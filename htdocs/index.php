@@ -24,44 +24,56 @@
     body {font-family:"Arial,Helvetica", sans-serif}
     h1,h2,h3,h4,h5,h6 {font-family:sans-serif; letter-spacing:5px}    
 
-    .name {font-family:"Arial,Helvetica", sans-serif; letter-spacing:10px}
+    .gem-name {font-family:"Arial,Helvetica", sans-serif; letter-spacing:6px; color:grey}
+    .gem-menu {font-family:"Arial,Helvetica", sans-serif; color:grey}
+    .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
 
   </style>
   
   <body>
 
-    <div class="">
+      <!-- Header -->
 
-      <div class="w3-bar">
-	<a href="#home" class="name w3-bar-item w3-button">GISÈLE EISENMANN MONTAGNÉ</a>
+      <div class="w3-bar w3-padding-16">
+	<a href="#home" class="gem-name w3-bar-item w3-button">GISÈLE EISENMANN MONTAGNÉ</a>
 	
 	<div class="w3-right">
 	  <div class="w3-dropdown-hover">
-	    <button class="w3-button">Work</button>
+	    <button class="w3-button gem-menu">Work <i class="fa fa-caret-down"></i></button>
 	    <div class="w3-dropdown-content w3-bar-block w3-card-4">
-	      <a href="#" class="w3-bar-item w3-button">Link 1</a>
-	      <a href="#" class="w3-bar-item w3-button">Link 2</a>
-	      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+	      <a href="#" class="w3-bar-item w3-button gem-menu">Link 1</a>
+	      <a href="#" class="w3-bar-item w3-button gem-menu">Link 2</a>
+	      <a href="#" class="w3-bar-item w3-button gem-menu">Link 3</a>
 	    </div>
 	  </div>
-	  <a href="#" class="w3-bar-item w3-button">News</a>
-	  <a href="#" class="w3-bar-item w3-button">Collect</a>
-	  <a href="#" class="w3-bar-item w3-button">About</a>
-	<a href="#" class="w3-bar-item w3-button">Contact</a>
-      </div>
+	  <a href="#" class="w3-bar-item w3-button gem-menu">News</a>
+	  <a href="#" class="w3-bar-item w3-button gem-menu">Collect</a>
+	  <a href="#" class="w3-bar-item w3-button gem-menu">About</a>
+	  <a href="#" class="w3-bar-item w3-button gem-menu">Contact</a>
+	</div>
       </div>
       
-      <div>
+      <!-- Page Content -->
+      <div class="w3-row w3-padding-64">
+	<div class="w3-col s6 w3-center w3-container">
+	  <img src="/public/images/web/expo1.png" alt="" style="width:100%">
+	</div>
+	<div class="w3-col s6 w3-center w3-container">
+	  <img src="/public/images/web/expo1.png" alt="" style="width:100%" >
+	</div>
+      </div>
+      
+      <!-- Footer -->
+
+      <footer class="w3-center gem-footer">
 	View Eisenmann Montagné's recent exhibition
 	<a href="">Water mirrors</a>
-      </div>
-      <p><i class="fa fa-copyright"></i>2025 by Gisele Eisenmann Montagné</p>
-      <p>Valbonne 06, France </p>
+	<p><i class="fa fa-copyright"></i>2025 by Gisele Eisenmann Montagné</p>
+	<p>Valbonne 06, France </p>
+      </footer>
       
 
-    </div>
-    
-    <script>
+      <script>
       // add the "alt" attribute to all "to-be-signed" images
       function signImages() {
       var gemSignature= "Gisele Eisenmann (gem)";
@@ -70,7 +82,6 @@
 	  images[i].setAttribute( 'alt', gemSignature );
         }
       }
-
       document.addEventListener('DOMContentLoaded', function() { signImages(); }, false);  
     </script>
     
