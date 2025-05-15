@@ -10,7 +10,8 @@
   <!-- the menu for large screens -->
   <div class="w3-right w3-hide-medium w3-hide-small">
     <div class="w3-dropdown-hover">
-      <button class="w3-button gem-menu"><?= Translator::t('Work') ?> <i class="fa fa-caret-down"></i></button>
+      <a href="<?= Translator::url('/public/work.php') ?>"
+	 class="w3-button gem-menu"><?= Translator::t('Work') ?> <i class="fa fa-caret-down"></i></a>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
 <?php
 foreach ( $ALL_GALLERIES->paint_dictionnaries as $dico ) {
