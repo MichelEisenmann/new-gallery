@@ -1,42 +1,42 @@
-<div class="w3-top">
-  <!-- on veut la navbar toujours au dessus -> modification de la classe des le depart -->
-  <div class="w3-bar w3-card w3-white" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-left" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="<?= Translator::url('/index.php') ?>"
-       class="w3-bar-item w3-button w3-hide-small"><?= Translator::t('ACCUEIL') ?></a>
-    <a href="<?= Translator::url('/public/acces_a_toutes.php') ?>"
-       class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> <?= Translator::t('GALERIE') ?></a>
-    <a href="<?= Translator::url('/public/expositions.php') ?>"
-       class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-globe"></i> <?= Translator::t('EXPOSITIONS') ?></a>
-    <a href="<?= Translator::url('/public/contenu_d_une_galerie.php?key=new') ?>"
-       class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> <?= Translator::t('NOUVEAUTES') ?></a>
-    <a href="<?= Translator::url('/index.php') ?>#contact"
-       class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> <?= Translator::t('CONTACT') ?></a>
+<div class="w3-bar w3-padding-16">
+  <a href="<?= Translator::url('/index.php') ?>" class="gem-name w3-bar-item w3-button">GISÈLE EISENMANN MONTAGNÉ</a>
+  
+  <!-- the three bars that give access to the menu if we are on a mobile -->
+  <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+     href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+    <i class="fa fa-bars"></i>
+  </a>
 
-    <button class="w3-button w3-right" onclick="useEnglish()">
-      <img src="/public/images/uk-48.png" alt="english"></img>
-    </button>
-    <button class="w3-button w3-right" onclick="useFrench()">
-      <img src="/public/images/france-48.png" alt="francais"></img>
-    </button>
+  <!-- this is hidden if we are on a mobile -->
+  <div class="w3-right w3-hide-small">
+    <div class="w3-dropdown-hover">
+      <button class="w3-button gem-menu"><?= Translator::t('Work') ?> <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+	<a href="#" class="w3-bar-item w3-button gem-menu">Link 1</a>
+	<a href="#" class="w3-bar-item w3-button gem-menu">Link 2</a>
+	<a href="#" class="w3-bar-item w3-button gem-menu">Link 3</a>
+      </div>
+    </div>
+    <a href="<?= Translator::url('/public/news.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('News') ?></a>
+    <a href="<?= Translator::url('/public/collect.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('Collect') ?></a>
+    <a href="<?= Translator::url('/public/about.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('About') ?></a>
+    <a href="<?= Translator::url('/public/contact.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('Contact') ?></a>
   </div>
+</div>
 
-  <!-- this is the menu that will be displayed when not enough space is available (accessed through the 3 bars) -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="<?= Translator::url('/index.php') ?>"
-       class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('ACCUEIL') ?></a>
-    <a href="<?= Translator::url('/public/acces_a_toutes.php') ?>"
-       class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('GALERIE') ?></a>
-	<a href="<?= Translator::url('/public/expositions.php') ?>"
-       class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('EXPOSITIONS') ?></a>
-    <a href="<?= Translator::url('/public/contenu_d_une_galerie.php?key=new') ?>"
-       class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('NOUVEAUTES') ?></a>
-    <a href="<?= Translator::url('/index.php') ?>#contact"
-       class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('CONTACT') ?></a>
-
-  </div>
+<!-- this is the menu that will be displayed when not enough space is available (accessed through the 3 bars) -->
+<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-right">
+  <a href="<?= Translator::url('/public/work.php') ?>"
+     class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('Work') ?></a>
+  <a href="<?= Translator::url('/public/news.php') ?>"
+     class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('News') ?></a>
+  <a href="<?= Translator::url('/public/collect.php') ?>"
+     class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('Collect') ?></a>
+  <a href="<?= Translator::url('/public/about.php') ?>"
+     class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('About') ?></a>
+  <a href="<?= Translator::url('/public/contact.php') ?>"
+     class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('Contact') ?></a>
+  
 </div>
 
 <script>

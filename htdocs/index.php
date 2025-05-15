@@ -11,7 +11,7 @@
     gtag('js', new Date());
     gtag('config', 'G-R9KWX3PWND');
   </script>
-  
+
   <?php include ('private/initialize.php'); ?>
   <?php include ('private/initialize_translator.php'); ?>
   <?php include ('private/initialize_galleries.php'); ?>
@@ -25,7 +25,7 @@
     h1,h2,h3,h4,h5,h6 {font-family:sans-serif; letter-spacing:5px}    
 
     .gem-name {font-family:"Arial,Helvetica", sans-serif; letter-spacing:6px; color:grey}
-    .gem-menu {font-family:"Arial,Helvetica", sans-serif; color:grey}
+    .gem-menu {font-family:"Arial,Helvetica", sans-serif; color:grey; background-color:white}
     .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
 
   </style>
@@ -33,25 +33,7 @@
   <body>
 
       <!-- Header -->
-
-      <div class="w3-bar w3-padding-16">
-	<a href="#home" class="gem-name w3-bar-item w3-button">GISÈLE EISENMANN MONTAGNÉ</a>
-	
-	<div class="w3-right">
-	  <div class="w3-dropdown-hover">
-	    <button class="w3-button gem-menu">Work <i class="fa fa-caret-down"></i></button>
-	    <div class="w3-dropdown-content w3-bar-block w3-card-4">
-	      <a href="#" class="w3-bar-item w3-button gem-menu">Link 1</a>
-	      <a href="#" class="w3-bar-item w3-button gem-menu">Link 2</a>
-	      <a href="#" class="w3-bar-item w3-button gem-menu">Link 3</a>
-	    </div>
-	  </div>
-	  <a href="#" class="w3-bar-item w3-button gem-menu">News</a>
-	  <a href="#" class="w3-bar-item w3-button gem-menu">Collect</a>
-	  <a href="#" class="w3-bar-item w3-button gem-menu">About</a>
-	  <a href="#" class="w3-bar-item w3-button gem-menu">Contact</a>
-	</div>
-      </div>
+      <?php include("public/navbar.php"); ?>
       
       <!-- Page Content -->
       <div class="w3-row w3-padding-64">
@@ -59,7 +41,7 @@
 	  <img src="/public/images/web/expo1.png" alt="" style="width:100%">
 	</div>
 	<div class="w3-col s6 w3-center w3-container">
-	  <img src="/public/images/web/expo1.png" alt="" style="width:100%" >
+	  <img src="/public/images/web/expo2.png" alt="" style="width:100%" >
 	</div>
       </div>
       

@@ -1,5 +1,13 @@
 <?php
 return array(
+    'Work' => "Work",
+    'News' => "News",
+    'Collect' => "Collect",
+    'About' => "About",
+    'Contact' => "Contact",
+
+    // oldies
+
     'ACCUEIL' => "HOME",
     'GALERIE' => "GALLERY",
 	'EXPOSITIONS' => "EXHIBITIONS",
