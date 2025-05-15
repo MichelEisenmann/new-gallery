@@ -12,9 +12,17 @@
     <div class="w3-dropdown-hover">
       <button class="w3-button gem-menu"><?= Translator::t('Work') ?> <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-	<a href="#" class="w3-bar-item w3-button gem-menu">Link 1</a>
-	<a href="#" class="w3-bar-item w3-button gem-menu">Link 2</a>
-	<a href="#" class="w3-bar-item w3-button gem-menu">Link 3</a>
+<?php
+foreach ( $ALL_GALLERIES->paint_dictionnaries as $dico ) {
+  // skip empty dictionaries and dictionaries that are not supposed to be shown
+  if ( count($dico->paints) == 0 ) {
+    continue;
+  }
+?>
+        <a href="#" class="w3-bar-item w3-button gem-menu"><?= Translator::t($dico->key); ?></a>
+<?php
+}
+?>
       </div>
     </div>
     <a href="<?= Translator::url('/public/news.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('News') ?></a>
