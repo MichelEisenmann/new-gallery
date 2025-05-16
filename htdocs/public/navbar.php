@@ -35,16 +35,35 @@ foreach ( $ALL_GALLERIES->paint_dictionnaries as $dico ) {
 
 <!-- the menu for small screens (accessed through the 3 bars) -->
 <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large  w3-right">
-  <a href="<?= Translator::url('/public/work.php') ?>"
-     class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('Work') ?></a>
+
+  <div class="w3-dropdown-hover">
+    <a href="<?= Translator::url('/public/work.php') ?>"
+       class="w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('Work') ?> <i class="fa fa-caret-down"></i></a>
+    <div class="w3-dropdown-content">
+<?php
+foreach ( $ALL_GALLERIES->paint_dictionnaries as $dico ) {
+  // skip empty dictionaries and dictionaries that are not supposed to be shown
+  if ( count($dico->paints) == 0 ) {
+    continue;
+  }
+?>
+
+      <a href="#"
+        class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t($dico->key); ?></a>
+
+<?php
+}
+?>
+   </div>
+  </div>
   <a href="<?= Translator::url('/public/news.php') ?>"
-     class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('News') ?></a>
+     class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('News') ?></a>
   <a href="<?= Translator::url('/public/collect.php') ?>"
-     class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('Collect') ?></a>
+     class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('Collect') ?></a>
   <a href="<?= Translator::url('/public/about.php') ?>"
-     class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('About') ?></a>
+     class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('About') ?></a>
   <a href="<?= Translator::url('/public/contact.php') ?>"
-     class="w3-bar-item w3-button" onclick="toggleFunction()"><?= Translator::t('Contact') ?></a>
+     class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('Contact') ?></a>
   
 </div>
 
