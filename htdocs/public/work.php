@@ -28,6 +28,7 @@
     .gem-name {font-family:"Arial,Helvetica", sans-serif; letter-spacing:6px; color:grey}
     .gem-menu {font-family:"Arial,Helvetica", sans-serif; color:grey; background-color:white}
     .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
+    .gem-animate {animation-duration: 3s}
 
   </style>
   
@@ -38,7 +39,7 @@
       
       <!-- Page Content -->
   
-      <div class="w3-container w3-padding-64">
+      <div class="w3-container w3-padding-64 w3-animate-opacity gem-animate">
 
 	<?php
 	 foreach ( $ALL_GALLERIES->paint_dictionnaries as $dico ) {

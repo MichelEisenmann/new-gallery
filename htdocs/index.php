@@ -27,6 +27,7 @@
     .gem-name {font-family:"Arial,Helvetica", sans-serif; letter-spacing:6px; color:grey}
     .gem-menu {font-family:"Arial,Helvetica", sans-serif; color:grey; background-color:white}
     .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
+    .gem-animate {animation-duration: 3s}
 
   </style>
   
@@ -36,7 +37,7 @@
       <?php include("public/navbar.php"); ?>
       
       <!-- Page Content -->
-      <div class="w3-row w3-padding-64">
+      <div class="w3-row w3-padding-64  w3-animate-opacity gem-animate">
 	<div class="w3-col s6 w3-center w3-container">
 	  <img src="/public/images/web/expo1.png" alt="" style="width:100%">
 	</div>
