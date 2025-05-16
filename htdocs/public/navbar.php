@@ -38,8 +38,8 @@ foreach ( $ALL_GALLERIES->paint_dictionnaries as $dico ) {
 
   <div class="w3-dropdown-hover">
     <a href="<?= Translator::url('/public/work.php') ?>"
-       class="w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('Work') ?> <i class="fa fa-caret-down"></i></a>
-    <div class="w3-dropdown-content">
+       class="w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('Work') ?> <i class="fa fa-caret-right"></i></a>
+    <div class="w3-dropdown-content" style="right:0">
 <?php
 foreach ( $ALL_GALLERIES->paint_dictionnaries as $dico ) {
   // skip empty dictionaries and dictionaries that are not supposed to be shown

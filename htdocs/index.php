@@ -37,7 +37,7 @@
       <?php include("public/navbar.php"); ?>
       
       <!-- Page Content -->
-      <div class="w3-row w3-padding-64  w3-animate-opacity gem-animate">
+      <div class="w3-row w3-padding-64  w3-animate-opacity">
 	<div class="w3-col s6 w3-center w3-container">
 	  <img src="/public/images/web/expo1.png" alt="" style="width:100%">
 	</div>
