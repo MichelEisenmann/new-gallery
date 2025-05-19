@@ -23,6 +23,7 @@ class PaintDictionnary {
     public $shownInSelector;
 
     const TYPE= "Type";
+    const CYCLE= "Cycle";
     const THEME= "Theme";
 
     const ALL="all";
@@ -41,6 +42,10 @@ class PaintDictionnary {
 
     function is_by_type() {
         return $this->kind == self::TYPE;
+    }
+
+    function is_by_cycle() {
+        return $this->kind == self::CYCLE;
     }
 
     // number of paints

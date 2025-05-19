@@ -6,6 +6,12 @@ return array(
     'About' => "About",
     'Contact' => "Contact",
 
+    // Cycles
+    'Cycle' => 'Cycle',
+    'alohaspirit' => 'Aloha Spirit',
+    'watermirror' => 'Water Mirror',
+    'metamorphose' => 'Metamorphose',
+
     // oldies
 
     'ACCUEIL' => "HOME",

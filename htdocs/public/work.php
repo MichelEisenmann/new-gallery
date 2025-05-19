@@ -44,7 +44,7 @@
 	<?php
 	 foreach ( $ALL_GALLERIES->paint_dictionnaries as $dico ) {
 	  // skip empty dictionaries and dictionaries that are not supposed to be shown
-	  if ( count($dico->paints) == 0 ) {
+        if ( count($dico->paints) == 0 || ! $dico->is_by_cycle()) {
 	    continue;
 	  }
 

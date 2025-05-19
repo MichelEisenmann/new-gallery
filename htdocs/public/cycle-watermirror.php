@@ -21,7 +21,7 @@
      $dico= $ALL_GALLERIES->paint_dictionnaries[$dico_key];
 ?>
 
-  <title><?= Translator::t("Cycle"); ?> <?= Translator::t($dico->name) ?></title>
+  <title>Water | Gisele Eisenmann Montagné</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
@@ -55,8 +55,7 @@
           <div class="w3-col s12 w3-center" >
 	    <img class="" src="images/<?= $latest->getThumbnailFile(); ?>" alt="">
 	    <div class="">
-	      <!-- open the public/cycle-xxx.php page where xxx is the name of the cycle -->
-              <a href="<?= Translator::url('/public/cycle-' .$dico->key .'.php') ?>" class="gem-link"><?= Translator::t($dico->key); ?></a>
+              <a href="#" class="gem-link"><?= Translator::t($dico->key); ?></a>
 	    </div>
 	  </div>
 	</div>

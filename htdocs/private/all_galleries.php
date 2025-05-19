@@ -114,17 +114,28 @@ class AllGalleries {
     // - son cycle si il est present
     // - son type (huile, pastel, etc...)
     function register_paint( $paint ) {
-        if ( count($paint->themes) > 0 ) {
-            foreach( $paint->themes as $theme ) {
-                $dico= $this->get_or_create_dictionnary($theme);
-                $dico->add_paint($paint);
-            }
+      // add it to the themes dictionnaries
+      if ( count($paint->themes) > 0 ) {
+        foreach( $paint->themes as $theme ) {
+          $dico= $this->get_or_create_dictionnary($theme);
+          $dico->add_paint($paint);
         }
-        $dico= $this->get_or_create_dictionnary($paint->type);
-        $dico->kind= PaintDictionnary::TYPE;
+      }
+
+      // add it to its type dictionnary
+      $dico= $this->get_or_create_dictionnary($paint->type);
+      $dico->kind= PaintDictionnary::TYPE;
+      $dico->add_paint($paint);
+      
+      // if there is a cycle add it to the corresponding dictionnary
+      if ( strlen($paint->cycle) > 0 ) {
+        $dico= $this->get_or_create_dictionnary($paint->cycle);
         $dico->add_paint($paint);
-        // paints are all put into the all_paint_dictionnary
-        $this->all_paint_dictionnary->add_paint($paint);
+        $dico->kind=PaintDictionnary::CYCLE;
+      }
+      
+      // paints are all put into the all_paint_dictionnary
+      $this->all_paint_dictionnary->add_paint($paint);
     }
 
     function get_or_create_dictionnary( $key ) {

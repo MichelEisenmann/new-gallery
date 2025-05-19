@@ -1,5 +1,20 @@
 <?php
 return array(
+
+    'Work' => "Work",
+    'News' => "News",
+    'Collect' => "Collect",
+    'About' => "About",
+    'Contact' => "Contact",
+
+    // Cycles
+    'Cycle' => 'Cycle',
+    'alohaspirit' => 'Aloha Spirit',
+    'watermirror' => 'Water Mirror',
+    'metamorphose' => 'Metamorphose',
+
+    // oldies
+
     'ACCUEIL' => "ACCUEIL",
     'GALERIE' => "OEUVRES",
 	'EXPOSITIONS' => "EXPOSITIONS",

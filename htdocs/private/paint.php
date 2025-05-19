@@ -15,6 +15,7 @@ class Paint {
     public $date;
     public $width;
     public $height;
+    public $cycle;
     public $type;
     public $status;  // SOLD_STATUS, UNAVAILABLE_STATUS
     public $description;
@@ -37,14 +38,15 @@ class Paint {
         $this->date= DateTimeImmutable::createFromFormat("Ymd", $array[3]);
         $this->width= $array[4];
         $this->height= $array[5];
-        $this->type= $array[6];
-        $this->setStatus($array[7]);
-        $this->description= $array[8];
+        $this->cycle= trim(strtolower($array[6]));
+        $this->type= $array[7];
+        $this->setStatus($array[8]);
+        $this->description= $array[9];
         // au cas ou les themes ne sont pas donnes
         $this->themes=array();
-        if ( count($array) > 9 ) {
-            // array[9] contient les themes separes par des espaces
-            $themes= explode(" ", trim($array[9]));
+        if ( count($array) > 10 ) {
+            // array[10] contient les themes separes par des espaces
+            $themes= explode(" ", trim($array[10]));
             //
             foreach( $themes as $theme ) {
                 $cur= trim($theme);
@@ -133,7 +135,7 @@ class Paint {
     }
 
     function print() {
-        echo "[" .$this->rank .", " .$this->file .", " .$this->title .", " .$this->type .", " .$this->status .", " .date_format($this->date, "Y/m/d") .", " .$this->width ."x" .$this->height .", " .$this->themes ."]";
+        echo "[" .$this->rank .", " .$this->file .", " .$this->cycle .", " .$this->title .", " .$this->type .", " .$this->status .", " .date_format($this->date, "Y/m/d") .", " .$this->width ."x" .$this->height .", " .$this->themes ."]";
     }
 }
 ?>

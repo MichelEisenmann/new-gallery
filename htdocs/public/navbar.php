@@ -16,7 +16,7 @@
 <?php
 foreach ( $ALL_GALLERIES->paint_dictionnaries as $navdico ) {
   // skip empty dictionaries and dictionaries that are not supposed to be shown
-  if ( count($navdico->paints) == 0 ) {
+  if ( count($navdico->paints) == 0 || !$navdico->is_by_cycle() ) {
     continue;
   }
 ?>
@@ -43,7 +43,7 @@ foreach ( $ALL_GALLERIES->paint_dictionnaries as $navdico ) {
 <?php
 foreach ( $ALL_GALLERIES->paint_dictionnaries as $navdico ) {
   // skip empty dictionaries and dictionaries that are not supposed to be shown
-  if ( count($navdico->paints) == 0 ) {
+  if ( count($navdico->paints) == 0 || !$navdico->is_by_cycle() ) {
     continue;
   }
 ?>
