@@ -16,12 +16,12 @@
   <?php include ('../private/initialize_galleries.php'); ?>
 
 <?php
-     // receives the dictionnary key
-     $dico_key=htmlspecialchars($_GET["cycle"]);
+     $dico_key='watermirror';
+     // retrieves the dictionnary to get access to paints
      $dico= $ALL_GALLERIES->paint_dictionnaries[$dico_key];
 ?>
 
-  <title>Water | Gisele Eisenmann Montagné</title>
+  <title><?= Translator::t($dico->key); ?> | Gisele Eisenmann Montagné</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
@@ -47,19 +47,23 @@
   
       <div class="w3-container w3-padding-64 w3-animate-opacity gem-animate">
 
-	<?php
-          $latest= $dico->sortedList[0];
-	?>
-
+	<!-- Ensure centering -->
 	<div class="w3-row">
           <div class="w3-col s12 w3-center" >
-	    <img class="" src="images/<?= $latest->getThumbnailFile(); ?>" alt="">
-	    <div class="">
-              <a href="#" class="gem-link"><?= Translator::t($dico->key); ?></a>
+
+	    <!-- Text Part -->
+	    <div class="w3-container w3-left-align">
+              <h1>Water Mirror</h1>
+	      
+              <p>Laius about water mirror</p>
+              <p>Some text.. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laius aabout water mirror</p>
+              <p>Some text.. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laius aabout water mirror</p>
+              <p>Laius aabout water mirror</p>
 	    </div>
+        
 	  </div>
 	</div>
-
+	
       </div>      
       
       <!-- Footer -->
