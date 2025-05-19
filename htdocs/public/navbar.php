@@ -14,13 +14,13 @@
 	 class="w3-button gem-menu"><?= Translator::t('Work') ?> <i class="fa fa-caret-down"></i></a>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
 <?php
-foreach ( $ALL_GALLERIES->paint_dictionnaries as $dico ) {
+foreach ( $ALL_GALLERIES->paint_dictionnaries as $navdico ) {
   // skip empty dictionaries and dictionaries that are not supposed to be shown
-  if ( count($dico->paints) == 0 ) {
+  if ( count($navdico->paints) == 0 ) {
     continue;
   }
 ?>
-        <a href="#" class="w3-bar-item w3-button gem-menu"><?= Translator::t($dico->key); ?></a>
+        <a href="<?= Translator::url('/public/cycle.php') ?>&cycle=<?= $navdico->key?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t($navdico->key); ?></a>
 <?php
 }
 ?>
@@ -41,15 +41,15 @@ foreach ( $ALL_GALLERIES->paint_dictionnaries as $dico ) {
        class="w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('Work') ?> <i class="fa fa-caret-right"></i></a>
     <div class="w3-dropdown-content" style="right:0">
 <?php
-foreach ( $ALL_GALLERIES->paint_dictionnaries as $dico ) {
+foreach ( $ALL_GALLERIES->paint_dictionnaries as $navdico ) {
   // skip empty dictionaries and dictionaries that are not supposed to be shown
-  if ( count($dico->paints) == 0 ) {
+  if ( count($navdico->paints) == 0 ) {
     continue;
   }
 ?>
 
-      <a href="#"
-        class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t($dico->key); ?></a>
+      <a href="<?= Translator::url('/public/cycle.php') ?>&cycle=<?= $navdico->key?>" 
+        class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t($navdico->key); ?></a>
 
 <?php
 }
