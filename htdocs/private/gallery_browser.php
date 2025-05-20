@@ -8,7 +8,7 @@ class GalleryBrowser {
     // sert a associer une cle et un intitule
     public $dictionnary;
 
-    // indexed by paint types (oil, pastel, etc.) and by cyles
+    // indexed by paint types (oil, pastel, etc.) and by series and themes
     public $paint_dictionnaries;
 
     public function __construct() {
