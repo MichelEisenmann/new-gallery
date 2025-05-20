@@ -6,8 +6,8 @@ return array(
     'About' => "About",
     'Contact' => "Contact",
 
-    // Cycles
-    'Cycle' => 'Cycle',
+    // Series
+    'Serie' => 'Serie',
     'alohaspirit' => 'Aloha Spirit',
     'watermirror' => 'Water Mirror',
     'metamorphose' => 'Metamorphose',

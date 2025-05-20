@@ -110,8 +110,9 @@ class AllGalleries {
       }
     }
 
-    // un tableau est present au plus dans deux dictionnaires
-    // - son cycle si il est present
+    // un tableau est present dans plusieurs dictionnaires
+    // - ses themes si ils sont presents
+    // - sa serie si il est present
     // - son type (huile, pastel, etc...)
     function register_paint( $paint ) {
       // add it to the themes dictionnaries
@@ -127,11 +128,11 @@ class AllGalleries {
       $dico->kind= PaintDictionnary::TYPE;
       $dico->add_paint($paint);
       
-      // if there is a cycle add it to the corresponding dictionnary
-      if ( strlen($paint->cycle) > 0 ) {
-        $dico= $this->get_or_create_dictionnary($paint->cycle);
+      // if there is a serie add it to the corresponding dictionnary
+      if ( strlen($paint->serie) > 0 ) {
+        $dico= $this->get_or_create_dictionnary($paint->serie);
         $dico->add_paint($paint);
-        $dico->kind=PaintDictionnary::CYCLE;
+        $dico->kind=PaintDictionnary::SERIE;
       }
       
       // paints are all put into the all_paint_dictionnary

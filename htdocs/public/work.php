@@ -44,7 +44,7 @@
 	<?php
 	 foreach ( $ALL_GALLERIES->paint_dictionnaries as $dico ) {
 	  // skip empty dictionaries and dictionaries that are not supposed to be shown
-        if ( count($dico->paints) == 0 || ! $dico->is_by_cycle()) {
+        if ( count($dico->paints) == 0 || ! $dico->is_by_serie()) {
 	    continue;
 	  }
 
@@ -55,7 +55,7 @@
           <div class="w3-col s12 w3-center" >
 	    <img class="" src="images/<?= $latest->getThumbnailFile(); ?>" alt="">
 	    <div class="">
-              <a href="#" class="gem-link"><?= Translator::t($dico->key); ?></a>
+              <a href="<?= Translator::url('/public/serie-' .$dico->key .'.php') ?>" class="gem-link"><?= Translator::t($dico->key); ?></a>
 	    </div>
 	  </div>
 	</div>

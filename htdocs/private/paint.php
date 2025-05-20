@@ -15,7 +15,7 @@ class Paint {
     public $date;
     public $width;
     public $height;
-    public $cycle;
+    public $serie;
     public $type;
     public $status;  // SOLD_STATUS, UNAVAILABLE_STATUS
     public $description;
@@ -36,9 +36,9 @@ class Paint {
         $this->file= $array[1]; // le path complet en partant dans images/. Ex: oils/flamboyance.jpg 
         $this->title= $array[2]; 
         $this->date= DateTimeImmutable::createFromFormat("Ymd", $array[3]);
-        $this->width= $array[4];
-        $this->height= $array[5];
-        $this->cycle= trim(strtolower($array[6]));
+        $this->height= $array[4];
+        $this->width= $array[5];
+        $this->serie= trim(strtolower($array[6]));
         $this->type= $array[7];
         $this->setStatus($array[8]);
         $this->description= $array[9];
@@ -135,7 +135,7 @@ class Paint {
     }
 
     function print() {
-        echo "[" .$this->rank .", " .$this->file .", " .$this->cycle .", " .$this->title .", " .$this->type .", " .$this->status .", " .date_format($this->date, "Y/m/d") .", " .$this->width ."x" .$this->height .", " .$this->themes ."]";
+        echo "[" .$this->rank .", " .$this->file .", " .$this->serie .", " .$this->title .", " .$this->type .", " .$this->status .", " .date_format($this->date, "Y/m/d") .", " .$this->width ."x" .$this->height .", " .$this->themes ."]";
     }
 }
 ?>

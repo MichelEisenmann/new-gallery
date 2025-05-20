@@ -16,11 +16,12 @@
 <?php
 foreach ( $ALL_GALLERIES->paint_dictionnaries as $navdico ) {
   // skip empty dictionaries and dictionaries that are not supposed to be shown
-  if ( count($navdico->paints) == 0 || !$navdico->is_by_cycle() ) {
+  if ( count($navdico->paints) == 0 || !$navdico->is_by_serie() ) {
     continue;
   }
 ?>
-        <a href="<?= Translator::url('/public/cycle.php') ?>&cycle=<?= $navdico->key?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t($navdico->key); ?></a>
+         <a href="<?= Translator::url('/public/serie-' .$navdico->key .'.php') ?>"
+            class="w3-bar-item w3-button gem-menu"><?= Translator::t($navdico->key); ?></a>
 <?php
 }
 ?>
@@ -43,13 +44,13 @@ foreach ( $ALL_GALLERIES->paint_dictionnaries as $navdico ) {
 <?php
 foreach ( $ALL_GALLERIES->paint_dictionnaries as $navdico ) {
   // skip empty dictionaries and dictionaries that are not supposed to be shown
-  if ( count($navdico->paints) == 0 || !$navdico->is_by_cycle() ) {
+  if ( count($navdico->paints) == 0 || !$navdico->is_by_serie() ) {
     continue;
   }
 ?>
 
-      <a href="<?= Translator::url('/public/cycle.php') ?>&cycle=<?= $navdico->key?>" 
-        class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t($navdico->key); ?></a>
+      <a href="<?= Translator::url('/public/serie-' .$navdico->key .'.php') ?>"
+         class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t($navdico->key); ?></a>
 
 <?php
 }
