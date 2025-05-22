@@ -26,6 +26,37 @@
   $other= $ALL_GALLERIES->paint_dictionnaries["other"];
 ?>
 
+  
+  <?php
+   // Collects all the paints that we want to display.
+   // This gives us access to the sizes and the status (sold or not..)
+   
+   // Oils
+   $paints["ClairDeSoleil"]= $oil->paints["Huile/20230708_ClairDeSoleil_Huile_30P.jpg"];
+  $paints["LeTorrent"]= $oil->paints["Huile/20241225_LeTorrent_HU41x33.jpg"];
+  $paints["Terranora creek-Sunset-Egret"]= $oil->paints["Huile/20220601_Terranora creek-Sunset-Egret-Huile.jpg"];
+  $paints["Reve de tropiques"]= $oil->paints["Huile/20221128_Reve de tropiques_Huile53x70.jpg"];
+  $paints["LesDanseuses"]= $oil->paints["Huile/20230216_LesDanseuses_Huile.jpg"];
+  $paints["IlotMangrove"]= $oil->paints["Huile/20230809_IlotMangrove_40x80.jpg"];
+  $paints["Zenitude"]= $oil->paints["Huile/20240130_Zenitude_Huile_F4.jpg"];
+  $paints["TheRiverBank_Vlaminck"]= $oil->paints["Huile/20230921_TheRiverBank_Vlaminck_38x46.jpg"];
+  
+  // Acrylics
+  $paints["Sunset on Terranora Creek"]= $acrylic->paints["Acrylique/20221103_Sunset on Terranora Creek-Acrylic 50x76.jpg"];
+  $paints["TerranoraCreek"]= $acrylic->paints["Acrylique/20221210_TerranoraCreek_Acrylique-53x70.jpg"];
+  $paints["La-Mangrove-SulfurCockatoo"]= $acrylic->paints["Acrylique/20230504_La-Mangrove-SulfurCockatoo_Acryl-53x71.jpg"];
+  $paints["Contemplation"]= $acrylic->paints["Acrylique/20230530_Contemplation_A100x73.jpg"];
+  $paints["La-Vague"]= $acrylic->paints["Acrylique/20230629_La-Vague_AcF6_33x41.jpg"];
+  $paints["Pelagos"]= $acrylic->paints["Acrylique/20231109_Pelagos_Acrylic-41x61.jpg"];
+  $paints["MarinaKeithCurran"]= $acrylic->paints["Acrylique/20231211_MarinaKeithCurran_Acry18x36pouces.jpg"];
+  $paints["Le Ficus"]= $acrylic->paints["Acrylique/20220609_Le Ficus_Acrylique.jpg"];
+  
+  // Pastels
+  $paints["BrisbaneNorthBank"]= $pastel->paints["Pastels/20240628_BrisbaneNorthBank_Pa-21x27.jpg"];
+  $paints["LaBrague"]= $pastel->paints["Pastels/20220714_LaBrague.jpg"];
+  ?>
+  
+
   <title><?= Translator::t($dico->key); ?> | Gisele Eisenmann Montagné</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -40,9 +71,14 @@
     .gem-menu {font-family:"Arial,Helvetica", sans-serif; color:grey; background-color:white}
     .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
     .gem-animate {animation-duration: 3s}
-    .gem-image-fit {object-fit: cover}
-    .gem-inline { display:inline-block}
+
+    .gem-image-fit {object-fit: cover; clip-path: circle(20%)}
+    
+    .gem-inline { display:inline-block; vertical-align: text-top}
+
     /* centered and fixed width */
+    /* 964 because the w3-container padding uses 32+32 pixels on the side */
+    /* so it is easier to remember that we have 900 pixels to actually use.. */
     .gem-fixed-width { width: 964px; margin-left: auto; margin-right: auto}
 
 
@@ -70,50 +106,21 @@
       <div class="w3-container w3-center">
 	<img src="/public/images/web/expo-seillans.png" alt="" style="width:100%">
       </div>
-    </div>
-      
-      <?php
-       // Collects all the paints that we want to display.
-       // This gives us access to the sizes and the status (sold or not..)
-       
-       // Oils
-      $paints["ClairDeSoleil"]= $oil->paints["Huile/20230708_ClairDeSoleil_Huile_30P.jpg"];
-      $paints["LeTorrent"]= $oil->paints["Huile/20241225_LeTorrent_HU41x33.jpg"];
-      $paints["Terranora creek-Sunset-Egret"]= $oil->paints["Huile/20220601_Terranora creek-Sunset-Egret-Huile.jpg"];
-      $paints["Reve de tropiques"]= $oil->paints["Huile/20221128_Reve de tropiques_Huile53x70.jpg"];
-      $paints["LesDanseuses"]= $oil->paints["Huile/20230216_LesDanseuses_Huile.jpg"];
-      $paints["IlotMangrove"]= $oil->paints["Huile/20230809_IlotMangrove_40x80.jpg"];
-      $paints["Zenitude"]= $oil->paints["Huile/20240130_Zenitude_Huile_F4.jpg"];
-      $paints["TheRiverBank_Vlaminck"]= $oil->paints["Huile/20230921_TheRiverBank_Vlaminck_38x46.jpg"];
-      
-      // Acrylics
-      $paints["Sunset on Terranora Creek"]= $acrylic->paints["Acrylique/20221103_Sunset on Terranora Creek-Acrylic 50x76.jpg"];
-      $paints["TerranoraCreek"]= $acrylic->paints["Acrylique/20221210_TerranoraCreek_Acrylique-53x70.jpg"];
-      $paints["La-Mangrove-SulfurCockatoo"]= $acrylic->paints["Acrylique/20230504_La-Mangrove-SulfurCockatoo_Acryl-53x71.jpg"];
-      $paints["Contemplation"]= $acrylic->paints["Acrylique/20230530_Contemplation_A100x73.jpg"];
-      $paints["La-Vague"]= $acrylic->paints["Acrylique/20230629_La-Vague_AcF6_33x41.jpg"];
-      $paints["Pelagos"]= $acrylic->paints["Acrylique/20231109_Pelagos_Acrylic-41x61.jpg"];
-      $paints["MarinaKeithCurran"]= $acrylic->paints["Acrylique/20231211_MarinaKeithCurran_Acry18x36pouces.jpg"];
-      $paints["Le Ficus"]= $acrylic->paints["Acrylique/20220609_Le Ficus_Acrylique.jpg"];
-      
-      // Pastels
-      $paints["BrisbaneNorthBank"]= $pastel->paints["Pastels/20240628_BrisbaneNorthBank_Pa-21x27.jpg"];
-      $paints["LaBrague"]= $pastel->paints["Pastels/20220714_LaBrague.jpg"];
-      ?>
       
     
 	<!-- Paintings -->
-        <div class="w3-container w3-center gem-fixed-width" >
-	    <div class="w3-orange gem-inline" style="width:500px; height:400px">
-	      a
+        <div class="w3-container w3-red" >
+	    <div class="w3-orange gem-inline" style="width:450px; height:400px">
+	      <img  class=""  src="images/<?= $paints["IlotMangrove"]->file ?>" alt="" style="width:100%">
 	    </div>
 	    <div class="w3-green gem-inline" style="width:400px; height:400px">
-	      b
+	      <img  class=""  src="images/<?= $paints["Le Ficus"]->file ?>" alt="" style="width:100%">
 	    </div>
 	</div>
       </div>
       
 
+    </div>
       <div class="w3-hide-large w3-hide-medium w3-hide-small ">
 	  <div class="w3-grid w3-orange" style="grid-template-columns:auto auto; align-items: center">
 	      <img  class=""  src="images/<?= $paints["IlotMangrove"]->file ?>" alt="" style="width:100%">
