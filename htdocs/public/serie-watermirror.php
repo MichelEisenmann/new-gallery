@@ -41,6 +41,10 @@
     .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
     .gem-animate {animation-duration: 3s}
     .gem-image-fit {object-fit: cover}
+    .gem-inline { display:inline-block}
+    /* centered and fixed width */
+    .gem-fixed-width { width: 964px; margin-left: auto; margin-right: auto}
+
 
   </style>
   
@@ -50,101 +54,127 @@
     <?php include("../public/navbar.php"); ?>
     
     <!-- Page Content -->
-    
-    <div class="w3-container w3-padding-16 w3-animate-opacity gem-animate">
+    <div class="w3-container w3-padding-16 w3-animate-opacity gem-animate gem-fixed-width">
       
-      <!-- Ensure centering -->
-      <div class="w3-row">
-        <div class="w3-col s12 w3-center" >
-          
-	  <!-- Text Part -->
-	  <div class="w3-container w3-left-align">
-            <h1>Water Mirror</h1>
-	    
-            <p>Laius about water mirror</p>
-            <p>Some text.. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laius aabout water mirror</p>
-            <p>Some text.. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laius aabout water mirror</p>
-            <p>Laius about water mirror</p>
-	  </div>
-          
-	  <!-- Galerie/Exposition photo -->
-	  <div class="w3-container w3-center">
-	    <img src="/public/images/web/expo-seillans.png" alt="" style="width:100%">
-	  </div>
-	</div>
+      <!-- Text Part -->
+      <div class="w3-container w3-left-align">
+        <h1>Water Mirror</h1>
 	
-        <div class="w3-col s12 w3-center" >
+        <p>Laius about water mirror</p>
+        <p>Some text.. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laius aabout water mirror</p>
+        <p>Some text.. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laius aabout water mirror</p>
+        <p>Laius about water mirror</p>
+      </div>
+      
+      <!-- Galerie/Exposition photo -->
+      <div class="w3-container w3-center">
+	<img src="/public/images/web/expo-seillans.png" alt="" style="width:100%">
+      </div>
+    </div>
+      
+      <?php
+       // Collects all the paints that we want to display.
+       // This gives us access to the sizes and the status (sold or not..)
+       
+       // Oils
+      $paints["ClairDeSoleil"]= $oil->paints["Huile/20230708_ClairDeSoleil_Huile_30P.jpg"];
+      $paints["LeTorrent"]= $oil->paints["Huile/20241225_LeTorrent_HU41x33.jpg"];
+      $paints["Terranora creek-Sunset-Egret"]= $oil->paints["Huile/20220601_Terranora creek-Sunset-Egret-Huile.jpg"];
+      $paints["Reve de tropiques"]= $oil->paints["Huile/20221128_Reve de tropiques_Huile53x70.jpg"];
+      $paints["LesDanseuses"]= $oil->paints["Huile/20230216_LesDanseuses_Huile.jpg"];
+      $paints["IlotMangrove"]= $oil->paints["Huile/20230809_IlotMangrove_40x80.jpg"];
+      $paints["Zenitude"]= $oil->paints["Huile/20240130_Zenitude_Huile_F4.jpg"];
+      $paints["TheRiverBank_Vlaminck"]= $oil->paints["Huile/20230921_TheRiverBank_Vlaminck_38x46.jpg"];
+      
+      // Acrylics
+      $paints["Sunset on Terranora Creek"]= $acrylic->paints["Acrylique/20221103_Sunset on Terranora Creek-Acrylic 50x76.jpg"];
+      $paints["TerranoraCreek"]= $acrylic->paints["Acrylique/20221210_TerranoraCreek_Acrylique-53x70.jpg"];
+      $paints["La-Mangrove-SulfurCockatoo"]= $acrylic->paints["Acrylique/20230504_La-Mangrove-SulfurCockatoo_Acryl-53x71.jpg"];
+      $paints["Contemplation"]= $acrylic->paints["Acrylique/20230530_Contemplation_A100x73.jpg"];
+      $paints["La-Vague"]= $acrylic->paints["Acrylique/20230629_La-Vague_AcF6_33x41.jpg"];
+      $paints["Pelagos"]= $acrylic->paints["Acrylique/20231109_Pelagos_Acrylic-41x61.jpg"];
+      $paints["MarinaKeithCurran"]= $acrylic->paints["Acrylique/20231211_MarinaKeithCurran_Acry18x36pouces.jpg"];
+      $paints["Le Ficus"]= $acrylic->paints["Acrylique/20220609_Le Ficus_Acrylique.jpg"];
+      
+      // Pastels
+      $paints["BrisbaneNorthBank"]= $pastel->paints["Pastels/20240628_BrisbaneNorthBank_Pa-21x27.jpg"];
+      $paints["LaBrague"]= $pastel->paints["Pastels/20220714_LaBrague.jpg"];
+      ?>
+      
+    
+	<!-- Paintings -->
+        <div class="w3-container w3-center gem-fixed-width" >
+	    <div class="w3-orange gem-inline" style="width:500px; height:400px">
+	      a
+	    </div>
+	    <div class="w3-green gem-inline" style="width:400px; height:400px">
+	      b
+	    </div>
+	</div>
+      </div>
+      
+
+      <div class="w3-hide-large w3-hide-medium w3-hide-small ">
+	  <div class="w3-grid w3-orange" style="grid-template-columns:auto auto; align-items: center">
+	      <img  class=""  src="images/<?= $paints["IlotMangrove"]->file ?>" alt="" style="width:100%">
+	      <img  class=""  src="images/<?= $paints["Le Ficus"]->file ?>" alt="" style="width:100%">
+
+	  </div>
+
+
+
+	  <div class= "w3-row w3-orange w3-padding-16" >
+	    <div class="w3-container w3-red w3-twothird" style="align-items: center">
+	      <img  class=""  src="images/<?= $paints["IlotMangrove"]->file ?>" alt="" style="width:100%; align-items: center">
+	    </div>
+	    <div class="w3-container w3-rest" style="align-items: center">
+	      <img  class=""  src="images/<?= $paints["Le Ficus"]->file ?>" alt="" style="width:100%; align-items: center">
+	    </div>
+	  </div>
 	  
 
-	  <?php
-	   // Collects all the paints that we want to display.
-	   // This gives us access to the sizes and the status (sold or not..)
-	   
-	   // Oils
-	  $paints["ClairDeSoleil"]= $oil->paints["Huile/20230708_ClairDeSoleil_Huile_30P.jpg"];
-	  $paints["LeTorrent"]= $oil->paints["Huile/20241225_LeTorrent_HU41x33.jpg"];
-	  $paints["Terranora creek-Sunset-Egret"]= $oil->paints["Huile/20220601_Terranora creek-Sunset-Egret-Huile.jpg"];
-	  $paints["Reve de tropiques"]= $oil->paints["Huile/20221128_Reve de tropiques_Huile53x70.jpg"];
-	  $paints["LesDanseuses"]= $oil->paints["Huile/20230216_LesDanseuses_Huile.jpg"];
-	  $paints["IlotMangrove"]= $oil->paints["Huile/20230809_IlotMangrove_40x80.jpg"];
-	  $paints["Zenitude"]= $oil->paints["Huile/20240130_Zenitude_Huile_F4.jpg"];
-	  $paints["TheRiverBank_Vlaminck"]= $oil->paints["Huile/20230921_TheRiverBank_Vlaminck_38x46.jpg"];
 
-	   // Acrylics
-	  $paints["Sunset on Terranora Creek"]= $acrylic->paints["Acrylique/20221103_Sunset on Terranora Creek-Acrylic 50x76.jpg"];
-	  $paints["TerranoraCreek"]= $acrylic->paints["Acrylique/20221210_TerranoraCreek_Acrylique-53x70.jpg"];
-	  $paints["La-Mangrove-SulfurCockatoo"]= $acrylic->paints["Acrylique/20230504_La-Mangrove-SulfurCockatoo_Acryl-53x71.jpg"];
-	  $paints["Contemplation"]= $acrylic->paints["Acrylique/20230530_Contemplation_A100x73.jpg"];
-	  $paints["La-Vague"]= $acrylic->paints["Acrylique/20230629_La-Vague_AcF6_33x41.jpg"];
-	  $paints["Pelagos"]= $acrylic->paints["Acrylique/20231109_Pelagos_Acrylic-41x61.jpg"];
-	  $paints["MarinaKeithCurran"]= $acrylic->paints["Acrylique/20231211_MarinaKeithCurran_Acry18x36pouces.jpg"];
-	  $paints["Le Ficus"]= $acrylic->paints["Acrylique/20220609_Le Ficus_Acrylique.jpg"];
-
-	  // Pastels
-	  $paints["BrisbaneNorthBank"]= $pastel->paints["Pastels/20240628_BrisbaneNorthBank_Pa-21x27.jpg"];
-
-	  ?>
-
-
-	  <!-- Paintings -->
-	  <div class= "w3-container w3-padding-16">
-	    <div class="w3-container w3-cell w3-red w3-cell-middle">
-	      <img  class="gem-image-fit"  src="images/<?= $paints["IlotMangrove"]->file ?>" alt="" style="width:100%">
+	  <div class="w3-hide-large w3-hide-medium w3-hide-small ">
+	  <div class= "w3-container  w3-padding-16 w3-orange" style="height:400px">
+	    <div class="w3-container w3-red w3-cell-middle w3-cell">
+	      <img  class=""  src="images/<?= $paints["IlotMangrove"]->file ?>" alt="" style="width:100%">
 	    </div>
 	    <div class="w3-container w3-cell w3-green w3-cell-middle">
 	      <img  class="gem-image-fit"  src="images/<?= $paints["Le Ficus"]->file ?>" alt="" style="width:100%">
 	    </div>
 	  </div>
 	  
-	  <div class= "w3-container w3-padding-16">
-	    <div class="w3-container w3-cell w3-red w3-cell-middle">
+	  <div class="w3-container w3-padding-16 w3-orange" style="height:500px">
+	    <div class="w3-container w3-red w3-cell-middle w3-cell">
 	      <img  class="gem-image-fit"  src="images/<?= $paints["ClairDeSoleil"]->file ?>" alt="" style="width:100%">
 	    </div>
 	    <div class="w3-container w3-cell w3-green w3-cell-middle">
 	      <img  class="gem-image-fit"  src="images/<?= $paints["BrisbaneNorthBank"]->file ?>" alt="" style="width:100%">
 	    </div>
 	  </div>
-	  
 
-	  <div class="w3-row w3-padding-16 w3-orange">
+	  <div class="w3-container w3-padding-16 w3-orange">
 	    <div class="w3-container w3-twothird w3-red">
-	      <img class="gem-image-fit" src="images/<?= $paints["IlotMangrove"]->file ?>" alt="" style="width:100%">
+	      <img class="gem-image-fit" src="images/<?= $paints["MarinaKeithCurran"]->file ?>" alt="" style="width:100%">
 	    </div>
 	    <div class="w3-container w3-third w3-green">
-	      <img class="gem-image-fit" src="images/<?= $paints["Le Ficus"]->file ?>" alt="" style="width:100%">
+	      <img class="" src="images/web/expo-seillans-2.png" alt="" style="width:100%">
 	    </div>
 	  </div>
 
-	  <div class="w3-row w3-padding-16 w3-orange">
+	  <div class="w3-container w3-padding-16 w3-orange">
 	    <div class="w3-container w3-third w3-red">
-	      <img src="images/<?= $paints["ClairDeSoleil"]->file ?>" alt="" style="width:100%">
+	      <img src="images/<?= $paints["Contemplation"]->file ?>" alt="" style="width:100%">
 	    </div>
 	    <div class="w3-container w3-twothird w3-green">
-	      <img src="images/<?= $paints["BrisbaneNorthBank"]->file ?>" alt="" style="width:100%">
+	      <img src="images/<?= $paints["LaBrague"]->file ?>" alt="" style="width:100%">
 	    </div>
 	  </div>
 	  
 	</div>
+	  
+	</div>
+	  </div>
 	
 	
       </div>
