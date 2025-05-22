@@ -72,13 +72,11 @@
     .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
     .gem-animate {animation-duration: 3s}
 
-    .gem-image-fit {object-fit: cover; clip-path: circle(20%)}
+    .gem-image-fit {object-fit: cover; clip-path: inset(5% 5% 5% 5%)}
     
     .gem-inline { display:inline-block; vertical-align: text-top}
 
-    /* centered and fixed width */
-    /* 964 because the w3-container padding uses 32+32 pixels on the side */
-    /* so it is easier to remember that we have 900 pixels to actually use.. */
+    /* remains centered with fixed width when resizing the browser */
     .gem-fixed-width { width: 964px; margin-left: auto; margin-right: auto}
 
 
@@ -107,19 +105,19 @@
 	<img src="/public/images/web/expo-seillans.png" alt="" style="width:100%">
       </div>
       
-    
-	<!-- Paintings -->
-        <div class="w3-container w3-red" >
-	    <div class="w3-orange gem-inline" style="width:450px; height:400px">
-	      <img  class=""  src="images/<?= $paints["IlotMangrove"]->file ?>" alt="" style="width:100%">
-	    </div>
-	    <div class="w3-green gem-inline" style="width:400px; height:400px">
-	      <img  class=""  src="images/<?= $paints["Le Ficus"]->file ?>" alt="" style="width:100%">
-	    </div>
+      
+      <!-- Paintings -->
+      <div class="w3-container w3-padding-16 w3-red" style="height: 500px" >
+	<div class="w3-orange gem-inline"
+	     style="width:400px; height: 450px; background: url('images/<?= $paints["IlotMangrove"]->file ?>'); background-position: 50% 50%; background-size: cover">
+	</div>
+	<div class="w3-green gem-inline" 
+	     style="width:450px; height: 450px; background: url('images/<?= $paints["Le Ficus"]->file ?>'); background-position: 50% 50%; background-size: cover">
 	</div>
       </div>
-      
-
+    </div>
+    
+    
     </div>
       <div class="w3-hide-large w3-hide-medium w3-hide-small ">
 	  <div class="w3-grid w3-orange" style="grid-template-columns:auto auto; align-items: center">
