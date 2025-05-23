@@ -92,6 +92,19 @@
        background-size: cover;
     }
 
+    .gem-clair-de-soleil {
+       background: url('images/<?= $paints["ClairDeSoleil"]->file ?>');
+       background-position: 50% 50%;
+       background-size: cover;
+    }
+
+    .gem-brisbane-northbank {
+       background: url('images/<?= $paints["BrisbaneNorthBank"]->file ?>');
+       background-position: 50% 50%;
+       background-size: cover;
+    }
+
+
     /* remains centered with fixed width when resizing the browser */
     .gem-fixed-width { width: 964px; margin-left: auto; margin-right: auto}
 
@@ -125,38 +138,30 @@
       <!-- Paintings -->
       <!--   Pick the height you want for the row -->
       <!--   The sum of the two paint width must be 885px -->
-      <div class="w3-container " style="height: 500px" >
-	<div class="w3-orange gem-inline gem-background-left gem-ilot-mangrove "
-	     style="width:485px; height: 450px; ">
+
+      <div class="w3-container">
+	<div class=" gem-inline gem-background-left gem-ilot-mangrove "
+	     style="width:485px; height: 500px;">
 	</div>
-	<div class="w3-green gem-inline gem-background-right gem-le-ficus" 
-	     style="width:400px; height: 450px; ">
+	<div class=" gem-inline gem-background-right gem-le-ficus" 
+	     style="width:400px; height: 500px; ">
 	</div>
       </div>
+
+      <div class="w3-container" >
+	<div class="gem-inline gem-background-left gem-clair-de-soleil "
+	     style="width:600px; height: 450px; ">
+	</div>
+	<div class="gem-inline gem-background-right gem-brisbane-northbank" 
+	     style="width:285px; height: 450px; ">
+	</div>
+      </div>
+
     </div>
     
     
     </div>
       <div class="w3-hide-large w3-hide-medium w3-hide-small ">
-	  <div class="w3-grid w3-orange" style="grid-template-columns:auto auto; align-items: center">
-	      <img  class=""  src="images/<?= $paints["IlotMangrove"]->file ?>" alt="" style="width:100%">
-	      <img  class=""  src="images/<?= $paints["Le Ficus"]->file ?>" alt="" style="width:100%">
-
-	  </div>
-
-
-
-	  <div class= "w3-row w3-orange w3-padding-16" >
-	    <div class="w3-container w3-red w3-twothird" style="align-items: center">
-	      <img  class=""  src="images/<?= $paints["IlotMangrove"]->file ?>" alt="" style="width:100%; align-items: center">
-	    </div>
-	    <div class="w3-container w3-rest" style="align-items: center">
-	      <img  class=""  src="images/<?= $paints["Le Ficus"]->file ?>" alt="" style="width:100%; align-items: center">
-	    </div>
-	  </div>
-	  
-
-
 	  <div class="w3-hide-large w3-hide-medium w3-hide-small ">
 	  <div class= "w3-container  w3-padding-16 w3-orange" style="height:400px">
 	    <div class="w3-container w3-red w3-cell-middle w3-cell">
