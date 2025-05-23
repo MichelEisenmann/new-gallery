@@ -123,9 +123,11 @@
       
       
       <!-- Paintings -->
+      <!--   Pick the height you want for the row -->
+      <!--   The sum of the two paint width must be 885px -->
       <div class="w3-container " style="height: 500px" >
-	<div class="w3-orange gem-inline gem-background-left gem-ilot-mangrove"
-	     style="width:450px; height: 450px; ">
+	<div class="w3-orange gem-inline gem-background-left gem-ilot-mangrove "
+	     style="width:485px; height: 450px; ">
 	</div>
 	<div class="w3-green gem-inline gem-background-right gem-le-ficus" 
 	     style="width:400px; height: 450px; ">
