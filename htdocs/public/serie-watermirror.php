@@ -74,7 +74,23 @@
 
     .gem-image-fit {object-fit: cover; clip-path: inset(5% 5% 5% 5%)}
     
+    .gem-background-left {margin-top: 10px;}
+    .gem-background-right {margin-top: 10px; margin-left: 10px;}
     .gem-inline { display:inline-block; vertical-align: text-top}
+
+    /* background-position tells which part of the image is centered in the box where it is diplayed */
+    
+    .gem-ilot-mangrove {
+       background: url('images/<?= $paints["IlotMangrove"]->file ?>');
+       background-position: 50% 50%;
+       background-size: cover;
+    }
+
+    .gem-le-ficus {
+       background: url('images/<?= $paints["Le Ficus"]->file ?>');
+       background-position: 50% 50%;
+       background-size: cover;
+    }
 
     /* remains centered with fixed width when resizing the browser */
     .gem-fixed-width { width: 964px; margin-left: auto; margin-right: auto}
@@ -107,12 +123,12 @@
       
       
       <!-- Paintings -->
-      <div class="w3-container w3-padding-16 w3-red" style="height: 500px" >
-	<div class="w3-orange gem-inline"
-	     style="width:400px; height: 450px; background: url('images/<?= $paints["IlotMangrove"]->file ?>'); background-position: 50% 50%; background-size: cover">
+      <div class="w3-container " style="height: 500px" >
+	<div class="w3-orange gem-inline gem-background-left gem-ilot-mangrove"
+	     style="width:450px; height: 450px; ">
 	</div>
-	<div class="w3-green gem-inline" 
-	     style="width:450px; height: 450px; background: url('images/<?= $paints["Le Ficus"]->file ?>'); background-position: 50% 50%; background-size: cover">
+	<div class="w3-green gem-inline gem-background-right gem-le-ficus" 
+	     style="width:400px; height: 450px; ">
 	</div>
       </div>
     </div>
