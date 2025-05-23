@@ -78,19 +78,34 @@
     .gem-background-right {margin-top: 10px; margin-left: 10px;}
     .gem-inline { display:inline-block; vertical-align: text-top}
 
+    .gem-hover {
+    display: none;
+    }
+
     /* background-position tells which part of the image is centered in the box where it is diplayed */
     
     .gem-ilot-mangrove {
        background: url('images/<?= $paints["IlotMangrove"]->file ?>');
        background-position: 50% 50%;
        background-size: cover;
-    }
+       }
+
+       .gem-ilot-mangrove:hover > .gem-hover {
+    color: red;
+    display: block;
+       }
 
     .gem-le-ficus {
        background: url('images/<?= $paints["Le Ficus"]->file ?>');
        background-position: 50% 50%;
        background-size: cover;
     }
+
+       .gem-le-ficus:hover > .gem-hover {
+       color: green;
+    display: block;
+       }
+
 
     .gem-clair-de-soleil {
        background: url('images/<?= $paints["ClairDeSoleil"]->file ?>');
@@ -140,11 +155,17 @@
       <!--   The sum of the two paint width must be 885px -->
 
       <div class="w3-container">
-	<div class=" gem-inline gem-background-left gem-ilot-mangrove "
+	<div class="w3-display-container gem-inline gem-background-left gem-ilot-mangrove "
 	     style="width:485px; height: 500px;">
+	  <div class="w3-display-middle gem-hover">
+	    <?= $paints["IlotMangrove"]->title ?> </br> <?= $paints["IlotMangrove"]->get_size() ?>
+	  </div>
 	</div>
-	<div class=" gem-inline gem-background-right gem-le-ficus" 
+	<div class="w3-display-container gem-inline gem-background-right gem-le-ficus" 
 	     style="width:400px; height: 500px; ">
+	  <div class="w3-display-middle gem-hover">
+	    <?= $paints["Le Ficus"]->title ?> </br> <?= $paints["Le Ficus"]->get_size() ?>
+	  </div>
 	</div>
       </div>
 
