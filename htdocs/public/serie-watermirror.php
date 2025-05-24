@@ -14,47 +14,48 @@
   <?php include ('../private/initialize.php'); ?>
   <?php include ('../private/initialize_translator.php'); ?>
   <?php include ('../private/initialize_galleries.php'); ?>
+  <?php include ('../private/line_generator.php'); ?>
 
 <?php
-     $dico_key='watermirror';
-     // retrieves the dictionnary to get access to paints
-     $dico= $ALL_GALLERIES->paint_dictionnaries[$dico_key];
+$dico_key='watermirror';
+// retrieves the dictionnary to get access to paints
+$dico= $ALL_GALLERIES->paint_dictionnaries[$dico_key];
 
-  $oil= $ALL_GALLERIES->paint_dictionnaries["oil"];
-  $pastel= $ALL_GALLERIES->paint_dictionnaries["pastel"];
-  $acrylic= $ALL_GALLERIES->paint_dictionnaries["acrylic"];
-  $other= $ALL_GALLERIES->paint_dictionnaries["other"];
+$oil= $ALL_GALLERIES->paint_dictionnaries["oil"];
+$pastel= $ALL_GALLERIES->paint_dictionnaries["pastel"];
+$acrylic= $ALL_GALLERIES->paint_dictionnaries["acrylic"];
+$other= $ALL_GALLERIES->paint_dictionnaries["other"];
+
+// Collects all the paints that we want to display.
+// This gives us access to the sizes and the status (sold or not..)
+
+// Oils
+$paints["ClairDeSoleil"]= $oil->paints["Huile/20230708_ClairDeSoleil_Huile_30P.jpg"];
+$paints["LeTorrent"]= $oil->paints["Huile/20241225_LeTorrent_HU41x33.jpg"];
+$paints["Terranora creek-Sunset-Egret"]= $oil->paints["Huile/20220601_Terranora creek-Sunset-Egret-Huile.jpg"];
+$paints["Revedetropiques"]= $oil->paints["Huile/20221128_Reve de tropiques_Huile53x70.jpg"];
+$paints["LesDanseuses"]= $oil->paints["Huile/20230216_LesDanseuses_Huile.jpg"];
+$paints["IlotMangrove"]= $oil->paints["Huile/20230809_IlotMangrove_40x80.jpg"];
+$paints["Zenitude"]= $oil->paints["Huile/20240130_Zenitude_Huile_F4.jpg"];
+$paints["TheRiverBankVlaminck"]= $oil->paints["Huile/20230921_TheRiverBank_Vlaminck_38x46.jpg"];
+
+// Acrylics
+$paints["SunsetonTerranoraCreek"]= $acrylic->paints["Acrylique/20221103_Sunset on Terranora Creek-Acrylic 50x76.jpg"];
+$paints["TerranoraCreek"]= $acrylic->paints["Acrylique/20221210_TerranoraCreek_Acrylique-53x70.jpg"];
+$paints["LaMangroveSulfurCockatoo"]= $acrylic->paints["Acrylique/20230504_La-Mangrove-SulfurCockatoo_Acryl-53x71.jpg"];
+$paints["Contemplation"]= $acrylic->paints["Acrylique/20230530_Contemplation_A100x73.jpg"];
+$paints["LaVague"]= $acrylic->paints["Acrylique/20230629_La-Vague_AcF6_33x41.jpg"];
+$paints["Pelagos"]= $acrylic->paints["Acrylique/20231109_Pelagos_Acrylic-41x61.jpg"];
+$paints["MarinaKeithCurran"]= $acrylic->paints["Acrylique/20231211_MarinaKeithCurran_Acry18x36pouces.jpg"];
+$paints["LeFicus"]= $acrylic->paints["Acrylique/20220609_Le Ficus_Acrylique.jpg"];
+
+// Pastels
+$paints["BrisbaneNorthBank"]= $pastel->paints["Pastels/20240628_BrisbaneNorthBank_Pa-21x27.jpg"];
+$paints["LaBrague"]= $pastel->paints["Pastels/20220714_LaBrague.jpg"];
+
+$line_generator= new LineGenerator();
+$line_generator->paints= $paints;
 ?>
-
-  
-  <?php
-   // Collects all the paints that we want to display.
-   // This gives us access to the sizes and the status (sold or not..)
-   
-   // Oils
-   $paints["ClairDeSoleil"]= $oil->paints["Huile/20230708_ClairDeSoleil_Huile_30P.jpg"];
-  $paints["LeTorrent"]= $oil->paints["Huile/20241225_LeTorrent_HU41x33.jpg"];
-  $paints["Terranora creek-Sunset-Egret"]= $oil->paints["Huile/20220601_Terranora creek-Sunset-Egret-Huile.jpg"];
-  $paints["Reve de tropiques"]= $oil->paints["Huile/20221128_Reve de tropiques_Huile53x70.jpg"];
-  $paints["LesDanseuses"]= $oil->paints["Huile/20230216_LesDanseuses_Huile.jpg"];
-  $paints["IlotMangrove"]= $oil->paints["Huile/20230809_IlotMangrove_40x80.jpg"];
-  $paints["Zenitude"]= $oil->paints["Huile/20240130_Zenitude_Huile_F4.jpg"];
-  $paints["TheRiverBank_Vlaminck"]= $oil->paints["Huile/20230921_TheRiverBank_Vlaminck_38x46.jpg"];
-  
-  // Acrylics
-  $paints["Sunset on Terranora Creek"]= $acrylic->paints["Acrylique/20221103_Sunset on Terranora Creek-Acrylic 50x76.jpg"];
-  $paints["TerranoraCreek"]= $acrylic->paints["Acrylique/20221210_TerranoraCreek_Acrylique-53x70.jpg"];
-  $paints["La-Mangrove-SulfurCockatoo"]= $acrylic->paints["Acrylique/20230504_La-Mangrove-SulfurCockatoo_Acryl-53x71.jpg"];
-  $paints["Contemplation"]= $acrylic->paints["Acrylique/20230530_Contemplation_A100x73.jpg"];
-  $paints["La-Vague"]= $acrylic->paints["Acrylique/20230629_La-Vague_AcF6_33x41.jpg"];
-  $paints["Pelagos"]= $acrylic->paints["Acrylique/20231109_Pelagos_Acrylic-41x61.jpg"];
-  $paints["MarinaKeithCurran"]= $acrylic->paints["Acrylique/20231211_MarinaKeithCurran_Acry18x36pouces.jpg"];
-  $paints["Le Ficus"]= $acrylic->paints["Acrylique/20220609_Le Ficus_Acrylique.jpg"];
-  
-  // Pastels
-  $paints["BrisbaneNorthBank"]= $pastel->paints["Pastels/20240628_BrisbaneNorthBank_Pa-21x27.jpg"];
-  $paints["LaBrague"]= $pastel->paints["Pastels/20220714_LaBrague.jpg"];
-  ?>
   
 
   <title><?= Translator::t($dico->key); ?> | Gisele Eisenmann Montagné</title>
@@ -84,41 +85,14 @@
 
     /* background-position tells which part of the image is centered in the box where it is diplayed */
     
-    .gem-ilot-mangrove {
-       background: url('images/<?= $paints["IlotMangrove"]->file ?>');
-       background-position: 50% 50%;
-       background-size: cover;
-       }
-
-       .gem-ilot-mangrove:hover > .gem-hover {
-    color: red;
-    display: block;
-       }
-
-    .gem-le-ficus {
-       background: url('images/<?= $paints["Le Ficus"]->file ?>');
-       background-position: 50% 50%;
-       background-size: cover;
-    }
-
-       .gem-le-ficus:hover > .gem-hover {
-       color: green;
-    display: block;
-       }
-
-
-    .gem-clair-de-soleil {
-       background: url('images/<?= $paints["ClairDeSoleil"]->file ?>');
-       background-position: 50% 50%;
-       background-size: cover;
-    }
-
-    .gem-brisbane-northbank {
-       background: url('images/<?= $paints["BrisbaneNorthBank"]->file ?>');
-       background-position: 50% 50%;
-       background-size: cover;
-    }
-
+    <?php
+     $line_generator->generate_style("IlotMangrove", 50, 50);
+     $line_generator->generate_style("LeFicus", 50, 50);
+     $line_generator->generate_style("Contemplation", 50, 50);
+     $line_generator->generate_style("ClairDeSoleil", 50, 50);
+     $line_generator->generate_style("BrisbaneNorthBank", 50, 50);
+     $line_generator->generate_style("LaBrague", 50, 50);
+    ?>
 
     /* remains centered with fixed width when resizing the browser */
     .gem-fixed-width { width: 964px; margin-left: auto; margin-right: auto}
@@ -155,78 +129,17 @@
       <!--   The sum of the two paint width must be 885px -->
 
       <div class="w3-container">
-	<div class="w3-display-container gem-inline gem-background-left gem-ilot-mangrove "
-	     style="width:485px; height: 500px;">
-	  <div class="w3-display-middle gem-hover">
-	    <?= $paints["IlotMangrove"]->title ?> </br> <?= $paints["IlotMangrove"]->get_size() ?>
-	  </div>
-	</div>
-	<div class="w3-display-container gem-inline gem-background-right gem-le-ficus" 
-	     style="width:400px; height: 500px; ">
-	  <div class="w3-display-middle gem-hover">
-	    <?= $paints["Le Ficus"]->title ?> </br> <?= $paints["Le Ficus"]->get_size() ?>
-	  </div>
-	</div>
+<?= $line_generator->generate_double_line( 500, "IlotMangrove", 485, "LeFicus" ); ?>
       </div>
 
-      <div class="w3-container" >
-	<div class="gem-inline gem-background-left gem-clair-de-soleil "
-	     style="width:600px; height: 450px; ">
-	</div>
-	<div class="gem-inline gem-background-right gem-brisbane-northbank" 
-	     style="width:285px; height: 450px; ">
-	</div>
+      <div class="w3-container">
+<?= $line_generator->generate_double_line( 500, "ClairDeSoleil", 485, "BrisbaneNorthBank" ); ?>
       </div>
-
-    </div>
-    
-    
-    </div>
-      <div class="w3-hide-large w3-hide-medium w3-hide-small ">
-	  <div class="w3-hide-large w3-hide-medium w3-hide-small ">
-	  <div class= "w3-container  w3-padding-16 w3-orange" style="height:400px">
-	    <div class="w3-container w3-red w3-cell-middle w3-cell">
-	      <img  class=""  src="images/<?= $paints["IlotMangrove"]->file ?>" alt="" style="width:100%">
-	    </div>
-	    <div class="w3-container w3-cell w3-green w3-cell-middle">
-	      <img  class="gem-image-fit"  src="images/<?= $paints["Le Ficus"]->file ?>" alt="" style="width:100%">
-	    </div>
-	  </div>
-	  
-	  <div class="w3-container w3-padding-16 w3-orange" style="height:500px">
-	    <div class="w3-container w3-red w3-cell-middle w3-cell">
-	      <img  class="gem-image-fit"  src="images/<?= $paints["ClairDeSoleil"]->file ?>" alt="" style="width:100%">
-	    </div>
-	    <div class="w3-container w3-cell w3-green w3-cell-middle">
-	      <img  class="gem-image-fit"  src="images/<?= $paints["BrisbaneNorthBank"]->file ?>" alt="" style="width:100%">
-	    </div>
-	  </div>
-
-	  <div class="w3-container w3-padding-16 w3-orange">
-	    <div class="w3-container w3-twothird w3-red">
-	      <img class="gem-image-fit" src="images/<?= $paints["MarinaKeithCurran"]->file ?>" alt="" style="width:100%">
-	    </div>
-	    <div class="w3-container w3-third w3-green">
-	      <img class="" src="images/web/expo-seillans-2.png" alt="" style="width:100%">
-	    </div>
-	  </div>
-
-	  <div class="w3-container w3-padding-16 w3-orange">
-	    <div class="w3-container w3-third w3-red">
-	      <img src="images/<?= $paints["Contemplation"]->file ?>" alt="" style="width:100%">
-	    </div>
-	    <div class="w3-container w3-twothird w3-green">
-	      <img src="images/<?= $paints["LaBrague"]->file ?>" alt="" style="width:100%">
-	    </div>
-	  </div>
-	  
-	</div>
-	  
-	</div>
-	  </div>
-	
-	
+      
+      <div class="w3-container">
+<?= $line_generator->generate_double_line( 500, "Contemplation", 485, "LaBrague" ); ?>
       </div>
+      
     </div>
     
     <!-- Footer -->
