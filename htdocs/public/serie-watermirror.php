@@ -17,18 +17,19 @@
   <?php include ('../private/line_generator.php'); ?>
 
 <?php
+// ce dictionnaire servira lorsqu'on voudra parcourir la serie sur la page qui montre les peintures une par une
 $dico_key='watermirror';
-// retrieves the dictionnary to get access to paints
 $dico= $ALL_GALLERIES->paint_dictionnaries[$dico_key];
 
+// ces dictionnaires sont les dictionnaires standard
 $oil= $ALL_GALLERIES->paint_dictionnaries["oil"];
 $pastel= $ALL_GALLERIES->paint_dictionnaries["pastel"];
 $acrylic= $ALL_GALLERIES->paint_dictionnaries["acrylic"];
 $other= $ALL_GALLERIES->paint_dictionnaries["other"];
 
-// Collects all the paints that we want to display.
-// This gives us access to the sizes and the status (sold or not..)
-
+// On recupere toutes les peintures qu'on veut voir dans cette serie
+// On les stocke dans "$paints" et on leur donne un ID qui doit etre sans caractere special.
+// Cet ID servira a les designer le moment venu.
 // Oils
 $paints["ClairDeSoleil"]= $oil->paints["Huile/20230708_ClairDeSoleil_Huile_30P.jpg"];
 $paints["LeTorrent"]= $oil->paints["Huile/20241225_LeTorrent_HU41x33.jpg"];
@@ -84,15 +85,21 @@ $line_generator->paints= $paints;
         font-weight: 900;
     }
 
-    /* background-position tells which part of the image is centered in the box where it is diplayed */
+    /* On doit utiliser un des ID qu'on a defini plus haut */
+    /* Chaque peinture va s'afficher dans une zone definie plus loin */
+    /* Cette zone va "clipper" la peinture */
+    /* La partie visible de la peinture est definie par les deux valeurs */
+    /* Elles definissent quel point de la peinture sera affiche au centre de la zone */
+    /* Par ex: 50, 50 veut dire que le milieu de la peinture (50%, 50%) est au centre de la zone */
+    /* Le dernier parametre est la couleur du texte qui apparait quand la souris se deplace sur l image */
     
     <?php
-     $line_generator->generate_style("IlotMangrove", 50, 50);
-     $line_generator->generate_style("LeFicus", 50, 50);
-     $line_generator->generate_style("Contemplation", 50, 50);
-     $line_generator->generate_style("ClairDeSoleil", 50, 50);
-     $line_generator->generate_style("BrisbaneNorthBank", 50, 50);
-     $line_generator->generate_style("LaBrague", 50, 50);
+  $line_generator->generate_style("IlotMangrove", 50, 50, "white");
+$line_generator->generate_style("LeFicus", 50, 50, "white");
+$line_generator->generate_style("Contemplation", 50, 50, "white");
+$line_generator->generate_style("ClairDeSoleil", 50, 50, "black");
+$line_generator->generate_style("BrisbaneNorthBank", 50, 50, "white");
+$line_generator->generate_style("LaBrague", 50, 50, "white");
     ?>
 
     /* remains centered with fixed width when resizing the browser */

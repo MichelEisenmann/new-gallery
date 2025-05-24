@@ -49,13 +49,10 @@ class LineGenerator {
     $this->print_line( $indent, "</div>" );
   }
   
-  function generate_style( $id, $xpos, $ypos ) {
+  function generate_style( $id, $xpos, $ypos, $color ) {
     $paint= $this->paints[$id];
     $tagname= $this->create_tag_name( $id );
       
-    // hover text color
-    $color= "black";
-    
     echo ".gem-" .$tagname ." {" ."\n";
     echo "    background: url('images/" .$paint->file ."');" ."\n";
     echo "    background-position: " .$xpos ."% " .$ypos ."%;" ."\n";
