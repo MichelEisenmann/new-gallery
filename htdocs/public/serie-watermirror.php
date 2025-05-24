@@ -80,7 +80,8 @@ $line_generator->paints= $paints;
     .gem-inline { display:inline-block; vertical-align: text-top}
 
     .gem-hover {
-    display: none;
+        display: none;
+        font-weight: 900;
     }
 
     /* background-position tells which part of the image is centered in the box where it is diplayed */
@@ -126,18 +127,17 @@ $line_generator->paints= $paints;
       
       <!-- Paintings -->
       <!--   Pick the height you want for the row -->
-      <!--   The sum of the two paint width must be 885px -->
-
+      <!--   The second number is the width for the first paint (out of 885 px) -->
       <div class="w3-container">
-<?= $line_generator->generate_double_line( 500, "IlotMangrove", 485, "LeFicus" ); ?>
+<?= $line_generator->generate_double_line( 400, "IlotMangrove", 485, "LeFicus" ); ?>
       </div>
 
       <div class="w3-container">
-<?= $line_generator->generate_double_line( 500, "ClairDeSoleil", 485, "BrisbaneNorthBank" ); ?>
+<?= $line_generator->generate_double_line( 500, "ClairDeSoleil", 500, "BrisbaneNorthBank" ); ?>
       </div>
       
       <div class="w3-container">
-<?= $line_generator->generate_double_line( 500, "Contemplation", 485, "LaBrague" ); ?>
+<?= $line_generator->generate_double_line( 600, "Contemplation", 485, "LaBrague" ); ?>
       </div>
       
     </div>

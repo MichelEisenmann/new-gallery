@@ -54,7 +54,7 @@ class LineGenerator {
     $tagname= $this->create_tag_name( $id );
       
     // hover text color
-    $color= "white";
+    $color= "black";
     
     echo ".gem-" .$tagname ." {" ."\n";
     echo "    background: url('images/" .$paint->file ."');" ."\n";
@@ -63,7 +63,7 @@ class LineGenerator {
     echo "}" ."\n";
     echo "\n";
     echo ".gem-" .$tagname .":hover {" ."\n";
-    echo "    opacity: 0.2;" ."\n";
+    echo "    opacity: 0.8;" ."\n";
     echo "}" ."\n";
     echo "\n";
     echo ".gem-" .$tagname .":hover > .gem-hover {" ."\n";
