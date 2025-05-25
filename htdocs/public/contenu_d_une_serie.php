@@ -17,11 +17,11 @@ gtag('config', 'G-R9KWX3PWND');
     <?php
 
 // ---- retrieve all the variables coming with the URL
-$dico_key="oil";
-if (array_key_exists("key", $_GET) ) {
-  $dico_key=htmlspecialchars($_GET["key"]);
+$serie_key="watermirror";
+if (array_key_exists("serie", $_GET) ) {
+  $serie_key=htmlspecialchars($_GET["serie"]);
 } 
-$dico= $ALL_GALLERIES->paint_dictionnaries[$dico_key];
+$serie_dico= $ALL_GALLERIES->paint_dictionnaries[$serie_key];
 
 // the rank of current selected paint in our gallery
 // OPTIONAL. If not given, the image variable must be set
@@ -37,7 +37,7 @@ if (array_key_exists("rank", $_GET) ) {
 $file_in_gallery="";
 if (array_key_exists("file", $_GET) ) {
   $file_in_gallery=htmlspecialchars($_GET["file"]);
-  $rank_in_gallery=$dico->get_file_rank($file_in_gallery);
+  $rank_in_gallery=$serie_dico->get_file_rank($file_in_gallery);
  }
 
 // the rank of the first paint shown in the pagination
@@ -51,7 +51,7 @@ if (array_key_exists("pagination", $_GET) ) {
 // Transfer the PHP variables into script global variables
 // Paint information
 
-var dicoKey= "<?= $dico_key ?>";
+var dicoKey= "<?= $serie_key ?>";
 var paintFiles= [];
 var paintTitles= [];
 var paintDescriptions= [];
@@ -59,7 +59,7 @@ var paintStatus= [];
 var paintStatusTranslated= [];
 var gemSignature= "<?= $GEM_SIGNATURE ?>";
 <?php
-foreach( $dico->sortedList as $paint ) {
+foreach( $serie_dico->sortedList as $paint ) {
 ?>
         paintFiles.push( "images/<?= $paint->file ?>" );
         paintTitles.push( "<?= $paint->full_title() ?>" );
@@ -82,7 +82,7 @@ foreach( $dico->sortedList as $paint ) {
 //  pagination_size= 5  (constant)
 
 // total number of paints
-var total_number= <?= count($dico->sortedList) ?>;
+var total_number= <?= count($serie_dico->sortedList) ?>;
 
 // size of pagination
 var pagination_size= 5;
@@ -125,223 +125,26 @@ adjustPaginationValues();
 
     </script>
     
-<title><?= Translator::t($dico->key) ?></title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.top-container {
-	padding-top: 50px;
-}
+  <title><?= Translator::t($dico->key); ?> | Gisele Eisenmann Montagné</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-.description {
-	font-size: 10px; 
-}
+  <style>
+    body {font-family:"Arial,Helvetica", sans-serif}
+    h1,h2,h3,h4,h5,h6 {font-family:sans-serif; letter-spacing:5px}    
 
-.center {
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom: 10px;
-    margin: auto;
-    width: 40%;
-}
-
-.center-pagination {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: auto;
-    width: 60%;
-    //    border: 1px solid;
-}
-
-.center-paint {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: auto;
-    max-width: 600px;
-    max-height: 500px;
-    //    border: 1px solid;
-}
-
-.fitting-image {
-    width: 50px;
-    height: 50px;
-    object-fit: scale-down;
-    border: 1px solid grey;
-}
-
-.hidden-image {
-    display: none;
-}
-
-.visible-image {
-}
-
-.pagination {
-	display: inline-block;
-}
-
-.pagination img.active {
-	color: white;
-	border: 3px solid black;
-}
-
-.pagination img:hover:not(.active) {
-    background-color: #ddd;
-}
-
-#gallery_selector {
-    font-size: 20px;
-}
-
-#central-paint-title {
-    font-size: 20px;
-}
-
-#central-paint-description {
-    font-size: 20px;
-}
-
-#central-paint-img {
-    width: 100%;
-}
-
-.pagination-button {
-    font-size: 20px;
-}
-
-.espace {
-    display: none;
-}
-
-.image-bar {
-    display: none;
-}
-
-/* To display the status on top of the image */
-.status-text-container {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.status-top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    background-color: black;
-    color: white;
-}
-
-
-/* Adjustments for phones */
-@media only screen and (max-device-width: 576px) {
-.espace {
-    display: block;
-    height: 50px;
-}
-
-#pagination-bar {
-    display: none;
-}
-
-.image-bar {
-    display: inline;
-}
-
-.pagination-button {
-    font-size: 15px;
-}
-
-.gallery_selector {
-    display: none;
-}
-
-.pagination {
-	display: none;
-}
-
-#central-paint-title {
-    font-size: 10px;
-}
-
-#central-paint-description {
-    font-size: 10px;
-}
-
+    .gem-name {font-family:"Arial,Helvetica", sans-serif; letter-spacing:6px; color:grey}
+    .gem-menu {font-family:"Arial,Helvetica", sans-serif; color:grey; background-color:white}
+    .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
+    .gem-animate {animation-duration: 3s}
 
 </style>
-  </head>
 
 <body>
-<!-- Navbar (sit on top) -->
-<?php include("navbar.php"); ?>
-
-<!-- ------------------------------------------------------- -->
-<!-- gallery selector -->
-<!-- not shown for special galeries like "all" or "new" -->
-
-<?php
-if ( $dico->shownInSelector == TRUE ) {
-    echo "<div class=\"center gallery_selector\">";
-    echo "   <select id=\"gallery_selector\" onChange=\"gallerySelected();\">";
-foreach ( $ALL_GALLERIES->paint_dictionnaries as $cur_dico ) {
-  // skip empty dictionaries
-  if ( count($cur_dico->paints) == 0 || $cur_dico->shownInSelector == FALSE) {
-    continue;
-  }
-  if ( $cur_dico == $dico ) {
-    echo "<option value=\"" .$cur_dico->key ."\" selected>" .Translator::t($cur_dico->name) ."</option><br>";
-  } else {
-    echo "<option value=\"" .$cur_dico->key ."\">" .Translator::t($cur_dico->name) ."</option><br>";
-  }
-}
-    echo "</select>";
-    echo "</div>";
-} else {
-  // space for the navbar
-  echo "<div class=\"w3-container top-container\">";
-  echo "<h1></h1>";
-  echo "</div>";
-}
-?>
-
-<!-- seulement visible sur les petits ecrans (reserve un peu de hauteur) -->
-<div class="w3-center espace" style="width:100%;margin:auto;">
-</div>
-
-<!-- ------------------------------------------------------- -->
-<!-- pagination with images -->
-
-<div id="pagination-bar"  class="center-pagination">
-  <!-- seulement visible sur les grands ecrans -->
-  <!-- necessaire pour etre centre a l'interieur du div de dessus -->
-  <div class="pagination w3-center" style="width:100%;margin:auto;">
-    <button class="w3-button w3-round pagination-button"
-            onClick="showPrevious();">
-<i class="fa fa-step-backward"></i>
-    </button>
-<?php
-  $i= 0;
-foreach( $dico->sortedList as $paint ) {
-?>
-<img id="paint-<?= $i ?>"
-     class="fitting-image hidden-image"
-     src="images/<?= $paint->getThumbnailFile(); ?>"
-     onClick="selectPaint( <?= $i ?> );" >
-<?php
-$i++;
-}
-?>
-
-<button class="w3-button w3-round pagination-button"
-        onClick="showNext();">
-<i class="fa fa-step-forward"></i>
-</button>
-</div>
-</div>
+    <!-- Header -->
+    <?php include("../public/navbar.php"); ?>
 
 <!-- ------------------------------------------------------- -->
 <!-- the central selected paint -->
@@ -349,7 +152,6 @@ $i++;
 
 <div class="center-paint">
   <div class="w3-container w3-center">
-    
     <div class="w3-card-4" >
 
       <div class="w3-container">
@@ -410,16 +212,6 @@ function toggleFunction() {
     } else {
         x.className = x.className.replace(" w3-show", "");
     }
-}
-
-function gallerySelected() {
-    // retrieve current language
-    const queryString= window.location.search;
-    const params= new URLSearchParams(queryString);
-    var language= params.get('lang');
-    //
-    var x = document.getElementById("gallery_selector").value;
-    location.replace("/public/contenu_d_une_galerie.php?key=" + x + "&lang=" + language);
 }
 
 function showPrevious() {
