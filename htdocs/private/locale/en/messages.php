@@ -1,8 +1,7 @@
 <?php
 return array(
     'Work' => "Work",
-    'News' => "News",
-    'Collect' => "Collect",
+    'Expositions' => "Exhibits",
     'About' => "About",
     'Contact' => "Contact",
 

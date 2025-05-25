@@ -27,8 +27,7 @@ foreach ( $ALL_GALLERIES->paint_dictionnaries as $navdico ) {
 ?>
       </div>
     </div>
-    <a href="<?= Translator::url('/public/news.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('News') ?></a>
-    <a href="<?= Translator::url('/public/collect.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('Collect') ?></a>
+    <a href="<?= Translator::url('/public/expositions.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('Expositions') ?></a>
     <a href="<?= Translator::url('/public/about.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('About') ?></a>
     <a href="<?= Translator::url('/public/contact.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('Contact') ?></a>
   </div>
@@ -57,10 +56,8 @@ foreach ( $ALL_GALLERIES->paint_dictionnaries as $navdico ) {
 ?>
    </div>
   </div>
-  <a href="<?= Translator::url('/public/news.php') ?>"
-     class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('News') ?></a>
-  <a href="<?= Translator::url('/public/collect.php') ?>"
-     class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('Collect') ?></a>
+  <a href="<?= Translator::url('/public/expositions.php') ?>"
+     class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('Expositions') ?></a>
   <a href="<?= Translator::url('/public/about.php') ?>"
      class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('About') ?></a>
   <a href="<?= Translator::url('/public/contact.php') ?>"

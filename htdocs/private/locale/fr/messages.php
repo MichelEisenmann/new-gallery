@@ -2,8 +2,7 @@
 return array(
 
     'Work' => "Work",
-    'News' => "News",
-    'Collect' => "Collect",
+    'Expositions' => "Expositions",
     'About' => "About",
     'Contact' => "Contact",
 
