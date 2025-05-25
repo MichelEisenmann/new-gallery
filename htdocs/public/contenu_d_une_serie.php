@@ -175,7 +175,7 @@ if (array_key_exists("pagination", $_GET) ) {
 	    var language= params.get('lang');
 
 	    var a= document.getElementById("central-paint-href");
-	    a.href="../public/affichage_peinture.php?key=" + dicoKey + "&rank=" + rank_in_gallery + "&lang=" + language;
+//	    a.href="../public/affichage_peinture.php?key=" + dicoKey + "&rank=" + rank_in_gallery + "&lang=" + language;
 	    //        
 	    var b= document.getElementById("central-paint-title");
 	    b.textContent= paintTitles[rank_in_gallery];
