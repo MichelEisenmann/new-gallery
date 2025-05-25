@@ -18,8 +18,8 @@
 
 <?php
 // ce dictionnaire servira lorsqu'on voudra parcourir la serie sur la page qui montre les peintures une par une
-$dico_key='watermirror';
-$dico= $ALL_GALLERIES->paint_dictionnaries[$dico_key];
+$serie_key='watermirror';
+$serie= $ALL_GALLERIES->paint_dictionnaries[$serie_key];
 
 // ces dictionnaires sont les dictionnaires standard
 $oil= $ALL_GALLERIES->paint_dictionnaries["oil"];
@@ -55,7 +55,8 @@ $paints["BrisbaneNorthBank"]= $pastel->paints["Pastels/20240628_BrisbaneNorthBan
 $paints["LaBrague"]= $pastel->paints["Pastels/20220714_LaBrague.jpg"];
 
 $line_generator= new LineGenerator();
-$line_generator->paints= $paints;
+$line_generator->paints= $paints; // may contain paints that are not in serie
+$line_generator->serie_dico= $serie;  // will be used to browse exclusively amongst serie
 ?>
   
 
@@ -74,8 +75,6 @@ $line_generator->paints= $paints;
     .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
     .gem-animate {animation-duration: 3s}
 
-    .gem-image-fit {object-fit: cover; clip-path: inset(5% 5% 5% 5%)}
-    
     .gem-background-left {margin-top: 10px;}
     .gem-background-right {margin-top: 10px; margin-left: 10px;}
     .gem-inline { display:inline-block; vertical-align: text-top}

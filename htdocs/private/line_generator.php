@@ -6,6 +6,9 @@ class LineGenerator {
   
   // dictionnary of all the paints we work with
   public $paints;
+
+  // dictionnary of the serie
+  public $serie_dico;
   
   // height: height of the line
   // dico1: dictionnary containing first paint
@@ -39,14 +42,19 @@ class LineGenerator {
   }
   
   function generate_part( $paint, $tagname, $width, $height, $style, $indent) {
+    $rank= $this->serie_dico->get_file_rank($paint->file);
+    $serie= $this->serie_dico->name;
+    $url= Translator::url('/public/contenu_d_une_serie.php?serie=' .$serie .'&rank=' .$rank);
     
     $ttab= $this->tab;	
+    $this->print_line( $indent, "<a href=\"" .$url ."\">" );
     $this->print_line( $indent, "<div class=\"w3-display-container gem-inline " .$style ." gem-" .$tagname ."\"" );
     $this->print_line( $indent, $ttab .$ttab ."style=\"width:" .$width ."px; height: " .$height ."px;\">" );
     $this->print_line( $indent, $ttab ."<div class=\"w3-display-middle gem-hover\">" );
     $this->print_line( $indent, $ttab .$ttab .$paint->title ." </br> " .$paint->get_size() );
     $this->print_line( $indent, $ttab ."</div>" );
     $this->print_line( $indent, "</div>" );
+    $this->print_line( $indent, "</a>" );
   }
   
   function generate_style( $id, $xpos, $ypos, $color ) {
