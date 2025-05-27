@@ -90,6 +90,7 @@ if (array_key_exists("pagination", $_GET) ) {
       .gem-menu {font-family:"Arial,Helvetica", sans-serif; color:grey; background-color:white}
       .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
       .gem-animate {animation-duration: 3s}
+      .gem-limited { max-width: 885px;}
       
     </style>
     
@@ -97,29 +98,39 @@ if (array_key_exists("pagination", $_GET) ) {
       <!-- Header -->
       <?php include("../public/navbar.php"); ?>
 
-      <!-- ------------------------------------------------------- -->
-      <!-- the central selected paint -->
-      <!-- this will be updated via updateCentralPaint() function -->
+      <!-- Page Content -->
+  
+      <div class="w3-container w3-padding-64 w3-animate-opacity gem-animate">
+        
+        <!-- ------------------------------------------------------- -->
+        <!-- the central selected paint -->
+        <!-- this will be updated via updateCentralPaint() function -->
+        
+        <div class="w3-row">
+          <div class="w3-col s12 w3-center" >
+            <button class="w3-button w3-round "
+                    onClick="showPrevious();">
+	          <i class="fa fa-step-backward"></i>
+            </button>
+            
+            <button class="w3-button w3-round "
+                    onClick="showNext();">
+	          <i class="fa fa-step-forward"></i>
+            </button>
+            
+            <div class="w3-container">
+	          <a id="central-paint-href" href="">
+	                <img id="central-paint-img" class="w3-image gem-limited"/>
+	              </a>
+            </div>
+            
+            <div class="w3-container w3-center">
+	          <span id="central-paint-title"></span>
+	              <span id="central-paint-description"></span>
+            </div>
+          </div>
 
-      <button class="w3-button w3-round "
-              onClick="showPrevious();">
-	<i class="fa fa-step-backward"></i>
-      </button>
-      
-      <button class="w3-button w3-round "
-              onClick="showNext();">
-	<i class="fa fa-step-forward"></i>
-      </button>
-
-      <div class="w3-container center-paint">
-	<a id="central-paint-href" href="">
-	  <img id="central-paint-img" class="w3-image"/>
-	</a>
-      </div>
-      
-      <div class="w3-container">
-	<span id="central-paint-title"></span>
-	<span id="central-paint-description"></span>
+        </div>
       </div>
       
       <!-- ------------------------------------------------------- -->

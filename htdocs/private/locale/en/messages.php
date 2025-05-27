@@ -31,6 +31,11 @@ return array(
     <br>Send an email to contact@giseleeisenmann.com for more information</br>
 	</p>",	
 	
+  
+    'vendu' => 'Sold',
+    'indisponible' => 'Private Coll.',
+
+
     // oldies
 
     'ACCUEIL' => "HOME",
@@ -39,9 +44,6 @@ return array(
     'NOUVEAUTES' => "RECENT WORK",
     'BIOGRAPHIE' => "BIOGRAPHY",
     'CONTACT' => "CONTACT",
-
-    'vendu' => 'Sold',
-    'indisponible' => 'Private Coll.',
 
     'Biographie' => 'Biography',
     'Galeries' => 'Painting galleries',

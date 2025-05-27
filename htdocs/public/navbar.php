@@ -1,3 +1,12 @@
+<?php
+ // add here all the series you want to see in the menu
+ // The ids must match the names that are in the excel file
+ $series[0]= "watermirror";
+ $series[1]= "metamorphose";
+ $series[2]= "momentsfeminins";
+ $series[3]= "origine";
+ ?>
+
 <div class="w3-bar w3-padding-16">
   <a href="<?= Translator::url('/index.php') ?>" class="gem-name w3-bar-item w3-button">GISÈLE EISENMANN MONTAGNÉ</a>
   
@@ -13,18 +22,18 @@
       <a href="<?= Translator::url('/public/work.php') ?>"
 	 class="w3-button gem-menu"><?= Translator::t('Work') ?> <i class="fa fa-caret-down"></i></a>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-<?php
-foreach ( $ALL_GALLERIES->paint_dictionnaries as $navdico ) {
-  // skip empty dictionaries and dictionaries that are not supposed to be shown
-  if ( count($navdico->paints) == 0 || !$navdico->is_by_serie() ) {
-    continue;
-  }
-?>
-         <a href="<?= Translator::url('/public/serie-' .$navdico->key .'.php') ?>"
-            class="w3-bar-item w3-button gem-menu"><?= Translator::t($navdico->key); ?></a>
-<?php
-}
-?>
+
+	<?php
+	 foreach ( $series as $serie ) {
+	 ?>
+
+        <a href="<?= Translator::url('/public/serie-' .$serie .'.php') ?>"
+           class="w3-bar-item w3-button gem-menu"><?= Translator::t($serie); ?></a>
+
+	 <?php
+	  }
+
+	  ?>
       </div>
     </div>
     <a href="<?= Translator::url('/public/expositions.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('Expositions') ?></a>
@@ -40,20 +49,18 @@ foreach ( $ALL_GALLERIES->paint_dictionnaries as $navdico ) {
     <a href="<?= Translator::url('/public/work.php') ?>"
        class="w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('Work') ?> <i class="fa fa-caret-right"></i></a>
     <div class="w3-dropdown-content" style="right:0">
-<?php
-foreach ( $ALL_GALLERIES->paint_dictionnaries as $navdico ) {
-  // skip empty dictionaries and dictionaries that are not supposed to be shown
-  if ( count($navdico->paints) == 0 || !$navdico->is_by_serie() ) {
-    continue;
-  }
-?>
 
-      <a href="<?= Translator::url('/public/serie-' .$navdico->key .'.php') ?>"
-         class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t($navdico->key); ?></a>
+	<?php
+	 foreach ( $series as $serie ) {
+	 ?>
 
-<?php
-}
-?>
+      <a href="<?= Translator::url('/public/serie-' .$serie .'.php') ?>"
+         class="w3-bar-item w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t($serie); ?></a>
+
+      <?php
+       }
+       ?>
+
    </div>
   </div>
   <a href="<?= Translator::url('/public/expositions.php') ?>"
