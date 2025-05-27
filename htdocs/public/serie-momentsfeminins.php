@@ -60,7 +60,7 @@ $line_generator->serie_dico= $serie;  // will be used to browse exclusively amon
 
   
 
-  <title><?= Translator::t($serie_key); ?> | Gisele Eisenmann Montagné</title>
+  <title><?= Translator::t($serie_key); ?> | Gisèle Eisenmann Montagné</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">

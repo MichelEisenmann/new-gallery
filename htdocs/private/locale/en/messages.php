@@ -3,6 +3,7 @@ return array(
     'Work' => "Work",
     'Expositions' => "Exhibitions",
     'About' => "About",
+	'Biography' => "Biography",
     'Contact' => "Contact",
 
     // Series
@@ -36,6 +37,9 @@ return array(
     'vendu' => 'Sold',
     'indisponible' => 'Private Coll.',
 
+    // noms tableaux
+	'AirMarinTitre' => 'Sea Air',
+	'ParisQuaiSeineTitre' => 'Paris Seine quay',
 
     // oldies
 

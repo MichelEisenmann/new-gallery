@@ -15,7 +15,7 @@
   <?php include ('../private/initialize_translator.php'); ?>
   <?php include ('../private/initialize_galleries.php'); ?>
 
-  <title><?= Translator::t("Expositions"); ?></title>
+  <title><?= Translator::t("Biography"); ?></title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
@@ -69,25 +69,30 @@
       <div class="w3-content w3-container " id="grid_theme">
         <main class="grid">
 	  <div>
-            <a href="<?= Translator::url('/public/acces_aux_galeries.php') ?>">
-              <img class="artiste to-be-signed" src="../public/images/web/gisele.jpg" alt="Artist's photo" />
-	    </a>
-	  </div>
-          
+	     <a href="<?= Translator::url('/index.php') ?>">
+		 <img class="artiste to-be-signed" src="../public/images/web/gisele.jpg" alt="Artist's photo" /></a>
+   	  </div>
+      
+	  
 	  <div></div>
 	  <div>
-	    <a href="<?= Translator::url('../public/contenu_d_une_galerie.php?key=oil&file=Huile/20230708_ClairDeSoleil_Huile_30P.jpg') ?>">
+<!--	    <a href="<?= Translator::url('../public/contenu_d_une_galerie.php?key=oil&file=Huile/20230708_ClairDeSoleil_Huile_30P.jpg') ?>">
               <img class="australie_theme to-be-signed" src="../public/images/Huile/20230708_ClairDeSoleil_Huile_30P_small.jpg" alt="Australie" />
 	    </a>
+-->
 	  </div>
           
-	  <div><a href="<?= Translator::url('../public/contenu_d_une_galerie.php?key=acrylic&file=Acrylique/20230530_Contemplation_A100x73.jpg') ?>">
+	  <div>
+<!--
+      <a href="<?= Translator::url('../public/contenu_d_une_galerie.php?key=acrylic&file=Acrylique/20230530_Contemplation_A100x73.jpg') ?>">
               <img class="paysage_theme to-be-signed" src="../public/images/Acrylique/20230530_Contemplation_A100x73_small.jpg" alt="Paysage" />
 	    </a>
+-->
 	  </div>
 	</main>
       </div>
     </div>
+
     
     <!-- common part -->
     <div class="w3-content w3-container" id="">

@@ -43,7 +43,7 @@
 	
         <div class="w3-row">
           <div class="w3-col s12 w3-center" >
-	    <img class="" src="/public/images/Huile/20250314_AirMarin_HU50x50_small.jpg" alt="<?= Translator::t('AirMarin') ?>" />
+	    <img class="" src="/public/images/Huile/20250314_AirMarin_HU50x50_small.jpg" alt="<?= Translator::t('AirMarinTitre') ?>" />
 	    <div class="">
               <a href="<?= Translator::url('/public/serie-momentsfeminins.php') ?>" class="gem-link"><?= Translator::t("momentsfeminins"); ?></a>
 	    </div>
@@ -51,7 +51,7 @@
 	</div>
 	<div class="w3-row">
           <div class="w3-col s12 w3-center" >
-	    <img class="" src="/public/images/Huile/20250314_AirMarin_HU50x50_small.jpg" alt="<?= Translator::t('AirMarin') ?>" />
+	    <img class="" src="/public/images/Acrylique/20220312_ParisQuaiDeSeine_AC40x80_small.jpg" alt="<?= Translator::t('ParisQuaiSeineTitre') ?>" />
 	    <div class="">
 	      <a href="<?= Translator::url('/public/serie-watermirror.php') ?>" class="gem-link"><?= Translator::t("watermirror"); ?></a>
 	    </div>
