@@ -120,7 +120,7 @@ class Paint {
 
     // return a label that shows the dimensions
     function get_size() {
-        return $this->width ."x" .$this->height ." cm";
+        return $this->height ."x" .$this->width ." cm";
     }
 
     // return a protected description
