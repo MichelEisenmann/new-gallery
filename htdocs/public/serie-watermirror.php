@@ -71,6 +71,7 @@ $line_generator->serie_dico= $serie;  // will be used to browse exclusively amon
 
     .gem-background-left {margin-top: 10px;}
     .gem-background-right {margin-top: 10px; margin-left: 10px;}
+    .gem-background-single {margin-top: 10px;}
     .gem-inline { display:inline-block; vertical-align: text-top}
 
     .gem-hover {

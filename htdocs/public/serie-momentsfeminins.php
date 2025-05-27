@@ -77,6 +77,7 @@ $line_generator->serie_dico= $serie;  // will be used to browse exclusively amon
 
     .gem-background-left {margin-top: 10px;}
     .gem-background-right {margin-top: 10px; margin-left: 10px;}
+    .gem-background-single {margin-top: 10px;}
     .gem-inline { display:inline-block; vertical-align: text-top}
 
     .gem-hover {
@@ -152,10 +153,9 @@ $line_generator->generate_style("JeuDeRegards", 50, 50, "white");
 <?= $line_generator->generate_double_line( 500, "ClairDeSoleil", 500, "LeTorrent" ); ?>
       </div>
 
-	 <div class="w3-container w3-center">
-	 <img src="/public/images/Huile/20240204_Baigneurs_HU50x100.jpg" alt="" style="width:100%">
+	 <div class="w3-container">
+<?= $line_generator->generate_single_line( 500, "LesDanseuses" ); ?>
       </div>
-	 
       
       <div class="w3-container">
 <?= $line_generator->generate_double_line( 600, "Contemplation", 500, "LaPiscine" ); ?>
