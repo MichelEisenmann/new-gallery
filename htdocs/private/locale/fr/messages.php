@@ -18,13 +18,23 @@ return array(
 	Moments Féminins est un hommage à la beauté des femmes dans leur existence au quotidien, de la rêverie 
 	à la surveillance des enfants à la plage, de la danse à l'enfance espiègle, 
 	du clin d'oeil de connivence entre amies à l'amour maternel.</p>
-    <p>L'xposition qui présente aussi quelques dernières oeuvres se tiendra du 30 Mai au 12 Juin 2025. 
+    <p>L'exposition qui présente aussi quelques dernières oeuvres se tiendra du 30 Mai au 12 Juin 2025. 
 	Les tableaux sont disponibles à l'achat.
+	<br>Envoyez un email à contact@giseleeisenmann.com pour plus d'information</br>
+	</p>",	
+	
+	'IntroWaterMirror' => "
+	<h1>Mirroir d'eau</h1><p>
+    Mirroir d'eau explore comment l'eau et la lumière transforment les paysages, créant des jeux de reflets et d'ombres. 
+	Les oeuvres capturent souvent des moments paisibles dans la nature que j'ai reproduits à partir de mes photos. Comme un
+	clin d'oeil facétieux, j'ajoute parfois une touche surréaliste pour enrichir la vue. 
+    <br>L'exposition est terminée mais quelques tableaux sont encore disponibles à l'achat. </br>	
 	<br>Envoyez un email à contact@giseleeisenmann.com pour plus d'information</br>
 	</p>",	
 	
     'vendu' => 'Vendu',
     'indisponible' => 'Collection privée',
+
 
     // oldies -----------------------------
 

@@ -58,7 +58,7 @@ $line_generator->serie_dico= $serie;  // will be used to browse exclusively amon
 ?>
   
 
-  <title><?= Translator::t($dico->key); ?> | Gisele Eisenmann Montagné</title>
+  <title><?= Translator::t($serie_key); ?> | Gisele Eisenmann Montagné</title>
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
@@ -126,12 +126,7 @@ $line_generator->generate_style("BordDeSiagne", 50, 50, "white");
       
       <!-- Text Part -->
       <div class="w3-container w3-left-align">
-        <h1>Water Mirror</h1>
-	
-        <p>Laius about water mirror</p>
-        <p>Some text.. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laius aabout water mirror</p>
-        <p>Some text.. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laius aabout water mirror</p>
-        <p>Laius about water mirror</p>
+       <?= Translator::t("IntroWaterMirror"); ?>
       </div>
       
       <!-- Galerie/Exposition photo -->
