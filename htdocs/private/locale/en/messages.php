@@ -21,7 +21,16 @@ return array(
 	 The paintings are available for purchase.
 	  <br>Send an email to contact@giseleeisenmann.com for more information</br>
 	  </p>',
-  
+ 
+	'IntroWaterMirror' => "
+	<h1>Water Mirror</h1><p>
+    Water Mirror explores how water and light transform landscapes, creating plays of reflections and shadows. 
+	The works often capture peaceful moments in nature that I have reproduced from my photos. Like a mischievous wink, I sometimes 
+	add a surreal touch to enrich the view. 
+	<br>The exhibition is closed but some paintings are still available for purchase.</br>
+    <br>Send an email to contact@giseleeisenmann.com for more information</br>
+	</p>",	
+	
     // oldies
 
     'ACCUEIL' => "HOME",
