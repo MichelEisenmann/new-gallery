@@ -71,7 +71,10 @@ class LineGenerator {
     $this->print_line( $indent, "<div class=\"w3-display-container gem-inline " .$style ." gem-" .$tagname ."\"" );
     $this->print_line( $indent, $ttab .$ttab ."style=\"width:" .$width ."px; height: " .$height ."px;\">" );
     $this->print_line( $indent, $ttab ."<div class=\"w3-display-middle gem-hover\">" );
-    $this->print_line( $indent, $ttab .$ttab .$paint->title ." </br> " .$paint->get_size() );
+    $this->print_line( $indent, $ttab .$ttab .$paint->title ." </br> " .$paint->get_size() ." </br> ");
+    if ( strlen($paint->get_status() ) != 0 ) {
+      $this->print_line( $indent, $ttab .$ttab .Translator::t($paint->get_status()) ." </br> " );
+    }
     $this->print_line( $indent, $ttab ."</div>" );
     $this->print_line( $indent, "</div>" );
     $this->print_line( $indent, "</a>" );
