@@ -11,9 +11,8 @@ class LineGenerator {
   public $serie_dico;
   
   // height: height of the line
-  // dico1: dictionnary containing first paint
-  // paintfile1: full name of the first paint file ("Huile/20230809_IlotMangrove_40x80.jpg")
   // width1: width of the first paint on the line (other width will be automatically computed
+  // id1, id2: ids in the $paints ditionnary
   
   function generate_double_line( $height, $id1, $width1, $id2 ) {
     $paint1= $this->paints[$id1];
@@ -39,6 +38,27 @@ class LineGenerator {
     $this->generate_part($paint1, $tagname1, $width1, $height, "gem-background-left", $indent);
     $width2= $available_width - $width1;
     $this->generate_part($paint2, $tagname2, $width2, $height, "gem-background-right", $indent);
+  }
+  
+  // height: height of the line
+  // id1: id in the $paints ditionnary
+  
+  function generate_single_line( $height, $id1 ) {
+    $paint1= $this->paints[$id1];
+    
+    // errors
+    if ( $paint1 == null ) {
+      echo "Cannot find " .$id1 ." in dictionnary";
+      return;
+    }
+    
+    // no whitespace, no uppercase
+    $tagname1= $this->create_tag_name( $id1 );
+    
+    // larger for single
+    $available_width= 900;
+    $indent= "\t";
+    $this->generate_part($paint1, $tagname1, $available_width, $height, "gem-background-single", $indent);
   }
   
   function generate_part( $paint, $tagname, $width, $height, $style, $indent) {
