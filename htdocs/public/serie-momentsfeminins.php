@@ -163,7 +163,9 @@ $line_generator->generate_style("JeuDeRegards", 50, 50, "white");
 <?= $line_generator->generate_double_line( 600, "Contemplation", 500, "LaPiscine" ); ?>
     </div>
 	  
-
+	  <div class="w3-container">
+<?= $line_generator->generate_double_line( 285, "SakuraNenuphars", 400, "JeuxDeRegards" ); ?>
+      </div>
 
 	  <div class="w3-container">
 <?= $line_generator->generate_double_line( 285, "SanguinePascaleGui", 400, "Aigrette" ); ?>
