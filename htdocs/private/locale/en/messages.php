@@ -12,8 +12,9 @@ return array(
     'metamorphose' => 'Metamorphose',
 	'origine' => 'Origin',
 
-    'IntroMomentsFem' => '<p>
-     Feminine Moments is a tribute to the beauty of women in their daily existence, from daydreaming 
+    'IntroMomentsFem' => '
+     <h1>Feminine Moments</h1>
+	 <p>Feminine Moments is a tribute to the beauty of women in their daily existence, from daydreaming 
 	 supervising children at the beach, from dancing to mischievous childhood, 
 	 from the wink of connivance between friends to maternal love.</p>
      <p>The exhibition, which also presents some of the latest works, will be held from May 30 to June 12, 2025. 

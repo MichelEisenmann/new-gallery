@@ -13,7 +13,8 @@ return array(
     'metamorphose' => 'Métamorphose',
 	'origine' => 'Origine',
 
-    'IntroMomentsFem' => "<p>
+    'IntroMomentsFem' => "
+	<h1>Moments Féminins</h1><p>
 	Moments Féminins est un hommage à la beauté des femmes dans leur existence au quotidien, de la rêverie 
 	à la surveillance des enfants à la plage, de la danse à l'enfance espiègle, 
 	du clin d'oeil de connivence entre amies à l'amour maternel.</p>

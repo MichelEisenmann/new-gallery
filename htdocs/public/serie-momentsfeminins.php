@@ -128,7 +128,7 @@ $line_generator->generate_style("JeuDeRegards", 50, 50, "white");
       
       <!-- Text Part -->
       <div class="w3-container w3-left-align">
-        <h1><?= Translator::t("IntroMomentsFem"); ?></h1>
+        <?= Translator::t("IntroMomentsFem"); ?>
 	
         
         </div>
