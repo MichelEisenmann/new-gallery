@@ -39,10 +39,10 @@
       <!-- Page Content -->
       <div class="w3-row w3-padding-64  w3-animate-opacity">
 	<div class="w3-col s6 w3-center w3-container">
-	  <img src="/public/images/web/expo1.png" alt="" style="width:100%">
+	  <img src="/public/images/web/Accueil_GalerieVirtuelle-Contemplation.png" alt="" style="width:100%">
 	</div>
 	<div class="w3-col s6 w3-center w3-container">
-	  <img src="/public/images/web/expo2.png" alt="" style="width:100%" >
+	  <img src="/public/images/web/Accueil_GalerieVirtuelle_Mangrove.png" alt="" style="width:100%" >
 	</div>
       </div>
       

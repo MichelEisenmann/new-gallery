@@ -31,22 +31,22 @@ $other= $ALL_GALLERIES->paint_dictionnaries["other"];
 // On les stocke dans "$paints" et on leur donne un ID qui doit etre sans caractere special.
 // Cet ID servira a les designer le moment venu.
 // Oils
+$paints["LesDanseuses"]= $oil->paints["Huile/20230216_LesDanseuses_Huile.jpg"];
+$paints["ClairDeSoleil"]= $oil->paints["Huile/20230708_ClairDeSoleil_Huile_30P.jpg"];
+$paints["TheRiverBankVlaminck"]= $oil->paints["Huile/20230921_TheRiverBank_Vlaminck_38x46.jpg"];
+$paints["BaigneursRiviere"]= $oil->paints["Huile/20240204_Baigneurs_Huile_50x100.jpg"];
+$paints["SakuraNenuphars"]= $oil->paints["Huile/20240613_Sakura-nenuphars_HU54x73.jpg"];
+$paints["BrumesDuSoir"]= $oil->paints["Huile/20240728_Brume_HU73x54.jpg"];
+$paints["LeTorrent"]= $oil->paints["Huile/20241225_LeTorrent_HU41x33.jpg"];
 $paints["AirMarin"]= $oil->paints["Huile/20250314_AirMarin_HU50x50.jpg"];
 $paints["PortraitPascale"]= $oil->paints["Huile/20250319_PortraitPascale_HU50x50.jpg"];
-$paints["ClairDeSoleil"]= $oil->paints["Huile/20230708_ClairDeSoleil_Huile_30P.jpg"];
-$paints["LeTorrent"]= $oil->paints["Huile/20241225_LeTorrent_HU41x33.jpg"];
-$paints["TerranoraCreek-Sunset-Egret"]= $oil->paints["Huile/20220601_Terranora creek-Sunset-Egret-Huile.jpg"];
-$paints["LesDanseuses"]= $oil->paints["Huile/20230216_LesDanseuses_Huile.jpg"];
-$paints["TheRiverBankVlaminck"]= $oil->paints["Huile/20230921_TheRiverBank_Vlaminck_38x46.jpg"];
 
 // Acrylics
-$paints["SunsetonTerranoraCreek"]= $acrylic->paints["Acrylique/20221103_Sunset on Terranora Creek-Acrylic 50x76.jpg"];
-$paints["TerranoraCreek"]= $acrylic->paints["Acrylique/20221210_TerranoraCreek_Acrylique-53x70.jpg"];
-$paints["LaMangroveSulfurCockatoo"]= $acrylic->paints["Acrylique/20230504_La-Mangrove-SulfurCockatoo_Acryl-53x71.jpg"];
-$paints["Contemplation"]= $acrylic->paints["Acrylique/20230530_Contemplation_A100x73.jpg"];
-$paints["LaVague"]= $acrylic->paints["Acrylique/20230629_La-Vague_AcF6_33x41.jpg"];
 $paints["JeuDeRegards"]= $acrylic->paints["Acrylique/20220821_Regards.jpg"];
+$paints["Contemplation"]= $acrylic->paints["Acrylique/20230530_Contemplation_A100x73.jpg"];
 $paints["Aigrette"]= $acrylic->paints["Acrylique/20240822_Aigrette_AC50x76.jpg"];
+$paints["PelicanSeul"]= $acrylic->paints["Acrylique/20240915_Pelican_AC55x38.jpg"];
+$paints["LaLectrice"]= $acrylic->paints["Acrylique/20250421_Lectrice_AC50x50.jpg"];
 $paints["LaPiscine"]= $acrylic->paints["Acrylique/20250504_La piscine-AC50x50.jpg"];
 
 // Autres
@@ -96,19 +96,19 @@ $line_generator->serie_dico= $serie;  // will be used to browse exclusively amon
     <?php
 $line_generator->generate_style("AirMarin", 50, 50, "white");
 $line_generator->generate_style("PortraitPascale", 50, 50, "white");
-$line_generator->generate_style("LaMangroveSulfurCockatoo", 50, 50, "white");
+$line_generator->generate_style("PelicanSeul", 50, 50, "white");
 $line_generator->generate_style("ClairDeSoleil", 50, 50, "white");
+$line_generator->generate_style("BaigneursRiviere", 0, 100, "white");
 $line_generator->generate_style("Contemplation", 50, 50, "black");
 $line_generator->generate_style("LeTorrent", 0, 50, "black");
 $line_generator->generate_style("TheRiverBankVlaminck", 50, 50, "white");
-$line_generator->generate_style("TerranoraCreek-Sunset-Egret", 50, 50, "white");
 $line_generator->generate_style("LesDanseuses", 50, 50, "white");
 $line_generator->generate_style("SunsetonTerranoraCreek", 50, 50, "white");
-$line_generator->generate_style("TerranoraCreek", 50, 50, "white");
-$line_generator->generate_style("LaVague", 50, 50, "white");
+$line_generator->generate_style("BrumesDuSoir", 50, 50, "white");
 $line_generator->generate_style("LaPiscine", 50, 50, "white");
 $line_generator->generate_style("Aigrette", 50, 50, "white");
 $line_generator->generate_style("SanguinePascaleGui", 50, 50, "white");
+$line_generator->generate_style("SakuraNenuphars", 50, 50, "white");
 $line_generator->generate_style("JeuDeRegards", 50, 50, "white");
     ?>
 
@@ -128,13 +128,10 @@ $line_generator->generate_style("JeuDeRegards", 50, 50, "white");
       
       <!-- Text Part -->
       <div class="w3-container w3-left-align">
-        <h1><?= Translator::t("Moments Féminins"); ?></h1>
+        <h1><?= Translator::t("IntroMomentsFem"); ?></h1>
 	
-        <p>Laius about water mirror</p>
-        <p>Some text.. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laius aabout water mirror</p>
-        <p>Some text.. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Laius aabout water mirror</p>
-        <p>Laius about water mirror</p>
-      </div>
+        
+        </div>
       
       <!-- Galerie/Exposition photo -->
 <!--      <div class="w3-container w3-center">
@@ -146,26 +143,40 @@ $line_generator->generate_style("JeuDeRegards", 50, 50, "white");
       <!--   Pick the height you want for the row -->
       <!--   The second number is the width for the first paint (out of 885 px) -->
       <div class="w3-container">
-<?= $line_generator->generate_double_line( 400, "AirMarin", 485, "PortraitPascale" ); ?>
-      </div>
-
-      <div class="w3-container">
-<?= $line_generator->generate_double_line( 500, "ClairDeSoleil", 500, "LeTorrent" ); ?>
+<?= $line_generator->generate_double_line( 500, "AirMarin", 485, "PortraitPascale" ); ?>
       </div>
 
 	 <div class="w3-container">
-<?= $line_generator->generate_single_line( 500, "LesDanseuses" ); ?>
+<?= $line_generator->generate_single_line( 400, "BaigneursRiviere" ); ?>
       </div>
-      
+
       <div class="w3-container">
+<?= $line_generator->generate_double_line( 500, "ClairDeSoleil", 500, "PelicanSeul" ); ?>
+      </div>
+      <div class="w3-container">
+<?= $line_generator->generate_double_line( 500, "LeTorrent", 500, "TheRiverBankVlaminck" ); ?>
+      </div>	  
+
+	 <div class="w3-container">
+<?= $line_generator->generate_single_line( 400, "LesDanseuses" ); ?>
+      </div>
+ 
+    <div class="w3-container">
 <?= $line_generator->generate_double_line( 600, "Contemplation", 500, "LaPiscine" ); ?>
-      </div>
-	  
-	  <div class="w3-container">
-<?= $line_generator->generate_double_line( 285, "SanguinePascaleGui", 400, "TheRiverBankVlaminck" ); ?>
-      </div>
-      
     </div>
+	  
+
+
+	  <div class="w3-container">
+<?= $line_generator->generate_double_line( 285, "SanguinePascaleGui", 400, "Aigrette" ); ?>
+      </div>
+
+      
+ 
+	  
+
+      
+ 
     
     <!-- Footer -->
     <?php include("../public/copyright.php"); ?>

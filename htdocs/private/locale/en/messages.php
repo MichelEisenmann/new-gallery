@@ -12,6 +12,15 @@ return array(
     'metamorphose' => 'Metamorphose',
 	'origine' => 'Origin',
 
+    'IntroMomentsFem' => '<p>
+     Feminine Moments is a tribute to the beauty of women in their daily existence, from daydreaming 
+	 supervising children at the beach, from dancing to mischievous childhood, 
+	 from the wink of connivance between friends to maternal love.</p>
+     <p>The exhibition, which also presents some of the latest works, will be held from May 30 to June 12, 2025. 
+	 The paintings are available for purchase.
+	  <br>Send an email to contact@giseleeisenmann.com for more information</br>
+	  </p>',
+  
     // oldies
 
     'ACCUEIL' => "HOME",

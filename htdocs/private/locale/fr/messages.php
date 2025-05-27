@@ -9,10 +9,19 @@ return array(
     // Series
     'Serie' => 'Série',
     'momentsfeminins' => 'Moments Féminins',
-    'watermirror' => 'Miroir d eau',
+    'watermirror' => 'Miroir d\'eau',
     'metamorphose' => 'Métamorphose',
 	'origine' => 'Origine',
 
+    'IntroMomentsFem' => "<p>
+	Moments Féminins est un hommage à la beauté des femmes dans leur existence au quotidien, de la rêverie 
+	à la surveillance des enfants à la plage, de la danse à l'enfance espiègle, 
+	du clin d'oeil de connivence entre amies à l'amour maternel.</p>
+    <p>L'xposition qui présente aussi quelques dernières oeuvres se tiendra du 30 Mai au 12 Juin 2025. 
+	Les tableaux sont disponibles à l'achat.
+	<br>Envoyez un email à contact@giseleeisenmann.com pour plus d'information</br>
+	</p>",	
+	
     // oldies -----------------------------
 
     'ACCUEIL' => "ACCUEIL",
