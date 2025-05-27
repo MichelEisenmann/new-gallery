@@ -42,7 +42,7 @@ $paints["AirMarin"]= $oil->paints["Huile/20250314_AirMarin_HU50x50.jpg"];
 $paints["PortraitPascale"]= $oil->paints["Huile/20250319_PortraitPascale_HU50x50.jpg"];
 
 // Acrylics
-$paints["JeuDeRegards"]= $acrylic->paints["Acrylique/20220821_Regards.jpg"];
+$paints["JeuxDeRegards"]= $acrylic->paints["Acrylique/20220821_Regards.jpg"];
 $paints["Contemplation"]= $acrylic->paints["Acrylique/20230530_Contemplation_A100x73.jpg"];
 $paints["Aigrette"]= $acrylic->paints["Acrylique/20240822_Aigrette_AC50x76.jpg"];
 $paints["PelicanSeul"]= $acrylic->paints["Acrylique/20240915_Pelican_AC55x38.jpg"];
@@ -109,7 +109,7 @@ $line_generator->generate_style("LaPiscine", 50, 50, "white");
 $line_generator->generate_style("Aigrette", 50, 50, "white");
 $line_generator->generate_style("SanguinePascaleGui", 50, 50, "white");
 $line_generator->generate_style("SakuraNenuphars", 50, 50, "white");
-$line_generator->generate_style("JeuDeRegards", 50, 50, "white");
+$line_generator->generate_style("JeuxDeRegards", 50, 50, "white");
     ?>
 
     /* remains centered with fixed width when resizing the browser */
