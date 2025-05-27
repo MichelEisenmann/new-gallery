@@ -41,28 +41,23 @@
   
       <div class="w3-container w3-padding-64 w3-animate-opacity gem-animate">
 
-	<?php
-	 foreach ( $ALL_GALLERIES->paint_dictionnaries as $dico ) {
-	  // skip empty dictionaries and dictionaries that are not supposed to be shown
-        if ( count($dico->paints) == 0 || ! $dico->is_by_serie()) {
-	    continue;
-	  }
-
-          $latest= $dico->sortedList[0];
-	?>
-
+<!-- to be duplicated in navbar.php ---->
 	<div class="w3-row">
           <div class="w3-col s12 w3-center" >
-	    <img class="" src="images/<?= $latest->getThumbnailFile(); ?>" alt="">
-	    <div class="">
-              <a href="<?= Translator::url('/public/serie-' .$dico->key .'.php') ?>" class="gem-link"><?= Translator::t($dico->key); ?></a>
+		  <img class="" src="/public/images/Huile/20250314_AirMarin_HU50x50_small.jpg" alt="<?= Translator::t('AirMarin') ?>" >
+	      <div class="">
+              <a href="<?= Translator::url('/public/serie-momentsfeminins.php') ?>" class="gem-link"><?= Translator::t("momentsfeminins"); ?></a>
 	    </div>
-	  </div>
-	</div>
+	<div class="w3-row">
+          <div class="w3-col s12 w3-center" >
+		  <img class="" src="/public/images/Huile/20250314_AirMarin_HU50x50_small.jpg" alt="<?= Translator::t('AirMarin') ?>" >
+	      <div class="">
+              <a href="<?= Translator::url('/public/serie-watermirror.php') ?>" class="gem-link"><?= Translator::t("watermirror"); ?></a>
+	    </div>
+		
 
-	<?php
-	 }
-	 ?>
+
+	 	
       </div>      
       
       <!-- Footer -->
