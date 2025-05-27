@@ -1,15 +1,16 @@
 <?php
 return array(
     'Work' => "Work",
-    'Expositions' => "Exhibits",
+    'Expositions' => "Exhibitions",
     'About' => "About",
     'Contact' => "Contact",
 
     // Series
     'Serie' => 'Serie',
-    'alohaspirit' => 'Aloha Spirit',
+    'momentsfeminins' => 'Feminine Moments',
     'watermirror' => 'Water Mirror',
     'metamorphose' => 'Metamorphose',
+	'origine' => 'Origin',
 
     // oldies
 
@@ -17,13 +18,13 @@ return array(
     'GALERIE' => "GALLERY",
 	'EXPOSITIONS' => "EXHIBITIONS",
     'NOUVEAUTES' => "RECENT WORK",
-    'BIBLIOGRAPHIE' => "BIBLIOGRAPHY",
+    'BIOGRAPHIE' => "BIOGRAPHY",
     'CONTACT' => "CONTACT",
 
     'vendu' => 'Sold',
     'indisponible' => 'Private Coll.',
 
-    'Bibliographie' => 'Bibliography',
+    'Biographie' => 'Biography',
     'Galeries' => 'Painting galleries',
     'Expositions' => 'Exhibitions',
 
