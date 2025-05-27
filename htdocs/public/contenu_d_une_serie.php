@@ -90,7 +90,6 @@ if (array_key_exists("pagination", $_GET) ) {
       .gem-menu {font-family:"Arial,Helvetica", sans-serif; color:grey; background-color:white}
       .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
       .gem-animate {animation-duration: 3s}
-      .gem-limited { max-width: 885px;}
       
     </style>
     
@@ -100,7 +99,7 @@ if (array_key_exists("pagination", $_GET) ) {
 
       <!-- Page Content -->
   
-      <div class="w3-container w3-padding-64 w3-animate-opacity gem-animate">
+      <div class="w3-container w3-animate-opacity gem-animate">
         
         <!-- ------------------------------------------------------- -->
         <!-- the central selected paint -->
@@ -119,8 +118,9 @@ if (array_key_exists("pagination", $_GET) ) {
             </button>
             
             <div class="w3-container">
-	          <a id="central-paint-href" href="">
-	                <img id="central-paint-img" class="w3-image gem-limited"/>
+	          <a id="central-paint-href" >
+	                <img id="central-paint-img" class="w3-image"
+                             style= "max-height: 700px"/>
 	              </a>
             </div>
             

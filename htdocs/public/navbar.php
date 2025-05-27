@@ -48,7 +48,7 @@
   <div class="w3-dropdown-hover">
     <a href="<?= Translator::url('/public/work.php') ?>"
        class="w3-button gem-menu" onclick="toggleFunction()"><?= Translator::t('Work') ?> <i class="fa fa-caret-right"></i></a>
-    <div class="w3-dropdown-content" style="right:0">
+    <div class="w3-dropdown-content w3-bar-block w3-card-4" style="right:0">
 
 	<?php
 	 foreach ( $series as $serie ) {
