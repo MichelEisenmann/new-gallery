@@ -40,24 +40,23 @@
       <!-- Page Content -->
   
       <div class="w3-container w3-padding-64 w3-animate-opacity gem-animate">
-
-<!-- to be duplicated in navbar.php ---->
-	<div class="w3-row">
+	
+        <div class="w3-row">
           <div class="w3-col s12 w3-center" >
-		  <img class="" src="/public/images/Huile/20250314_AirMarin_HU50x50_small.jpg" alt="<?= Translator::t('AirMarin') ?>" >
-	      <div class="">
+	    <img class="" src="/public/images/Huile/20250314_AirMarin_HU50x50_small.jpg" alt="<?= Translator::t('AirMarin') ?>" />
+	    <div class="">
               <a href="<?= Translator::url('/public/serie-momentsfeminins.php') ?>" class="gem-link"><?= Translator::t("momentsfeminins"); ?></a>
 	    </div>
+	  </div>
+	</div>
 	<div class="w3-row">
           <div class="w3-col s12 w3-center" >
-		  <img class="" src="/public/images/Huile/20250314_AirMarin_HU50x50_small.jpg" alt="<?= Translator::t('AirMarin') ?>" >
-	      <div class="">
-              <a href="<?= Translator::url('/public/serie-watermirror.php') ?>" class="gem-link"><?= Translator::t("watermirror"); ?></a>
+	    <img class="" src="/public/images/Huile/20250314_AirMarin_HU50x50_small.jpg" alt="<?= Translator::t('AirMarin') ?>" />
+	    <div class="">
+	      <a href="<?= Translator::url('/public/serie-watermirror.php') ?>" class="gem-link"><?= Translator::t("watermirror"); ?></a>
 	    </div>
-		
-
-
-	 	
+	  </div>
+	</div>	    
       </div>      
       
       <!-- Footer -->
