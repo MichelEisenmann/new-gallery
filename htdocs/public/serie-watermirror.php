@@ -107,7 +107,7 @@ $line_generator->generate_style("LaVague", 50, 50, "white");
 $line_generator->generate_style("MarinaKeithCurran", 50, 50, "white");
 $line_generator->generate_style("LaBrague", 50, 50, "white");
 $line_generator->generate_style("BrisbaneNorthBank", 50, 50, "white");
-$line_generator->generate_style("BordDeSiagne", 50, 50, "white");
+$line_generator->generate_style("BordDeSiagne", 50, 100, "white");
     ?>
 
     /* remains centered with fixed width when resizing the browser */
@@ -163,7 +163,7 @@ $line_generator->generate_style("BordDeSiagne", 50, 50, "white");
 <?= $line_generator->generate_double_line( 300, "PinkSunsetTerranoraCreek", 485, "BordDeSiagne" ); ?>
       </div>
 	 <div class="w3-container">
-<?= $line_generator->generate_single_line( 300, "LesZebres" ); ?>
+<?= $line_generator->generate_single_line( 400, "LesZebres" ); ?>
       </div> 
 	 <div class="w3-container">
 <?= $line_generator->generate_double_line( 300, "Zenitude", 485, "BlueTerranoraSunset" ); ?>

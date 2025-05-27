@@ -11,9 +11,10 @@ return array(
     'watermirror' => 'Water Mirror',
     'metamorphose' => 'Metamorphose',
 	'origine' => 'Origin',
+	'CopyrightView' => "View artist's recent exhibition",
 
     'IntroMomentsFem' => '
-     <h1>Feminine Moments</h1>
+     <h2>Feminine Moments</h2>
 	 <p>Feminine Moments is a tribute to the beauty of women in their daily existence, from daydreaming 
 	 supervising children at the beach, from dancing to mischievous childhood, 
 	 from the wink of connivance between friends to maternal love.</p>
@@ -23,7 +24,7 @@ return array(
 	  </p>',
  
 	'IntroWaterMirror' => "
-	<h1>Water Mirror</h1><p>
+	<h2>Water Mirror</h2><p>
     Water Mirror explores how water and light transform landscapes, creating plays of reflections and shadows. 
 	The works often capture peaceful moments in nature that I have reproduced from my photos. Like a mischievous wink, I sometimes 
 	add a surreal touch to enrich the view. 
