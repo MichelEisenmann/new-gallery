@@ -14,11 +14,11 @@ return array(
 	'origine' => 'Origin',
 	
 	//divers
-	'CopyrightView' => "View artist's recent exhibition",
+	'copyrightview' => "View artist's recent exhibition",
 	'soloexpo' => 'Solo Exhibitions', 
 	'groupexpo' => 'Selected Group Exhibitions',
 	'faitespeinture' => 'Painting Festival',
-	'assopicasso' => 'The friends of the Picasso Museum organization',
+	'assopicasso' => 'Picasso Museum friends organization',
 
     'IntroMomentsFem' => '
      <h2>Feminine Moments</h2>
@@ -65,11 +65,14 @@ return array(
     'Avertissement' => 'Warning: The content of this web site is copyrighted. Any reproduction is strictly forbidden.',
 
     'Contacter' => 'For all questions or inquiries',
+	'contactlaius' => "For all questions or inquiries,  
+	 contact <b>contact@giseleeisenmann.com</b>
+	 <p>Studio Address : Valbonne, Provence-Alpes Côte d'Azur, France</p> ",
 	
 	'Winner' => '<p>Gisèle Eisenmann Montagné is the winner of the following prices and awards
 	<ul><li>2024 Luxembourg Art prize: certificate of artistic achievement </li>
-	    <li>2024 TROPHY AWARD OF ANTIBES CITY [Painting Festival - (association the friends of the Picasso Museum)] </li> 
-		<li>2021 2nd prize, Watercolour/Pastel category [ainting Festival - (association the friends of the Picasso Museum)] </li> 
+	    <li>2024 Trophy Award of Antibes City [Painting Festival - (Picasso Museum friends organization)] </li> 
+		<li>2021 2nd prize, Watercolour/Pastel category [Painting Festival - (Picasso Museum friends organization)] </li> 
 	</ul>',
 	
     'vendu' => 'Sold',

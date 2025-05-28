@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  <link rel="stylesheet" href="./global-style.css">
+ <link rel="stylesheet" href="./serie-style.css">
   <style>
  
   .grid {
@@ -85,44 +86,6 @@
       <?= Translator::t('Introduction'); ?>
 
      <?= Translator::t('Winner'); ?>	  
-<!--	  
-      <div class="visible-on-computer">
-	<div class="w3-content w3-container " id="grid">
-	  <p/>
-	  
-	  <main class="grid">
-	    <div class="gem-cliping">
-	      <a href="<?= Translator::url('../public/contenu_d_une_galerie.php?key=oil&file=Huile/20250314_AirMarin_HU50x50.jpg') ?>">
-			    <img class="limited to-be-signed" src="../public/images/Huile/20250314_AirMarin_HU50x50.jpg" alt="<?= Translator::t("oil") ?>" />
-			    <br><?= Translator::t("oil") ?></br>
-	      </a>
-	    </div>
-	    
-	    <div class="gem-cliping">
-	      <a href="<?= Translator::url('../public/contenu_d_une_galerie.php?key=acrylic&file=Acrylique/20240822_Aigrette_AC50x76.jpg') ?>">
-		<img class="limited to-be-signed" src="../public/images/Acrylique/20240822_Aigrette_AC50x76_small.jpg" alt="<?= Translator::t("acrylic") ?>" />
-		<br><?= Translator::t("acrylic") ?></br>
-	      </a>
-	    </div>
-	    
-	    <div class="gem-cliping">
- 	      <a href="<?= Translator::url('../public/contenu_d_une_galerie.php?key=pastel&file=Pastels/20240119_Corentin2Mois.jpg') ?>">
-		<img class="limited to-be-signed" src="../public/images/Pastels/20240119_Corentin2Mois_small.jpg" alt="<?= Translator::t("pastel") ?>" >
-                <br><?= Translator::t("pastel") ?></br>			
-	      </a>
-            </div>
-	    
-            <div class="gem-cliping">
-	      <a href="<?= Translator::url('../public/contenu_d_une_galerie.php?key=other&file=Autres/20200920_SanguinePascaleGuillaume.jpg') ?>">
-		<img class="limited to-be-signed" src="../public/images/Autres/20200920_SanguinePascaleGuillaume_small.jpg" alt="<?= Translator::t("other") ?>" />
-                <br><?= Translator::t("other") ?></br>
-	      </a>
-	    </div>
-	  </main>
-	</div>	   
-      </div>	   
--->
-
       
     </div>
     

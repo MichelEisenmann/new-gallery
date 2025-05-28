@@ -34,7 +34,7 @@
       
 	  
 	  <!-- Container (Exhibit Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
+<div class="w3-content w3-container " id="about">
   
   <h5><b><?= Translator::t('soloexpo') ?></b></h5>
   <!-- pasted from old about ---->

@@ -11,6 +11,11 @@ h1,h2,h3,h4,h5,h6 {font-family:sans-serif; letter-spacing:5px}
 text-decoration: none;
 }
 
+/* icon Art Majeur dans copyright */
+.ArtMajeur-fixed-size {
+    width: 30px;
+    height: 30px;
+}
 /* remains centered with fixed width when resizing the browser */
 .gem-fixed-width { width: 964px; margin-left: auto; margin-right: auto}
 

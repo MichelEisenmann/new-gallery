@@ -23,7 +23,13 @@ font-weight: 900;
 text-decoration: none;
 }
 
+/* icon Art Majeur dans copyright. Added in global-css as well */
+.ArtMajeur-fixed-size {
+    width: 30px;
+    height: 30px;
+}
 
+ 
 /* remains centered with fixed width when resizing the browser */
 .gem-fixed-width { width: 964px; margin-left: auto; margin-right: auto}
 

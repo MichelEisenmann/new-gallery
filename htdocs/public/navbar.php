@@ -43,6 +43,7 @@
     <a href="<?= Translator::url('/public/expositions.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('Expositions') ?></a>
     <a href="<?= Translator::url('/public/about.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('About') ?></a>
     <a href="<?= Translator::url('/public/contact.php') ?>" class="w3-bar-item w3-button gem-menu"><?= Translator::t('Contact') ?></a>
+
   </div>
 </div>
 

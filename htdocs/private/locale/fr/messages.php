@@ -15,7 +15,7 @@ return array(
 	'origine' => 'Origine',
 	
 	// divers
-	'CopyrightView' => "Voir la dernière exposition",
+	'copyrightview' => "Voir la dernière exposition",
 	'soloexpo' => 'Expositions Solo', 
 	'groupexpo' => "Une sélection d'expositions de groupe",
     'faitespeinture' => 'Faîtes de la peinture',
@@ -51,6 +51,9 @@ return array(
 	
     'vendu' => 'Vendu',
     'indisponible' => 'Collection privée',
+	'contactlaius' => "Pour toute question ou demande de renseignement, 
+	 contacter <b>contact@giseleeisenmann.com</b>
+	 <p>Adresse de l'atelier : Valbonne, Provence-Alpes Côte d'Azur, France</p> ",
 
     'Introduction' => '  <p>Gisèle Eisenmann Montagné (nom artiste: GEM) est une artiste autodidacte, travaillant 
 	principalement aujourd’hui avec l’huile et l’acrylique, et occasionnellement avec des pastels secs. 
