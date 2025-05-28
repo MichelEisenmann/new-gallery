@@ -32,7 +32,78 @@
     
     <div class="w3-container w3-animate-opacity gem-animate gem-fixed-width">
       
+	  
+	  <!-- Container (Exhibit Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  
+  <h5><b><?= Translator::t('soloexpo') ?></b></h5>
+  <!-- pasted from old about ---->
+   <div>
+     <div class="w3-content w3-container " id="grid_theme">
+        <main class="grid">
+	      <div>2025</div>
+	      <div><ul>
+	           <li><?= Translator::t('momentsfeminins') ?>, Gourdon (06, France) </li>
+	           </ul>
+	      </div>
+	     </main>
+       <main class="grid">
+	  <div>2024</div>
+          <div><ul>
+	        <li><?= Translator::t('metamorphose') ?>, Gourdon (06, France) </li>
+			<li><?= Translator::t('watermirror') ?>, Seillans (83, France) </li>
+			<li><?= Translator::t('watermirror') ?>, Roquefort Les Pins (06, France) </li>
+	       </ul>
+	       </div>
+	  </div>
+	</main>
+	
+	<main class="grid">
+	  <div>2023</div>
+          <div><ul>
+	        <li>Gourdon (06, France) </li>
+	       </ul>
+	       <div>
+	  </div>
+	</main>
+      </div>
+    </div>
+	  
+	    <h5><b><?= Translator::t('groupexpo') ?></b></h5>
+   <div>
+     <div class="w3-content w3-container " id="grid_theme">
+        <main class="grid">
+	  <div>2025</div>
+	  <div><ul>
+	        <li>Antibes Art Fair, Antibes (06, France) </li>
+			<li>Feminin'Arte, Antibes (06, France) </li>
+	       </ul>
+	   </div>
+	   </main>
+	          
+	<main class="grid">
+	  <div>2024</div>
+      <div><ul>
+	        <li>International virtual exhibition Arts & Sports 2024 </li>
+			<li><?= Translator::t('faitespeinture') ?> - (<?= Translator::t('assopicasso') ?>), Antibes (06, France) </li>
+			<li>Feminin'Arte, Antibes (06, France) </li>
+			</ul>     
+	       </div>
+	 </main>
+
+	<main class="grid">	
+	  <div>2021 to 2023</div>
+           <div><ul>
+			<li><?= Translator::t('faitespeinture') ?>, Antibes (06, France) </li>
+			</ul>         
+			</div>
+	</main>
+      </div>
+    </div>
+
+	  
       <!-- 2025 -->
+<!---
       <div class="w3-card-4">
 	<header class="w3-container w3-orange">
 	  <h4>2025</h4>
@@ -61,8 +132,9 @@
 	    </li>
 	</div>
       </div>
-      
+-->      
       <!-- 2024 -->
+<!---
       <div class="w3-card-4">
 	<header class="w3-container w3-light-blue">
 	  <h4>2024</h4>
@@ -114,9 +186,9 @@
 	  </ul>
 	</div>
       </div>
-      
+-->      
       <!-- 2023 -->
-      <div class="w3-card-4">
+ <!---     <div class="w3-card-4">
 	<header class="w3-container w3-light-blue">
 	  <h4>2023</h4>
 	</header>
@@ -136,8 +208,9 @@
 	</div>
       </div>
       
+-->	  
       <!-- 2022 -->
-      <div class="w3-card-4">
+<!---     <div class="w3-card-4">
 	<header class="w3-container w3-light-blue">
 	  <h4>2022</h4>
 	</header>
@@ -146,9 +219,10 @@
           <p>Antibes (06, France) - "Fa&icirc;tes de la peinture" (association les amis du mus&eacute;e Picasso)</p> 
 	</div>
       </div>
-      
+
+-->      
     <!-- 2021 -->
-    <div class="w3-card-4">
+ <!---   <div class="w3-card-4">
       <header class="w3-container w3-light-blue">
 	<h4>2021</h4>
       </header>
@@ -161,7 +235,7 @@
 	</a>
       </div>
     </div>
-
+-->
     </div>
 
 

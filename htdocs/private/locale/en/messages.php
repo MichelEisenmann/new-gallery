@@ -10,9 +10,15 @@ return array(
     'Serie' => 'Serie',
     'momentsfeminins' => 'Feminine Moments',
     'watermirror' => 'Water Mirror',
-    'metamorphose' => 'Metamorphose',
+    'metamorphose' => 'Metamorphosis',
 	'origine' => 'Origin',
+	
+	//divers
 	'CopyrightView' => "View artist's recent exhibition",
+	'soloexpo' => 'Solo Exhibitions', 
+	'groupexpo' => 'Selected Group Exhibitions',
+	'faitespeinture' => 'Painting Festival',
+	'assopicasso' => 'The friends of the Picasso Museum organization',
 
     'IntroMomentsFem' => '
      <h2>Feminine Moments</h2>

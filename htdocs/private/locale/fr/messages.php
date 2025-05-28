@@ -13,7 +13,13 @@ return array(
     'watermirror' => 'Miroir d\'eau',
     'metamorphose' => 'Métamorphose',
 	'origine' => 'Origine',
+	
+	// divers
 	'CopyrightView' => "Voir la dernière exposition",
+	'soloexpo' => 'Expositions Solo', 
+	'groupexpo' => "Une sélection d'expositions de groupe",
+    'faitespeinture' => 'Faîtes de la peinture',
+    'assopicasso' => 'Association Les amis du Musée Picasso',	
 
     'IntroMomentsFem' => "
 	<h2>Moments Féminins</h2><p>
