@@ -7,20 +7,24 @@
  //$series[3]= "origine";
  ?>
 
-<div class="w3-bar w3-padding-16">
-  <a href="<?= Translator::url('/index.php') ?>" class="gem-name w3-bar-item w3-button">GISÈLE EISENMANN MONTAGNÉ</a>
-  
+<div class="w3-bar">
+  <div class="w3-bar-item">
+    <a href="<?= Translator::url('/index.php') ?>" class="gem-name gem-a">GISÈLE EISENMANN MONTAGNÉ</a>
+  </div>
+
   <!-- the three bars that give access to the menu if we are on a mobile -->
-  <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right"
-     href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-    <i class="fa fa-bars"></i>
-  </a>
+  <div class="w3-bar-item w3-hide-large w3-right">
+    <a class="w3-hover-black "
+       href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
 
   <!-- the menu for large screens -->
-  <div class="w3-right w3-hide-medium w3-hide-small">
+  <div class="w3-right w3-hide-small w3-hide-medium ">
     <div class="w3-dropdown-hover">
       <a href="<?= Translator::url('/public/work.php') ?>"
-	 class="w3-button gem-menu"><?= Translator::t('Work') ?> <i class="fa fa-caret-down"></i></a>
+	     class="w3-button gem-menu"><?= Translator::t('Work') ?> <i class="fa fa-caret-down"></i></a>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
 
 	<?php
@@ -43,7 +47,7 @@
 </div>
 
 <!-- the menu for small screens (accessed through the 3 bars) -->
-<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large  w3-right">
+<div id="navDemo" class="w3-white w3-hide w3-right">
 
   <div class="w3-dropdown-hover">
     <a href="<?= Translator::url('/public/work.php') ?>"
