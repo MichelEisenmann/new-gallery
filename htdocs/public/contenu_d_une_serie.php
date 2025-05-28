@@ -81,16 +81,10 @@ if (array_key_exists("pagination", $_GET) ) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+      <link rel="stylesheet" href="./serie-style.css">    
     
     <style>
-      body {font-family:"Arial,Helvetica", sans-serif}
-      h1,h2,h3,h4,h5,h6 {font-family:sans-serif; letter-spacing:5px}    
-      
-      .gem-name {font-family:"Arial,Helvetica", sans-serif; letter-spacing:6px; color:grey}
-      .gem-menu {font-family:"Arial,Helvetica", sans-serif; color:grey; background-color:white}
-      .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
-      .gem-animate {animation-duration: 3s}
-      
     </style>
     
     <body>
