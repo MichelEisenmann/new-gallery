@@ -21,29 +21,8 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <style>
-    body {font-family:"Arial,Helvetica", sans-serif}
-    h1,h2,h3,h4,h5,h6 {font-family:sans-serif; letter-spacing:5px}    
+  <link rel="stylesheet" href="./global-style.css">
 
-    .gem-name {font-family:"Arial,Helvetica", sans-serif; letter-spacing:6px; color:grey}
-    .gem-menu {font-family:"Arial,Helvetica", sans-serif; color:grey; background-color:white}
-    .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
-    .gem-animate {animation-duration: 3s}
-
-    /* remains centered with fixed width when resizing the browser */
-    .gem-fixed-width { width: 964px; margin-left: auto; margin-right: auto}
-
-    /* mobiles */
-    @media screen and (max-width: 320px) {
-	.gem-fixed-width { width: 480px; margin-left: auto; margin-right: auto}
-    }
-
-    @media screen and (max-width: 480px) {
-	.gem-fixed-width { width: 480px; margin-left: auto; margin-right: auto}
-    }
-
-  </style>
-  
   <body>
 
     <!-- Header -->

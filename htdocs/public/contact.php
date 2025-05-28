@@ -41,6 +41,8 @@
   .grid img:nth-child(2) {
       grid-column: span 4;
   }
+
+
     .limited {
       height: 100px;
     }
