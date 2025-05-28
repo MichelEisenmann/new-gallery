@@ -30,6 +30,18 @@
     .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
     .gem-animate {animation-duration: 3s}
 
+    /* remains centered with fixed width when resizing the browser */
+    .gem-fixed-width { width: 964px; margin-left: auto; margin-right: auto}
+
+    /* mobiles */
+    @media screen and (max-width: 320px) {
+	.gem-fixed-width { width: 480px; margin-left: auto; margin-right: auto}
+    }
+
+    @media screen and (max-width: 480px) {
+	.gem-fixed-width { width: 480px; margin-left: auto; margin-right: auto}
+    }
+
   </style>
   
   <body>
@@ -38,37 +50,35 @@
     <?php include("../public/navbar.php"); ?>
     
     <!-- Page Content -->
-    <div class="w3-container">
-
+    
+    <div class="w3-container w3-animate-opacity gem-animate gem-fixed-width">
+      
       <!-- 2025 -->
       <div class="w3-card-4">
 	<header class="w3-container w3-orange">
 	  <h4>2025</h4>
 	</header>
 	
-	<div class="w3-container">
-	  <ul>
-            <li><b>11ème édition annuelle du Luxembourg Art prize</b>
+	    <div class="w3-container">
+	      <ul>
+		<li>
+		  11ème édition annuelle du Luxembourg Art prize
+		</li>
+		<li>
+	      30 Mai-12 Juin - Gourdon (06, France) - Exposition SOLO - Salle de la Mairie
 	    </li>
-	    <li><b>30 Mai-12 Juin / JUNE</b>	    
-	      <b>GOURDON (06, France)</b>
-	      - Exposition SOLO - Salle de la Mairie
-	      <br> </br>
-	    </li>
-	    <li><b>Antibes (06, France)</b> Antibes Art Fair - 12-21 Avril 
-	      <br>
+	    <li>
+	      12-21 Avril - Antibes (06, France) - Antibes Art Fair
+	      </br>
 	      <a href="images/Huile/20250314_AirMarin_HU50x50.jpg" alt="Air Marin">
 		<img src="images/Huile/20250314_AirMarin_HU50x50_small.jpg" width="60" height="60"/>Air Marin
 	      </a>
-	      <br></br> 
 	    </li>
-	    <li><b>Antibes (06, France)</b> Femin'Arte - FEMIN'EXPO Les Casemates - Boulevard d'Aguillon - 27 F&eacute;vrier au samedi 22 Mars <br> 
-	      ["Icones"]
-	      <br>
+	    <li>27 F&eacute;vrier au samedi 22 Mars - Antibes (06, France) Femin'Arte ["Icones"] - FEMIN'EXPO Les Casemates - Boulevard d'Aguillon 
+	      </br>
 	      <a href="images/Acrylique/20241109_IconesDechues_AC28x35_small.jpg" alt="Icones Déchues">
 		<img src="images/web/20241109_IconesDechues_AC28x35_mini.jpg" width="50" height="40"/>Icones d&eacute;chues
 	      </a>
-		  </br> 
 	    </li>
 	</div>
       </div>
@@ -81,19 +91,19 @@
 	
 	<div class="w3-container">
 	  <ul>
-	    <li><b>10ème édition annuelle du Luxembourg Art prize</b>
+	    <li>10ème édition annuelle du Luxembourg Art prize
 	      <p style="color:green;">CERTIFICAT DE MERITE ARTISTIQUE
 		<a href="images/web/2024-12_LuxembourgArtPrize.png">
 		  <img src="images/web/2024-12_LuxembourgArtPrize_small.png" width="38"/>
 		</a>
 	    </li>
-	    <li><b>Exposition virtuelle internationale Arts & Sports 2024 - La maison des artistes</b>
+	    <li>Exposition virtuelle internationale Arts & Sports 2024 - La maison des artistes
 	      <br><a href="https://www.lamaisondesartistes.fr/site/musee-virtuel-arts-et-sports-2024-galerie/?_nationalit=francaise&_dpartements=06" alt="Arts & Sports 2024">
 		International virtual exhibition Arts & Sports 2024: Gallery</a></br>
 	      
 	    </li>
-	    <li><b>2-6 OCTOBRE / OCTOBER</b>
-	      <br><b>ANTIBES (06, France)</b> - "Fa&icirc;tes de la peinture" 14ème édition - (association les amis du mus&eacute;e Picasso)</br> 
+	    <li>2-6 octobre
+	      <br>ANTIBES (06, France) - "Fa&icirc;tes de la peinture" 14ème édition - (association les amis du mus&eacute;e Picasso)</br> 
 	      <p style="color:green;">Prix TROPHEE DE LA VILLE D'ANTIBES
 		<a href="images/web/20241006_Video-FaitesPeinture_Pelican.mp4">[video 19s]</a></p>
 	      <a href="images/Acrylique/20240915_Pelican_AC55x38.jpg">
@@ -101,28 +111,25 @@
 	      </a>
 	    </li>
 	    
-	    <li><b>5-11 JUILLET / JULY</b>
+	    <li>5-11 juillet - Gourdon (06, France) - Exposition SOLO - Salle de la Mairie
 	      <br><a href="images/web/Expo-JUL24.jpg" alt="Exhibition Gourdon">
 		<img src="images/web/Expo-JUL24_small.jpg" width="60" height="80"/>
-		<b>GOURDON (06, France)</b></a>
-	      - Exposition SOLO - Salle de la Mairie
-			</br>
+	      </a>
+	     </br>
 	    </li>
-	    <li><b> 23-30 JUIN /JUNE</b>
+	    <li> 23-30 juin - Seillans (83, France) - Exposition SOLO - Salle du Couvent Place du Thouron
 	      <br><a href="images/web/Affichette_Expo-Juin24.jpg" alt="Exhibition Seillans">
 		<img src="images/web/Affichette_Expo-Juin24_small.jpg" width="60" height="80"/>
-		<b>SEILLANS (83, France)</b></a>
-	      - Exposition SOLO - Salle du Couvent Place du Thouron
-			</br>
+	      </a>
+              </br>
 	    </li>
-	    <li><b>18 MAI-15 JUIN</b><b> ROQUEFORT LES PINS (06, France)</b>- Les artistes Roquefortois
+	    <li>18 mai-15 juin - Roquefort les Pins (06, France)- Les artistes Roquefortois
 	    </li>
-	    <li><b>MAR 2024</b><b> ANTIBES (06, France)</b> - FEMIN'EXPO Mars "LA COULEUR DES MOTS"
+	    <li>mars 2024 ANTIBES (06, France) - FEMIN'EXPO Mars ["la couleur des mots"]
 	    </li>
-	    <li><b>JAN 2024</b>
+	    <li>janvier 2024 - Roquefort les Pins (06, France)- Exposition Solo
 	      <br><a href="images/web/20240106_Roquefort.png" alt="Expo Pole image" >
-		<img src="images/web/20240106_Roquefort_small.png" width="60" height="80"/><b>ROQUEFORT LES PINS (06, France)</b></a>
-	      - Exposition SOLO
+		<img src="images/web/20240106_Roquefort_small.png" width="60" height="80"/></a>
 		  </br> 
 	    </li>
 	  </ul>
@@ -137,12 +144,11 @@
 	
 	<div class="w3-container">
 	  <ul>
-	    <li><a href="images/web/Expo-Aout23_small.jpg" alt="Expo Gourdon">
-		<img src="images/web/Expo-Aout23_small.jpg" width="60" height="80"/><b>Gourdon (06, France)</b></a>
-	      - Salle de la Mairie - 4 au 10 Ao&ucirc;t / exhibition 4-10 August 2023	
+	    <li> 4 au 10 Ao&ucirc;t / exhibition - Gourdon (06, France) - Salle de la Mairie
+	      <a href="images/web/Expo-Aout23_small.jpg" alt="Expo Gourdon">
+		<img src="images/web/Expo-Aout23_small.jpg" width="60" height="80"/></a>
 	    </li>
-	    <li><b>Antibes (06, France)</b> - Spectacles Femin'Arte - FEMIN'EXPO M&eacute;diath&egrave;que Albert Camus - 28 F&eacute;vrier au samedi 11 Mars <br> 
-	      ["Dansons, sinon nous sommes perdus! (Pina Bausch)"]
+	    <li> 28 F&eacute;vrier au 11 Mars - Antibes (06, France) - Spectacles Femin'Arte - FEMIN'EXPO M&eacute;diath&egrave;que Albert Camus - ["Dansons, sinon nous sommes perdus! (Pina Bausch)"]
 	      <br><a href="images/Huile/20230216_LesDanseuses_Huile_small.jpg" alt="Les danseuses">
 		<img src="images/web/20230216_LesDanseuses_Huile_mini.jpg" width="100" height="80"/>Les danseuses</a>
 		  </br> 
@@ -158,7 +164,7 @@
 	</header>
 	
 	<div class="w3-container">
-          <p><b>Antibes (06, France)</b> - "Fa&icirc;tes de la peinture" (association les amis du mus&eacute;e Picasso)</p> 
+          <p>Antibes (06, France) - "Fa&icirc;tes de la peinture" (association les amis du mus&eacute;e Picasso)</p> 
 	</div>
       </div>
       
@@ -169,7 +175,7 @@
       </header>
       
       <div class="w3-container">
-        <p><b>Antibes (06, France)</b> - "Fa&icirc;tes de la peinture" (association les amis du mus&eacute;e Picasso)</p> 
+        <p>Antibes (06, France) - "Fa&icirc;tes de la peinture" (association les amis du mus&eacute;e Picasso)</p> 
         <p style="color:green;">2&egrave;me prix, cat&eacute;gorie Aquarelle/pastel </p>
         <a href="images/Pastels/20210917_Michel en Polynesie_small.jpg">
           <img src="images/Pastels/20210917_Michel en Polynesie_small.jpg" width="100"/>Torride

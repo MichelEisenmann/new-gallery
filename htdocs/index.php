@@ -40,7 +40,7 @@
       <div class="w3-row w3-padding-64  w3-animate-opacity">
 	<div class="w3-col s6 w3-center w3-container">
 	  <img src="/public/images/web/Accueil-art-gallery1.jpg" alt="" style="width:100%">
-	</div>
+	              </div>
 	<div class="w3-col s6 w3-center w3-container">
 	  <img src="/public/images/web/Accueil-art-gallery2.jpg" alt="" style="width:100%" >
 	</div>
