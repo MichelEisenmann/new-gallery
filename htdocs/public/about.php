@@ -53,7 +53,7 @@
   <body>
 
     <!-- Header -->
-    <?php include("../public/navbar.php"); ?>git status
+    <?php include("../public/navbar.php"); ?>
 	
     
     <!-- Page Content -->
@@ -70,18 +70,9 @@
 	  
 	  <div></div>
 	  <div>
-<!--	    <a href="<?= Translator::url('../public/contenu_d_une_galerie.php?key=oil&file=Huile/20230708_ClairDeSoleil_Huile_30P.jpg') ?>">
-              <img class="australie_theme to-be-signed" src="../public/images/Huile/20230708_ClairDeSoleil_Huile_30P_small.jpg" alt="Australie" />
-	    </a>
--->
 	  </div>
           
 	  <div>
-<!--
-      <a href="<?= Translator::url('../public/contenu_d_une_galerie.php?key=acrylic&file=Acrylique/20230530_Contemplation_A100x73.jpg') ?>">
-              <img class="paysage_theme to-be-signed" src="../public/images/Acrylique/20230530_Contemplation_A100x73_small.jpg" alt="Paysage" />
-	    </a>
--->
 	  </div>
 	</main>
       </div>
@@ -92,13 +83,16 @@
     <div class="w3-content w3-container" id="">
       
       <?= Translator::t('Introduction'); ?>
+
+     <?= Translator::t('Winner'); ?>	  
+<!--	  
       <div class="visible-on-computer">
 	<div class="w3-content w3-container " id="grid">
 	  <p/>
+	  
 	  <main class="grid">
 	    <div class="gem-cliping">
 	      <a href="<?= Translator::url('../public/contenu_d_une_galerie.php?key=oil&file=Huile/20250314_AirMarin_HU50x50.jpg') ?>">
-		<!--   <img class="limited to-be-signed" src="../public/images/Huile/20230216_LesDanseuses_Huile_small.jpg" alt="<?= Translator::t("oil") ?>" />  -->
 			    <img class="limited to-be-signed" src="../public/images/Huile/20250314_AirMarin_HU50x50.jpg" alt="<?= Translator::t("oil") ?>" />
 			    <br><?= Translator::t("oil") ?></br>
 	      </a>
@@ -127,6 +121,8 @@
 	  </main>
 	</div>	   
       </div>	   
+-->
+
       
     </div>
     
