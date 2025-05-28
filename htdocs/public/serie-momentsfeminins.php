@@ -66,25 +66,9 @@ $line_generator->serie_dico= $serie;  // will be used to browse exclusively amon
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <link rel="stylesheet" href="./serie-style.css">    
+
   <style>
-    body {font-family:"Arial,Helvetica", sans-serif}
-    h1,h2,h3,h4,h5,h6 {font-family:sans-serif; letter-spacing:5px}    
-
-    .gem-name {font-family:"Arial,Helvetica", sans-serif; letter-spacing:6px; color:grey}
-    .gem-menu {font-family:"Arial,Helvetica", sans-serif; color:grey; background-color:white}
-    .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
-    .gem-animate {animation-duration: 3s}
-
-    .gem-background-left {margin-top: 10px;}
-    .gem-background-right {margin-top: 10px; margin-left: 10px;}
-    .gem-background-single {margin-top: 10px;}
-    .gem-inline { display:inline-block; vertical-align: text-top}
-
-    .gem-hover {
-        display: none;
-        font-weight: 900;
-    }
-
     /* On doit utiliser un des ID qu'on a defini plus haut */
     /* Chaque peinture va s'afficher dans une zone definie plus loin */
     /* Cette zone va "clipper" la peinture */
@@ -111,11 +95,6 @@ $line_generator->generate_style("SanguinePascaleGui", 50, 50, "white");
 $line_generator->generate_style("SakuraNenuphars", 50, 50, "white");
 $line_generator->generate_style("JeuxDeRegards", 50, 50, "white");
     ?>
-
-    /* remains centered with fixed width when resizing the browser */
-    .gem-fixed-width { width: 964px; margin-left: auto; margin-right: auto}
-
-
   </style>
   
   <body>
@@ -138,47 +117,19 @@ $line_generator->generate_style("JeuxDeRegards", 50, 50, "white");
 -->      
       
       <!-- Paintings -->
-      <!--   Pick the height you want for the row -->
-      <!--   The second number is the width for the first paint (out of 885 px) -->
-      <div class="w3-container">
-<?= $line_generator->generate_double_line( 500, "AirMarin", 485, "PortraitPascale" ); ?>
-      </div>
+      <!--   First argument is the height of the line -->
+      <!--   The second number is the percent of width allocated to the first paint -->
+<?= $line_generator->generate_double_line( "gem-large-height", "AirMarin", 60, "PortraitPascale" ); ?>
+<?= $line_generator->generate_single_line( "gem-medium-height", "BaigneursRiviere" ); ?>
+<?= $line_generator->generate_double_line( "gem-large-height", "ClairDeSoleil", 60, "PelicanSeul" ); ?>
+<?= $line_generator->generate_double_line( "gem-large-height", "LeTorrent", 60, "TheRiverBankVlaminck" ); ?>
+<?= $line_generator->generate_single_line( "gem-medium-height", "LesDanseuses" ); ?>
+<?= $line_generator->generate_double_line( "gem-very-large-height", "Contemplation", 60, "LaPiscine" ); ?>
+<?= $line_generator->generate_double_line( "gem-small-height", "SakuraNenuphars", 40, "JeuxDeRegards" ); ?>
+<?= $line_generator->generate_double_line( "gem-small-height", "SanguinePascaleGui", 40, "Aigrette" ); ?>
 
-	 <div class="w3-container">
-<?= $line_generator->generate_single_line( 400, "BaigneursRiviere" ); ?>
-      </div>
-
-      <div class="w3-container">
-<?= $line_generator->generate_double_line( 500, "ClairDeSoleil", 500, "PelicanSeul" ); ?>
-      </div>
-      <div class="w3-container">
-<?= $line_generator->generate_double_line( 500, "LeTorrent", 500, "TheRiverBankVlaminck" ); ?>
-      </div>	  
-
-	 <div class="w3-container">
-<?= $line_generator->generate_single_line( 400, "LesDanseuses" ); ?>
-      </div>
- 
-    <div class="w3-container">
-<?= $line_generator->generate_double_line( 600, "Contemplation", 500, "LaPiscine" ); ?>
     </div>
-	  
-	  <div class="w3-container">
-<?= $line_generator->generate_double_line( 285, "SakuraNenuphars", 400, "JeuxDeRegards" ); ?>
-      </div>
-
-	  <div class="w3-container">
-<?= $line_generator->generate_double_line( 285, "SanguinePascaleGui", 400, "Aigrette" ); ?>
-      </div>
-
-      
- 
-	  
-
-      
- 
-    
-    <!-- Footer -->
+     <!-- Footer -->
     <?php include("../public/copyright.php"); ?>
     
     <script>

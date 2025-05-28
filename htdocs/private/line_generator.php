@@ -35,15 +35,20 @@ class LineGenerator {
     //
     $available_width= 885;
     $indent= "\t";
+    //
+    $this->print_line( $indent, "<div class=\"w3-container\">" );
     $this->generate_part($paint1, $tagname1, $width1, $height, "gem-background-left", $indent);
-    $width2= $available_width - $width1;
+    //    $width2= $available_width - $width1;
+    $width2= 100 - $width1 - 4;
     $this->generate_part($paint2, $tagname2, $width2, $height, "gem-background-right", $indent);
+    //
+    $this->print_line( $indent, "</div>" );
   }
   
   // height: height of the line
   // id1: id in the $paints ditionnary
   
-  function generate_single_line( $height, $id1 ) {
+  function generate_single_line( $height_style, $id1 ) {
     $paint1= $this->paints[$id1];
     
     // errors
@@ -58,18 +63,23 @@ class LineGenerator {
     // larger for single
     $available_width= 900;
     $indent= "\t";
-    $this->generate_part($paint1, $tagname1, $available_width, $height, "gem-background-single", $indent);
+    //    $this->generate_part($paint1, $tagname1, $available_width, $height, "gem-background-single", $indent);
+
+    $this->print_line( $indent, "<div class=\"w3-container\">" );
+    $this->generate_part($paint1, $tagname1, 100, $height_style, "gem-background-single", $indent);
+    $this->print_line( $indent, "</div>" );
   }
   
-  function generate_part( $paint, $tagname, $width, $height, $style, $indent) {
+  function generate_part( $paint, $tagname, $width, $height_style, $style, $indent) {
     $rank= $this->serie_dico->get_file_rank($paint->file);
     $serie= $this->serie_dico->name;
     $url= Translator::url('/public/contenu_d_une_serie.php?serie=' .$serie .'&rank=' .$rank);
     
     $ttab= $this->tab;	
-    $this->print_line( $indent, "<a href=\"" .$url ."\">" );
-    $this->print_line( $indent, "<div class=\"w3-display-container gem-inline " .$style ." gem-" .$tagname ."\"" );
-    $this->print_line( $indent, $ttab .$ttab ."style=\"width:" .$width ."px; height: " .$height ."px;\">" );
+    $this->print_line( $indent, "<a class=\"gem-a\" href=\"" .$url ."\">" );
+    $this->print_line( $indent, "<div class=\"w3-display-container gem-inline " .$height_style ." " .$style ." gem-" .$tagname ."\"" );
+    //    $this->print_line( $indent, $ttab .$ttab ."style=\"width:" .$width ."px; height: " .$height ."px;\">" );
+    $this->print_line( $indent, $ttab .$ttab ."style=\"width:" .$width ."%;\">" );
     $this->print_line( $indent, $ttab ."<div class=\"w3-display-middle gem-hover\">" );
     $this->print_line( $indent, $ttab .$ttab .$paint->title ." </br> " .$paint->get_size() ." </br> ");
     if ( strlen($paint->get_status() ) != 0 ) {

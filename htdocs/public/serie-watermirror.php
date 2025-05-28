@@ -64,25 +64,9 @@ $line_generator->serie_dico= $serie;  // will be used to browse exclusively amon
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+  <link rel="stylesheet" href="./serie-style.css">    
+      
   <style>
-    body {font-family:"Arial,Helvetica", sans-serif}
-    h1,h2,h3,h4,h5,h6 {font-family:sans-serif; letter-spacing:5px}    
-
-    .gem-name {font-family:"Arial,Helvetica", sans-serif; letter-spacing:6px; color:grey}
-    .gem-menu {font-family:"Arial,Helvetica", sans-serif; color:grey; background-color:white}
-    .gem-footer {font-family:"Arial,Helvetica", sans-serif; color:grey}
-    .gem-animate {animation-duration: 3s}
-
-    .gem-background-left {margin-top: 10px;}
-    .gem-background-right {margin-top: 10px; margin-left: 10px;}
-    .gem-background-single {margin-top: 10px;}
-    .gem-inline { display:inline-block; vertical-align: text-top}
-
-    .gem-hover {
-        display: none;
-        font-weight: 900;
-    }
-
     /* On doit utiliser un des ID qu'on a defini plus haut */
     /* Chaque peinture va s'afficher dans une zone definie plus loin */
     /* Cette zone va "clipper" la peinture */
@@ -109,11 +93,6 @@ $line_generator->generate_style("LaBrague", 50, 50, "white");
 $line_generator->generate_style("BrisbaneNorthBank", 50, 50, "white");
 $line_generator->generate_style("BordDeSiagne", 50, 100, "white");
     ?>
-
-    /* remains centered with fixed width when resizing the browser */
-    .gem-fixed-width { width: 964px; margin-left: auto; margin-right: auto}
-
-
   </style>
   
   <body>
@@ -137,40 +116,19 @@ $line_generator->generate_style("BordDeSiagne", 50, 100, "white");
       
       
       <!-- Paintings -->
-      <!--   Pick the height you want for the row -->
-      <!--   The second number is the width for the first paint (out of 885 px) -->
-	  	 <div class="w3-container">
-<?= $line_generator->generate_single_line( 400, "ParisQuaiSeine" ); ?>
-      </div>
-      <div class="w3-container">
-<?= $line_generator->generate_double_line( 500, "EgretYellowSunset", 500, "MangroveSulfurCockatoo" ); ?>
-      </div>
+      <!--   First argument is the height of the line -->
+      <!--   The second number is the percent of width allocated to the first paint -->
+<?= $line_generator->generate_single_line( "gem-medium-height", "ParisQuaiSeine" ); ?>
+<?= $line_generator->generate_double_line( "gem-large-height", "EgretYellowSunset", 60, "MangroveSulfurCockatoo" ); ?>
+<?= $line_generator->generate_double_line( "gem-medium-height", "LaVague", 40, "JeuxDeVagues" ); ?>
+<?= $line_generator->generate_double_line( "gem-medium-height", "ReveDeTropiques", 55, "AustralianPelican" ); ?>
+<?= $line_generator->generate_single_line( "gem-small-height", "MarinaKeithCurran" ); ?>
+<?= $line_generator->generate_single_line( "gem-small-height", "IlotMangrove" ); ?>
+<?= $line_generator->generate_double_line( "gem-small-height", "PinkSunsetTerranoraCreek", 55, "BordDeSiagne" ); ?>
+<?= $line_generator->generate_single_line( "gem-medium-height", "LesZebres" ); ?>
+<?= $line_generator->generate_double_line( "gem-small-height", "Zenitude", 55, "BlueTerranoraSunset" ); ?>
+<?= $line_generator->generate_double_line( "gem-small-height", "BrisbaneNorthBank", 55, "LaBrague" ); ?>
 
-      <div class="w3-container">
-<?= $line_generator->generate_double_line( 300, "LaVague", 400, "JeuxDeVagues" ); ?>
-      </div>
-	       <div class="w3-container">
-<?= $line_generator->generate_double_line( 400, "ReveDeTropiques", 500, "AustralianPelican" ); ?>
-      </div> 
-	  	 <div class="w3-container">
-<?= $line_generator->generate_single_line( 300, "MarinaKeithCurran" ); ?>
-      </div>	  
-      <div class="w3-container">
-<?= $line_generator->generate_single_line( 300, "IlotMangrove" ); ?>
-      </div>
-
-      <div class="w3-container">
-<?= $line_generator->generate_double_line( 300, "PinkSunsetTerranoraCreek", 485, "BordDeSiagne" ); ?>
-      </div>
-	 <div class="w3-container">
-<?= $line_generator->generate_single_line( 400, "LesZebres" ); ?>
-      </div> 
-	 <div class="w3-container">
-<?= $line_generator->generate_double_line( 300, "Zenitude", 485, "BlueTerranoraSunset" ); ?>
-      </div> 
-     <div class="w3-container">
-<?= $line_generator->generate_double_line( 300, "BrisbaneNorthBank", 485, "LaBrague" ); ?>
-      </div>      
     </div>
     
     <!-- Footer -->
