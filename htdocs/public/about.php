@@ -20,11 +20,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <link rel="stylesheet" href="./global-style.css">
-
-
+ <link rel="stylesheet" href="./global-style.css">
   <style>
+ 
   .grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -41,17 +39,22 @@
   .grid img:nth-child(2) {
       grid-column: span 4;
   }
+
+
     .limited {
       height: 100px;
     }
 
     .gem-cliping { height: 100%; width: 200px; overflow: hidden; }
+
+
   </style>
   
   <body>
 
     <!-- Header -->
-    <?php include("../public/navbar.php"); ?>
+    <?php include("../public/navbar.php"); ?>git status
+	
     
     <!-- Page Content -->
     <div class="w3-container">

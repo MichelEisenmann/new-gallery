@@ -18,7 +18,7 @@
 
 <?php
 // ce dictionnaire servira lorsqu'on voudra parcourir la serie sur la page qui montre les peintures une par une
-$serie_key='momentsfeminins';
+$serie_key='metamorphose';
 $serie= $ALL_GALLERIES->paint_dictionnaries[$serie_key];
 
 // ces dictionnaires sont les dictionnaires standard
@@ -30,27 +30,29 @@ $other= $ALL_GALLERIES->paint_dictionnaries["other"];
 // On recupere toutes les peintures qu'on veut voir dans cette serie
 // On les stocke dans "$paints" et on leur donne un ID qui doit etre sans caractere special.
 // Cet ID servira a les designer le moment venu.
+
 // Oils
-$paints["LesDanseuses"]= $oil->paints["Huile/20230216_LesDanseuses_Huile.jpg"];
-$paints["ClairDeSoleil"]= $oil->paints["Huile/20230708_ClairDeSoleil_HU92x65.jpg"];
-$paints["TheRiverBankVlaminck"]= $oil->paints["Huile/20230921_TheRiverBank_Vlaminck_38x46.jpg"];
-$paints["BaigneursRiviere"]= $oil->paints["Huile/20240204_Baigneurs_Huile_50x100.jpg"];
-$paints["SakuraNenuphars"]= $oil->paints["Huile/20240613_Sakura-nenuphars_HU54x73.jpg"];
-$paints["BrumesDuSoir"]= $oil->paints["Huile/20240728_Brume_HU73x54.jpg"];
-$paints["LeTorrent"]= $oil->paints["Huile/20241225_LeTorrent_HU41x33.jpg"];
-$paints["AirMarin"]= $oil->paints["Huile/20250314_AirMarin_HU50x50.jpg"];
-$paints["PortraitPascale"]= $oil->paints["Huile/20250319_PortraitPascale_HU50x50.jpg"];
+$paints["Flamboyance"]= $oil->paints["Huile/20221109_Flamboyance_HU32x41.jpg"];
+$paints["ChapeauOrange"]= $oil->paints["Huile/20240601_ChapeauOrange_HU46x33.jpg"];
 
 // Acrylics
-$paints["JeuxDeRegards"]= $acrylic->paints["Acrylique/20220821_Regards.jpg"];
-$paints["Contemplation"]= $acrylic->paints["Acrylique/20230530_Contemplation_A100x73.jpg"];
-$paints["Aigrette"]= $acrylic->paints["Acrylique/20240822_Aigrette_AC50x76.jpg"];
-$paints["PelicanSeul"]= $acrylic->paints["Acrylique/20240915_Pelican_AC55x38.jpg"];
-$paints["LaLectrice"]= $acrylic->paints["Acrylique/20250421_Lectrice_AC50x50.jpg"];
-$paints["LaPiscine"]= $acrylic->paints["Acrylique/20250504_La piscine-AC50x50.jpg"];
+$paints["EvocationGourdon"]= $acrylic->paints["Acrylique/20211228_EvocationGourdon_AC73x90.jpg"];
+$paints["LeFicus"]= $acrylic->paints["Acrylique/20220609_Le Ficus_AC20x20.jpg"];
+$paints["Abutilons"]= $acrylic->paints["Acrylique/20221016_Abutilon_AC20x27.jpg"];
+$paints["Pelagos"]= $acrylic->paints["Acrylique/20231109_Pelagos_AC41x61.jpg"];
+$paints["Tournesols"]= $acrylic->paints["Acrylique/20231111_LesTournesols_AC24x30.jpg"];
+$paints["BallonsOl"]= $acrylic->paints["Acrylique/20240218_BallonsOlympiques_AC55x38.jpg"];
+$paints["Deflagration"]= $acrylic->paints["Acrylique/20240326_Deflagration_AC90x90.jpg"];
+$paints["Distorsion"]= $acrylic->paints["Acrylique/20240529_Distorsion_AC46x55.jpg"];
+$paints["Eclosion"]= $acrylic->paints["Acrylique/20240704_Eclosion_AC38x46.jpg"];
 
-// Autres
-$paints["SanguinePascaleGui"]= $other->paints["Autres/20200920_SanguinePascaleGuillaume.jpg"];
+// Pastels et Autres
+$paints["MichelPoly"]= $pastel->paints["Pastels/20210917_MichelPolynesie_PA20x28.jpg"];
+$paints["BebeSourit"]= $pastel->paints["Pastels/20240119_Corentin2M_PA26x21.jpg"];
+$paints["Tendresse"]= $pastel->paints["Pastels/20240227_Tendresse_PA30x24.jpg"];
+$paints["BebeRose"]= $pastel->paints["Pastels/20240625_BebeRose_PA32x24.jpg"];
+
+$paints["LesMouettes"]= $other->paints["Autres/20230202_LesMouettes_AQ40x30.jpg"];
 
 
 $line_generator= new LineGenerator();
@@ -79,22 +81,22 @@ $line_generator->serie_dico= $serie;  // will be used to browse exclusively amon
     /* Le dernier parametre est la couleur du texte qui apparait quand la souris se deplace sur l image */
     
     <?php
-$line_generator->generate_style("AirMarin", 50, 50, "white");
-$line_generator->generate_style("PortraitPascale", 50, 50, "white");
-$line_generator->generate_style("PelicanSeul", 50, 50, "white");
-$line_generator->generate_style("ClairDeSoleil", 70, 50, "white");
-$line_generator->generate_style("BaigneursRiviere", 0, 100, "white");
-$line_generator->generate_style("Contemplation", 70, 70, "black");
-$line_generator->generate_style("LeTorrent", 0, 50, "black");
-$line_generator->generate_style("TheRiverBankVlaminck", 50, 50, "white");
-$line_generator->generate_style("LesDanseuses", 50, 50, "white");
-$line_generator->generate_style("BrumesDuSoir", 50, 50, "white");
-$line_generator->generate_style("LaPiscine", 50, 50, "white");
-$line_generator->generate_style("Aigrette", 50, 100, "white");
-$line_generator->generate_style("SanguinePascaleGui", 40, 50, "white");
-$line_generator->generate_style("SakuraNenuphars", 50, 50, "white");
-$line_generator->generate_style("JeuxDeRegards", 50, 50, "white");
-$line_generator->generate_style("LaLectrice", 50, 50, "white");
+$line_generator->generate_style("Flamboyance", 50, 50, "white");
+$line_generator->generate_style("ChapeauOrange", 50, 50, "white");
+$line_generator->generate_style("EvocationGourdon", 50, 50, "white");
+$line_generator->generate_style("LeFicus", 50, 50, "white");
+$line_generator->generate_style("Abutilons", 50, 50, "white");
+$line_generator->generate_style("Pelagos", 0, 50, "black");
+$line_generator->generate_style("Tournesols", 50, 50, "white");
+$line_generator->generate_style("BallonsOl", 50, 50, "white");
+$line_generator->generate_style("Deflagration", 50, 50, "white");
+$line_generator->generate_style("Distorsion", 50, 50, "white");
+$line_generator->generate_style("Eclosion", 50, 50, "white");
+$line_generator->generate_style("MichelPoly", 50, 50, "white");
+$line_generator->generate_style("BebeSourit", 50, 50, "white");
+$line_generator->generate_style("Tendresse", 50, 50, "white");
+$line_generator->generate_style("BebeRose", 50, 50, "white");
+$line_generator->generate_style("LesMouettes", 0, 50, "white");
     ?>
   </style>
   
@@ -108,7 +110,7 @@ $line_generator->generate_style("LaLectrice", 50, 50, "white");
       
       <!-- Text Part -->
       <div class="w3-container w3-left-align">
-        <?= Translator::t("IntroMomentsFem"); ?>
+        <?= Translator::t("IntroMetamorphose"); ?>
         </div>
       
       <!-- Galerie/Exposition photo -->
@@ -120,15 +122,16 @@ $line_generator->generate_style("LaLectrice", 50, 50, "white");
       <!-- Paintings -->
       <!--   First argument is the height of the line -->
       <!--   The second number is the percent of width allocated to the first paint -->
-<?= $line_generator->generate_double_line( "gem-large-height", "AirMarin", 60, "PelicanSeul" ); ?>
-<?= $line_generator->generate_single_line( "gem-medium-height", "BaigneursRiviere" ); ?>
-<?= $line_generator->generate_double_line( "gem-large-height", "ClairDeSoleil", 60, "LaLectrice" ); ?>
-<?= $line_generator->generate_double_line( "gem-large-height", "LeTorrent", 60, "LaPiscine" ); ?>
-<?= $line_generator->generate_single_line( "gem-medium-height", "LesDanseuses" ); ?>
-<?= $line_generator->generate_double_line( "gem-large-height", "Contemplation", 60, "TheRiverBankVlaminck" ); ?>
-<?= $line_generator->generate_double_line( "gem-medium-height", "SakuraNenuphars", 60, "JeuxDeRegards" ); ?>
-<?= $line_generator->generate_double_line( "gem-medium-height", "SanguinePascaleGui", 50, "PortraitPascale" ); ?>
-<?= $line_generator->generate_single_line( "gem-medium-height", "Aigrette" ); ?>
+<?= $line_generator->generate_double_line( "gem-medium-height", "Deflagration", 60, "Distorsion" ); ?>
+<?= $line_generator->generate_double_line( "gem-small-height", "Eclosion", 50, "Tournesols" ); ?>
+<?= $line_generator->generate_single_line( "gem-very-large-height", "Pelagos" ); ?>
+<?= $line_generator->generate_double_line( "gem-medium-height", "EvocationGourdon", 60, "Tendresse" ); ?>
+<?= $line_generator->generate_double_line( "gem-large-height", "ChapeauOrange", 60, "Flamboyance" ); ?>
+<?= $line_generator->generate_double_line( "gem-medium-height", "Abutilons", 60, "BebeSourit" ); ?>
+<?= $line_generator->generate_double_line( "gem-medium-height", "LesMouettes", 60, "BebeRose" ); ?>
+<?= $line_generator->generate_single_line( "gem-large-height", "MichelPoly" ); ?>
+<?= $line_generator->generate_double_line( "gem-medium-height", "BallonsOl", 60, "LeFicus" ); ?>
+
 
     </div>
      <!-- Footer -->

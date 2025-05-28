@@ -32,7 +32,16 @@ return array(
 	clin d'oeil facétieux, j'ajoute parfois une touche surréaliste pour enrichir la vue. 
     <br>L'exposition est terminée mais quelques tableaux sont encore disponibles à l'achat. </br>	
 	<br>Envoyez un email à contact@giseleeisenmann.com pour plus d'information</br>
-	</p>",	
+	</p>",
+
+    'IntroMetamorphose' => "
+	<h2>Métamorphose</h2><p>
+	Métamorphose explore l'agencement de figures géométriques soumises à une pression. Trois tableaux aux 
+	couleurs chatoyantes orange, marron et or correspondent à cette étude. </p>
+    <p>L'exposition qui présentait aussi quelques oeuvres figuratives, en particulier des portraits aux pastels 
+	secs, est terminée. Quelques tableaux sont disponibles à l'achat.
+	<br>Envoyez un email à contact@giseleeisenmann.com pour plus d'information</br>
+	</p>",		
 	
     'vendu' => 'Vendu',
     'indisponible' => 'Collection privée',

@@ -3,7 +3,7 @@
  // The ids must match the names that are in the excel file
  $series[0]= "momentsfeminins";
  $series[1]= "watermirror";
- //$series[2]= "metamorphose";
+ $series[2]= "metamorphose";
  //$series[3]= "origine";
  ?>
 

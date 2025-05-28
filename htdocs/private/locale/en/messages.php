@@ -33,7 +33,15 @@ return array(
     <br>Send an email to contact@giseleeisenmann.com for more information</br>
 	</p>",	
 	
-  
+    'IntroMetamorphose' => "
+	<h2>Metamorphosis</h2><p>
+	Metamorphosis explores the arrangement of geometric figures under pressure. Three paintings in the 
+	shimmering colors orange, brown and gold correspond to this study. It also presented some 
+	figurative works, in particular portraits painted with soft pastels. 
+	<br>The exhibition is over, however some paintings are available for purchase.</br>
+    <br>Send an email to contact@giseleeisenmann.com for more information</br>
+	</p>",	
+	
     'vendu' => 'Sold',
     'indisponible' => 'Private Coll.',
 
