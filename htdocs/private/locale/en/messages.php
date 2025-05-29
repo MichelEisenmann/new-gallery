@@ -90,27 +90,13 @@ return array(
 	
     'vendu' => 'Sold',
     'indisponible' => 'Private Coll.',
+    'disponible' => 'Available',
 
     // noms tableaux
 	'AirMarinTitre' => 'Sea Air',
 	'ParisQuaiSeineTitre' => 'Paris Seine quay',
 
     // oldies
-
-    'ACCUEIL' => "HOME",
-    'GALERIE' => "GALLERY",
-	'EXPOSITIONS' => "EXHIBITIONS",
-    'NOUVEAUTES' => "RECENT WORK",
-    'BIOGRAPHIE' => "BIOGRAPHY",
-    'CONTACT' => "CONTACT",
-
-    'Biographie' => 'Biography',
-    'Galeries' => 'Painting galleries',
-    'Expositions' => 'Exhibitions',
-
-    'overview' => 'Overview',
-    'new' => 'Recent work',
-	'all' => 'Artwork',
 
     'oil' => 'Oils',
     'acrylic' => 'Acrylics',
@@ -123,8 +109,6 @@ return array(
     'vivant' => 'Life',
 
     'Slogan' => 'Painting to transcend reality',
-
-
 
 );
 ?>

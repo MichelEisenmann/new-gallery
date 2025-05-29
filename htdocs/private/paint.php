@@ -63,7 +63,7 @@ class Paint {
     function setStatus( $status ) {
       $status= trim(strtolower($status));
       if ( empty($status) ) {
-        $this->status= "";
+        $this->status= Paint::AVAILABLE_STATUS;
       } else if ( strcmp( $status, Paint::SOLD_STATUS ) == 0 ) {
         $this->status= Paint::SOLD_STATUS;
       } else if ( strcmp ($status, Paint::UNAVAILABLE_STATUS ) == 0 ) {

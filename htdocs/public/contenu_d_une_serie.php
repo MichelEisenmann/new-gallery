@@ -60,17 +60,13 @@ if (array_key_exists("pagination", $_GET) ) {
       var paintFiles= [];
       var paintTitles= [];
       var paintDescriptions= [];
-      var paintStatus= [];
-      var paintStatusTranslated= [];
       var gemSignature= "<?= $GEM_SIGNATURE ?>";
  <?php
   foreach( $serie_dico->sortedList as $paint ) {
  ?>
       paintFiles.push( "images/<?= $paint->file ?>" );
       paintTitles.push( "<?= $paint->full_title() ?>" );
-      paintDescriptions.push( "<?= $paint->get_description() ?>" );
-      paintStatus.push("<?= $paint->get_status() ?>" );
-      paintStatusTranslated.push("<?= Translator::t($paint->get_status()) ?>" );
+      paintDescriptions.push( "<?= $paint->get_description_and_status() ?>" );
  <?php
  }
  ?>
@@ -187,14 +183,6 @@ if (array_key_exists("pagination", $_GET) ) {
 	    b.textContent= paintTitles[rank_in_gallery];
 	    var b= document.getElementById("central-paint-description");
 	    b.textContent= paintDescriptions[rank_in_gallery];
-
-	    // status part
-	    var st= document.getElementById("status");
-	    var status= paintStatus[rank_in_gallery];
-	    st.textContent= "";
-	    if ( status.length != 0 ) {
-		st.textContent= paintStatusTranslated[rank_in_gallery];
-	    }
 	}
 
       </script>

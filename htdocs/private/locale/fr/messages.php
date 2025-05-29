@@ -51,6 +51,8 @@ return array(
 	
     'vendu' => 'Vendu',
     'indisponible' => 'Collection privée',
+    'disponible' => 'Disponible',
+
 	'contactlaius' => "Pour toute question ou demande de renseignement, 
 	 contacter <b>contact@giseleeisenmann.com</b>
 	 <p>Adresse de l'atelier : 
@@ -97,21 +99,6 @@ Elle explore aussi l’abstrait qui lui permet de faire jaillir couleurs et form
 	'ParisQuaiSeineTitre' => 'Paris Quai de Seine',
 
     // oldies -----------------------------
-
-    'ACCUEIL' => "ACCUEIL",
-    'GALERIE' => "OEUVRES",
-	'EXPOSITIONS' => "EXPOSITIONS",
-    'NOUVEAUTES' => "NOUVELLES OEUVRES",
-    'BIBLIOGRAPHIE' => "BIBLIOGRAPHIE",
-    'CONTACT' => "CONTACT",
-
-    'Biographie' => 'Biographie',
-    'Galeries' => 'Galeries',
-    'Expositions' => 'Expositions',
-
-    'overview' => 'Revue des oeuvres',
-    'new' => 'Nouvelles oeuvres',
-	'all' => 'Oeuvres',
 
     'oil' => 'Huiles',
     'acrylic' => 'Acryliques',
