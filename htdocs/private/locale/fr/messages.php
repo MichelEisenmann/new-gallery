@@ -21,6 +21,8 @@ return array(
     'faitespeinture' => 'Faîtes de la peinture',
     'assopicasso' => 'Association Les amis du Musée Picasso',	
 
+    'currentExpoDate' => '30 Mai au 12 Juin',
+
     'IntroMomentsFem' => "
 	<h2>Moments Féminins</h2><p>
 	Moments Féminins est un hommage à la beauté des femmes dans leur existence au quotidien, de la rêverie 

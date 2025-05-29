@@ -34,7 +34,7 @@
       <ul>
 	2025
 	<ul>
-	  <li><?= Translator::t('momentsfeminins') ?>, Gourdon (06, France) </li>
+	  <li><?= Translator::t('momentsfeminins') ?>, Gourdon (06, France) <?= Translator::t('currentExpoDate') ?></li>
 	</ul>
       </ul>
 

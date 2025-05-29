@@ -20,6 +20,8 @@ return array(
 	'faitespeinture' => 'Painting Festival',
 	'assopicasso' => 'Picasso Museum friends organization',
 
+    'currentExpoDate' => 'May 30th to June 12th',
+    
     'IntroMomentsFem' => '
      <h2>Feminine Moments</h2>
 	 <p>Feminine Moments is a tribute to the beauty of women in their daily existence, from daydreaming 
