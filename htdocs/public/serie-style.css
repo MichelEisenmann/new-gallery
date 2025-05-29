@@ -5,9 +5,10 @@
 .gem-background-single {margin-top: 10px;}
 .gem-inline { display:inline-block; vertical-align: text-top}
 
+/* controle le style qui apparait sur le tableau quand on place la souris dessus */
 .gem-hover {
 display: none;
-font-weight: 900;
+font-weight: 400;
 }
 
 .gem-very-large-height { height: 600px; }

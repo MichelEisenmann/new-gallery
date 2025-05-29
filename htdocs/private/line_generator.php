@@ -63,8 +63,6 @@ class LineGenerator {
     // larger for single
     $available_width= 900;
     $indent= "\t";
-    //    $this->generate_part($paint1, $tagname1, $available_width, $height, "gem-background-single", $indent);
-
     $this->print_line( $indent, "<div class=\"w3-container\">" );
     $this->generate_part($paint1, $tagname1, 100, $height_style, "gem-background-single", $indent);
     $this->print_line( $indent, "</div>" );
@@ -78,13 +76,10 @@ class LineGenerator {
     $ttab= $this->tab;	
     $this->print_line( $indent, "<a class=\"gem-a\" href=\"" .$url ."\">" );
     $this->print_line( $indent, "<div class=\"w3-display-container gem-inline " .$height_style ." " .$style ." gem-" .$tagname ."\"" );
-    //    $this->print_line( $indent, $ttab .$ttab ."style=\"width:" .$width ."px; height: " .$height ."px;\">" );
     $this->print_line( $indent, $ttab .$ttab ."style=\"width:" .$width ."%;\">" );
     $this->print_line( $indent, $ttab ."<div class=\"w3-display-middle gem-hover\">" );
     $this->print_line( $indent, $ttab .$ttab .$paint->title ." </br> " .$paint->get_size() ." </br> ");
-    if ( strlen($paint->get_status() ) != 0 ) {
-      $this->print_line( $indent, $ttab .$ttab .Translator::t($paint->get_status()) ." </br> " );
-    }
+    $this->print_line( $indent, $ttab .$ttab .Translator::t($paint->get_status()) ." </br> " );
     $this->print_line( $indent, $ttab ."</div>" );
     $this->print_line( $indent, "</div>" );
     $this->print_line( $indent, "</a>" );
