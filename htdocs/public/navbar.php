@@ -23,17 +23,16 @@
   <!-- the menu for large screens -->
   <div class="w3-right w3-hide-small w3-hide-medium ">
     <div class="w3-dropdown-hover">
-      <a href="<?= Translator::url('/public/work.php') ?>"
-	     class="w3-button gem-menu"><?= Translator::t('Work') ?> <i class="fa fa-caret-down"></i></a>
+      <div class="w3-button gem-menu">
+        <?= Translator::t('Work') ?> <i class="fa fa-caret-down"></i>
+      </div>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
 
 	<?php
 	 foreach ( $series as $serie ) {
 	 ?>
-
         <a href="<?= Translator::url('/public/serie-' .$serie .'.php') ?>"
            class="w3-bar-item w3-button gem-menu"><?= Translator::t($serie); ?></a>
-
 	 <?php
 	  }
 
