@@ -108,14 +108,14 @@ if (array_key_exists("pagination", $_GET) ) {
 	          <i class="fa fa-step-forward"></i>
             </button>
             
-            <div class="w3-container">
+            <div class="w3-container w3-padding-8">
 	          <a id="central-paint-href" >
 	                <img id="central-paint-img" class="w3-image"
                              style= "max-height: 700px"/>
 	              </a>
             </div>
             
-            <div class="w3-container w3-center">
+            <div class="w3-container w3-center w3-padding-8">
 	          <span id="central-paint-title"></span>
 	              <span id="central-paint-description"></span>
             </div>

@@ -132,10 +132,10 @@ $line_generator->generate_style("LaLectrice", 50, 50, "white");
 <?= $line_generator->generate_double_line( "gem-medium-height", "SanguinePascaleGui", 50, "PortraitPascale" ); ?>
 <?= $line_generator->generate_single_line( "gem-medium-height", "Aigrette" ); ?>
 
-    </div>
      <!-- Footer -->
     <?php include("../public/copyright.php"); ?>
     
+    </div>
     <script>
       // add the "alt" attribute to all "to-be-signed" images
       function signImages() {

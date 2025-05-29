@@ -134,9 +134,10 @@ $line_generator->generate_style("LesMouettes", 0, 50, "white");
 <?= $line_generator->generate_double_line( "gem-medium-height", "BallonsOl", 60, "LeFicus" ); ?>
 
 
-    </div>
      <!-- Footer -->
     <?php include("../public/copyright.php"); ?>
+
+    </div>
     
     <script>
       // add the "alt" attribute to all "to-be-signed" images

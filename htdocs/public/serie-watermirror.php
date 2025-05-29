@@ -133,10 +133,10 @@ $line_generator->generate_style("CanalMidi", 50, 50, "black");
 <?= $line_generator->generate_double_line( "gem-medium-height", "BrisbaneNorthBank", 50, "Zenitude" ); ?>
 <?= $line_generator->generate_single_line( "gem-small-height", "BlueTerranoraSunset" ); ?>
 
-    </div>
-    
     <!-- Footer -->
     <?php include("../public/copyright.php"); ?>
+
+    </div>
     
     <script>
       // add the "alt" attribute to all "to-be-signed" images
