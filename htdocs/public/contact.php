@@ -22,32 +22,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="./global-style.css">
-
-
+  
   <style>
-  .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      align-items: center;
-      justify-items: center;
-      margin: auto;
-  }
-  .grid img {
-      border: 1px solid #ccc;
-      box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-      max-width: 100%;
-  }
-  .grid img:nth-child(2) {
-      grid-column: span 4;
-  }
-
-
-    .limited {
-      height: 100px;
-    }
-
-    .gem-cliping { height: 100%; width: 200px; overflow: hidden; }
   </style>
   
   <body>
@@ -56,29 +32,21 @@
     <?php include("../public/navbar.php"); ?>
     
     <!-- Page Content -->
-    <div class="w3-container">
-
-      <!-- Theme grid -->
-      <div class="w3-content w3-container " id="grid_theme">
-        <main class="grid">
-		<div>
-			<?= Translator::t('contactlaius') ?>
-		</div>
-		<div>
-			<img class="artiste to-be-signed" src="../public/images/web/2024-04-29-GEM-peint.png" alt="Artist" /></a>
-		</div>
-           
-	</main>
-      </div>
-    </div>
-
-   <p>
-    <div class="w3-content w3-container" id="">
-	<?= Translator::t('additionalinfo') ?>
+    <div class="w3-container w3-padding-32 w3-animate-opacity gem-animate gem-fixed-width">
+      <div class="w3-row">
+	<div class="w3-col s6 w3-container">
+	  <?= Translator::t('contactlaius') ?>
 	</div>
-        
-   <p>   
- 
+	<div class="w3-col s6 w3-center w3-container">
+	  <img class="to-be-signed" src="../public/images/web/2024-04-29-GEM-peint.png" alt="Artist" style="width:100%"/>
+	</div>
+      </div>
+
+      <div class="w3-content w3-container" id="">
+	<?= Translator::t('additionalinfo') ?>
+      </div>
+      
+    </div>
     
     
     <!-- Footer -->

@@ -34,6 +34,7 @@
     <!-- Page Content -->
     <div class="w3-container w3-padding-32 w3-animate-opacity gem-animate gem-fixed-width">
 
+      <!-- photo -->
       <div class="w3-content w3-container">
 	<a href="<?= Translator::url('/index.php') ?>">
 	  <img class="artiste to-be-signed" src="../public/images/web/gisele.jpg" alt="Artist's photo" /></a>
