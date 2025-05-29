@@ -60,13 +60,17 @@ if (array_key_exists("pagination", $_GET) ) {
       var paintFiles= [];
       var paintTitles= [];
       var paintDescriptions= [];
+      var paintStatus= [];
+      var paintStatusTranslated= [];
       var gemSignature= "<?= $GEM_SIGNATURE ?>";
  <?php
   foreach( $serie_dico->sortedList as $paint ) {
  ?>
       paintFiles.push( "images/<?= $paint->file ?>" );
       paintTitles.push( "<?= $paint->full_title() ?>" );
-      paintDescriptions.push( "<?= $paint->get_description_and_status() ?>" );
+      paintDescriptions.push( "<?= $paint->get_description() ?>" );
+      paintStatus.push("<?= $paint->get_status() ?>" );
+      paintStatusTranslated.push("<?= Translator::t($paint->get_status()) ?>" );
  <?php
  }
  ?>
@@ -78,7 +82,7 @@ if (array_key_exists("pagination", $_GET) ) {
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-      <link rel="stylesheet" href="./global-style.css"> 
+      <link rel="stylesheet" href="./global-style.css">    b
       <link rel="stylesheet" href="./serie-style.css">    
     
     <style>
@@ -108,16 +112,18 @@ if (array_key_exists("pagination", $_GET) ) {
 	          <i class="fa fa-step-forward"></i>
             </button>
             
-            <div class="w3-container w3-padding-8">
+            <div class="w3-container">
 	          <a id="central-paint-href" >
 	                <img id="central-paint-img" class="w3-image"
                              style= "max-height: 700px"/>
 	              </a>
             </div>
             
-            <div class="w3-container w3-center w3-padding-8">
+            <div class="w3-container w3-center w3-padding-16">
 	          <span id="central-paint-title"></span>
 	              <span id="central-paint-description"></span>
+                      <br>
+		              <span id="central-paint-status"></span>
             </div>
           </div>
 
@@ -183,6 +189,14 @@ if (array_key_exists("pagination", $_GET) ) {
 	    b.textContent= paintTitles[rank_in_gallery];
 	    var b= document.getElementById("central-paint-description");
 	    b.textContent= paintDescriptions[rank_in_gallery];
+
+	    // status part
+	    var st= document.getElementById("central-paint-status");
+	    var status= paintStatus[rank_in_gallery];
+	    st.textContent= "";
+	    if ( status.length != 0 ) {
+		st.textContent= paintStatusTranslated[rank_in_gallery];
+	    }
 	}
 
       </script>

@@ -74,9 +74,9 @@ Elle explore aussi l’abstrait qui lui permet de faire jaillir couleurs et form
  ',
  
     'additionalinfo' => "
-	<h3>Information Complémentaire</h3>
+	<h5>Information Complémentaire</h5>
 	<b>Comment puis-je acheter un tableau?</b>
-	<br>Pour acheter un tableau, envoyez votre demande à contact@giseleeisenmann.com</br>
+	<br>Pour acheter un tableau, envoyez votre demande à <b>contact@giseleeisenmann.com</b></br>
 	<p><b>Comment savoir si le tableau s'intègre bien dans mon espace?</b>
 	<br>Envoyez à contact@giseleeisenmann.com une image de la pièce avec les dimensions du mur 
 	afin que je puisse créer un mock-up personnalisé simulant le tableau en place.

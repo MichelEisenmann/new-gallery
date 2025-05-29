@@ -77,9 +77,9 @@ return array(
 	</ul>',
 	
 	'additionalinfo' => "
-	<h3>Additional Information</h3>
+	<h5>Additional Information</h5>
 	<b>How can I purchase a painting?</b>
-	<br>To purchase a painting, just email contact@giseleeisenmann.com</br>
+	<br>To purchase a painting, just email <b>contact@giseleeisenmann.com</b></br>
 	<p><b>How will I know if the painting fit my space? </b>
 	<br>If you would like to see how the painting would look in your space, send me an image of the room 
 	with measurements of the wall, and I can create a mock-up of how the space would look with the 
