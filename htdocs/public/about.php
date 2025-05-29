@@ -25,24 +25,6 @@
   <link rel="stylesheet" href="./serie-style.css">
 
   <style>
-    .grid {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 10px;
-	align-items: center;
-	justify-items: center;
-	margin: auto;
-    }
-    .grid img {
-	border: 1px solid #ccc;
-	box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
-	max-width: 100%;
-    }
-    .grid img:nth-child(2) {
-	grid-column: span 4;
-    }
-
-
   </style>
   
   <body>
@@ -52,24 +34,11 @@
     <!-- Page Content -->
     <div class="w3-container w3-padding-32 w3-animate-opacity gem-animate gem-fixed-width">
 
-      <!-- Theme grid -->
-      <div class="w3-content w3-container " id="grid_theme">
-        <main class="grid">
-	  <div>
-	    <a href="<?= Translator::url('/index.php') ?>">
-	      <img class="artiste to-be-signed" src="../public/images/web/gisele.jpg" alt="Artist's photo" /></a>
-   	  </div>
-	  
-	  
-	  <div></div>
-	  <div>
-	  </div>
-          
-	  <div>
-	  </div>
-	</main>
+      <div class="w3-content w3-container">
+	<a href="<?= Translator::url('/index.php') ?>">
+	  <img class="artiste to-be-signed" src="../public/images/web/gisele.jpg" alt="Artist's photo" /></a>
       </div>
-
+      
       <!-- text -->
       <div class="w3-content w3-container gem-justify">
 	<?= Translator::t('Introduction'); ?>
