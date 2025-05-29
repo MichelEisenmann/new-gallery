@@ -17,7 +17,7 @@
 
   <title><?= Translator::t("Contact"); ?></title>
   
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -46,12 +46,10 @@
 	<?= Translator::t('additionalinfo') ?>
       </div>
       
+      <!-- Footer -->
+      <?php include("../public/copyright.php"); ?>
+
     </div>
-    
-    
-    <!-- Footer -->
-    <?php include("../public/copyright.php"); ?>
-    
     
     <script>
       // add the "alt" attribute to all "to-be-signed" images

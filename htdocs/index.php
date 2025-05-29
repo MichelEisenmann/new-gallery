@@ -16,7 +16,10 @@
   <?php include ('private/initialize_translator.php'); ?>
   <?php include ('private/initialize_galleries.php'); ?>
   
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width">
+  <!--
+      <meta name="viewport" content="width=1000, initial-scale=1">
+      -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -31,7 +34,7 @@
       <div class="w3-row w3-padding-32 w3-animate-opacity gem-animate gem-fixed-width">
 	<div class="w3-col s6 w3-center w3-container">
 	  <img src="/public/images/web/Accueil-art-gallery1.jpg" alt="" style="width:100%">
-	              </div>
+	</div>
 	<div class="w3-col s6 w3-center w3-container">
 	  <img src="/public/images/web/Accueil-art-gallery2.jpg" alt="" style="width:100%" >
 	</div>
