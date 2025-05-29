@@ -51,6 +51,7 @@ $paints["MarinaKeithCurran"]= $acrylic->paints["Acrylique/20231211_MarinaKeithCu
 $paints["LaBrague"]= $pastel->paints["Pastels/20220714_LaBrague_PA21x28.jpg"];
 $paints["BrisbaneNorthBank"]= $pastel->paints["Pastels/20240628_BrisbaneNorthBank_PA21x27.jpg"];
 $paints["BordDeSiagne"]= $pastel->paints["Pastels/20240428_BordDeSiagne_PA32x24.jpg"];
+$paints["CanalMidi"]= $pastel->paints["Pastels/20210909_canalDuMidi_PA29x39.jpg"];
 
 $line_generator= new LineGenerator();
 $line_generator->paints= $paints; // may contain paints that are not in serie
@@ -89,9 +90,10 @@ $line_generator->generate_style("BlueTerranoraSunset", 0, 50, "white");
 $line_generator->generate_style("MangroveSulfurCockatoo", 50, 50, "white");
 $line_generator->generate_style("LaVague", 50, 50, "white");
 $line_generator->generate_style("MarinaKeithCurran", 50, 50, "white");
-$line_generator->generate_style("LaBrague", 50, 50, "white");
+$line_generator->generate_style("LaBrague", 0, 50, "white");
 $line_generator->generate_style("BrisbaneNorthBank", 50, 50, "white");
 $line_generator->generate_style("BordDeSiagne", 50, 100, "white");
+$line_generator->generate_style("CanalMidi", 50, 50, "black");
     ?>
   </style>
   
@@ -119,15 +121,16 @@ $line_generator->generate_style("BordDeSiagne", 50, 100, "white");
       <!--   First argument is the height of the line -->
       <!--   The second number is the percent of width allocated to the first paint -->
 <?= $line_generator->generate_single_line( "gem-medium-height", "ParisQuaiSeine" ); ?>
-<?= $line_generator->generate_double_line( "gem-large-height", "EgretYellowSunset", 60, "MangroveSulfurCockatoo" ); ?>
+<?= $line_generator->generate_double_line( "gem-large-height", "EgretYellowSunset", 50, "MangroveSulfurCockatoo" ); ?>
 <?= $line_generator->generate_double_line( "gem-medium-height", "LaVague", 40, "JeuxDeVagues" ); ?>
 <?= $line_generator->generate_double_line( "gem-medium-height", "ReveDeTropiques", 55, "AustralianPelican" ); ?>
 <?= $line_generator->generate_single_line( "gem-small-height", "MarinaKeithCurran" ); ?>
 <?= $line_generator->generate_single_line( "gem-small-height", "IlotMangrove" ); ?>
 <?= $line_generator->generate_double_line( "gem-small-height", "PinkSunsetTerranoraCreek", 55, "BordDeSiagne" ); ?>
 <?= $line_generator->generate_single_line( "gem-medium-height", "LesZebres" ); ?>
-<?= $line_generator->generate_double_line( "gem-small-height", "Zenitude", 55, "BlueTerranoraSunset" ); ?>
-<?= $line_generator->generate_double_line( "gem-small-height", "BrisbaneNorthBank", 55, "LaBrague" ); ?>
+<?= $line_generator->generate_double_line( "gem-large-height", "CanalMidi", 50, "LaBrague" ); ?>
+<?= $line_generator->generate_double_line( "gem-medium-height", "BrisbaneNorthBank", 50, "Zenitude" ); ?>
+<?= $line_generator->generate_single_line( "gem-small-height", "BlueTerranoraSunset" ); ?>
 
     </div>
     

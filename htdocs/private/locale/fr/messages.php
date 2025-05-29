@@ -53,7 +53,8 @@ return array(
     'indisponible' => 'Collection privée',
 	'contactlaius' => "Pour toute question ou demande de renseignement, 
 	 contacter <b>contact@giseleeisenmann.com</b>
-	 <p>Adresse de l'atelier : Valbonne, Provence-Alpes Côte d'Azur, France</p> ",
+	 <p>Adresse de l'atelier : 
+	 <br>Valbonne, Provence-Alpes Côte d'Azur, France</br></p> ",
 
     'Introduction' => '  <p>Gisèle Eisenmann Montagné (nom artiste: GEM) est une artiste autodidacte, travaillant 
 	principalement aujourd’hui avec l’huile et l’acrylique, et occasionnellement avec des pastels secs. 
@@ -70,6 +71,17 @@ Elle explore aussi l’abstrait qui lui permet de faire jaillir couleurs et form
 </br>
  ',
  
+    'additionalinfo' => "
+	<h3>Information Complémentaire</h3>
+	<b>Comment puis-je acheter un tableau?</b>
+	<br>Pour acheter un tableau, envoyez votre demande à contact@giseleeisenmann.com</br>
+	<p><b>Comment savoir si le tableau s'intègre bien dans mon espace?</b>
+	<br>Envoyez à contact@giseleeisenmann.com une image de la pièce avec les dimensions du mur 
+	afin que je puisse créer un mock-up personnalisé simulant le tableau en place.
+	</br>
+	</p>
+	",
+	
     'Winner' => '<p>Gisèle Eisenmann Montagné est lauréate des prix suivants
 	<ul><li>2024 Luxembourg Art prize: CERTIFICAT DE MERITE ARTISTIQUE </li>
 	    <li>2024 Prix TROPHEE DE LA VILLE ANTIBES ["Faîtes de la peinture" - (association les amis du musée Picasso)] </li> 

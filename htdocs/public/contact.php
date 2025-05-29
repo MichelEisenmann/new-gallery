@@ -73,6 +73,10 @@
     </div>
 
    <p>
+    <div class="w3-content w3-container" id="">
+	<?= Translator::t('additionalinfo') ?>
+	</div>
+        
    <p>   
  
     

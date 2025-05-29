@@ -67,13 +67,26 @@ return array(
     'Contacter' => 'For all questions or inquiries',
 	'contactlaius' => "For all questions or inquiries,  
 	 contact <b>contact@giseleeisenmann.com</b>
-	 <p>Studio Address : Valbonne, Provence-Alpes Côte d'Azur, France</p> ",
+	 <p>Studio Address : 
+	 <br>Valbonne, Provence-Alpes Côte d'Azur, France</br></p> ",
 	
 	'Winner' => '<p>Gisèle Eisenmann Montagné is the winner of the following prices and awards
 	<ul><li>2024 Luxembourg Art prize: certificate of artistic achievement </li>
 	    <li>2024 Trophy Award of Antibes City [Painting Festival - (Picasso Museum friends organization)] </li> 
 		<li>2021 2nd prize, Watercolour/Pastel category [Painting Festival - (Picasso Museum friends organization)] </li> 
 	</ul>',
+	
+	'additionalinfo' => "
+	<h3>Additional Information</h3>
+	<b>How can I purchase a painting?</b>
+	<br>To purchase a painting, just email contact@giseleeisenmann.com</br>
+	<p><b>How will I know if the painting fit my space? </b>
+	<br>If you would like to see how the painting would look in your space, send me an image of the room 
+	with measurements of the wall, and I can create a mock-up of how the space would look with the 
+	painting. 
+	</br>
+	</p>
+	",
 	
     'vendu' => 'Sold',
     'indisponible' => 'Private Coll.',

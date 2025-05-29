@@ -36,7 +36,7 @@ $paints["ClairDeSoleil"]= $oil->paints["Huile/20230708_ClairDeSoleil_HU92x65.jpg
 $paints["TheRiverBankVlaminck"]= $oil->paints["Huile/20230921_TheRiverBank_Vlaminck_38x46.jpg"];
 $paints["BaigneursRiviere"]= $oil->paints["Huile/20240204_Baigneurs_Huile_50x100.jpg"];
 $paints["SakuraNenuphars"]= $oil->paints["Huile/20240613_Sakura-nenuphars_HU54x73.jpg"];
-$paints["BrumesDuSoir"]= $oil->paints["Huile/20240728_Brume_HU73x54.jpg"];
+$paints["BrumesDuSoir"]= $oil->paints["Huile/20240728_Brume_HU54x73.jpg"];
 $paints["LeTorrent"]= $oil->paints["Huile/20241225_LeTorrent_HU41x33.jpg"];
 $paints["AirMarin"]= $oil->paints["Huile/20250314_AirMarin_HU50x50.jpg"];
 $paints["PortraitPascale"]= $oil->paints["Huile/20250319_PortraitPascale_HU50x50.jpg"];
@@ -89,7 +89,7 @@ $line_generator->generate_style("LeTorrent", 0, 50, "black");
 $line_generator->generate_style("TheRiverBankVlaminck", 50, 50, "white");
 $line_generator->generate_style("LesDanseuses", 50, 50, "white");
 $line_generator->generate_style("BrumesDuSoir", 50, 50, "white");
-$line_generator->generate_style("LaPiscine", 50, 50, "white");
+$line_generator->generate_style("LaPiscine", 70, 50, "white");
 $line_generator->generate_style("Aigrette", 50, 100, "white");
 $line_generator->generate_style("SanguinePascaleGui", 40, 50, "white");
 $line_generator->generate_style("SakuraNenuphars", 50, 50, "white");
@@ -124,6 +124,7 @@ $line_generator->generate_style("LaLectrice", 50, 50, "white");
 <?= $line_generator->generate_single_line( "gem-medium-height", "BaigneursRiviere" ); ?>
 <?= $line_generator->generate_double_line( "gem-large-height", "ClairDeSoleil", 60, "LaLectrice" ); ?>
 <?= $line_generator->generate_double_line( "gem-large-height", "LeTorrent", 60, "LaPiscine" ); ?>
+<?= $line_generator->generate_single_line( "gem-medium-height", "BrumesDuSoir" ); ?>
 <?= $line_generator->generate_single_line( "gem-medium-height", "LesDanseuses" ); ?>
 <?= $line_generator->generate_double_line( "gem-large-height", "Contemplation", 60, "TheRiverBankVlaminck" ); ?>
 <?= $line_generator->generate_double_line( "gem-medium-height", "SakuraNenuphars", 60, "JeuxDeRegards" ); ?>
